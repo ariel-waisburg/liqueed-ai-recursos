@@ -10,6 +10,10 @@ guardado: 2026-11-18
 temas:
   - desarrollo-agentico
   - agentes-y-evals
+tags:
+  - desarrollo-agentico
+  - agentes-y-evals
+  - articulo
 estado: resumido
 publish: false
 ---

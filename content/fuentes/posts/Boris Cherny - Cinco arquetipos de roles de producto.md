@@ -9,6 +9,9 @@ publicado: "2026-06-28"
 guardado: 2026-11-18
 temas:
   - producto-e-ia
+tags:
+  - producto-e-ia
+  - post
 estado: resumido
 publish: false
 ---

@@ -9,6 +9,9 @@ publicado: "2026-10-08"
 guardado: 2026-11-18
 temas:
   - adopcion-ia
+tags:
+  - adopcion-ia
+  - articulo
 estado: resumido-parcial
 publish: false
 ---

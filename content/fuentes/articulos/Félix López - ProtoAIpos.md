@@ -10,6 +10,10 @@ guardado: 2026-11-18
 temas:
   - producto-e-ia
   - desarrollo-agentico
+tags:
+  - producto-e-ia
+  - desarrollo-agentico
+  - articulo
 estado: resumido
 publish: false
 ---

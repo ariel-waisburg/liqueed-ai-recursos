@@ -9,6 +9,9 @@ publicado: "2026-04 (aprox.)"
 guardado: 2026-11-18
 temas:
   - desarrollo-agentico
+tags:
+  - desarrollo-agentico
+  - video
 estado: pendiente-captura
 publish: false
 ---

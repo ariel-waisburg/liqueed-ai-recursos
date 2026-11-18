@@ -10,6 +10,10 @@ guardado: 2026-11-18
 temas:
   - adopcion-ia
   - agentes-y-evals
+tags:
+  - adopcion-ia
+  - agentes-y-evals
+  - hilo
 estado: resumido
 publish: false
 ---

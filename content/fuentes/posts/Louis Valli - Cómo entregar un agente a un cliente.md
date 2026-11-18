@@ -9,6 +9,9 @@ publicado: "2026-11-11"
 guardado: 2026-11-18
 temas:
   - agentes-y-evals
+tags:
+  - agentes-y-evals
+  - post
 estado: pendiente-captura
 publish: false
 ---

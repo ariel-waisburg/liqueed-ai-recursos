@@ -10,6 +10,10 @@ guardado: 2026-11-18
 temas:
   - gobernanza-ia
   - adopcion-ia
+tags:
+  - gobernanza-ia
+  - adopcion-ia
+  - herramienta
 estado: resumido
 publish: false
 ---

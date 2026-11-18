@@ -9,6 +9,9 @@ publicado: ""
 guardado: 2026-11-18
 temas:
   - desarrollo-agentico
+tags:
+  - desarrollo-agentico
+  - articulo-x
 estado: resumido-parcial
 publish: false
 ---

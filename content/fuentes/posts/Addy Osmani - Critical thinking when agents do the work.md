@@ -10,6 +10,10 @@ guardado: 2026-11-18
 temas:
   - pensamiento-critico
   - desarrollo-agentico
+tags:
+  - pensamiento-critico
+  - desarrollo-agentico
+  - articulo-x
 estado: resumido-parcial
 publish: false
 ---

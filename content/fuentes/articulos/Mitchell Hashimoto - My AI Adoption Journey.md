@@ -11,6 +11,11 @@ temas:
   - desarrollo-agentico
   - adopcion-ia
   - pensamiento-critico
+tags:
+  - desarrollo-agentico
+  - adopcion-ia
+  - pensamiento-critico
+  - articulo
 estado: resumido
 publish: false
 ---

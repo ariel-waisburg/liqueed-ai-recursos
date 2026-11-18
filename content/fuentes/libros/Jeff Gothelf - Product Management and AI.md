@@ -9,6 +9,9 @@ publicado: ""
 guardado: 2026-11-18
 temas:
   - producto-e-ia
+tags:
+  - producto-e-ia
+  - libro
 estado: pendiente-captura
 publish: false
 ---

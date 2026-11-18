@@ -10,6 +10,10 @@ guardado: 2026-11-18
 temas:
   - desarrollo-agentico
   - adopcion-ia
+tags:
+  - desarrollo-agentico
+  - adopcion-ia
+  - post
 estado: resumido
 publish: false
 ---

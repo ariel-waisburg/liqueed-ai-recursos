@@ -10,6 +10,10 @@ guardado: 2026-11-18
 temas:
   - adopcion-ia
   - gobernanza-ia
+tags:
+  - adopcion-ia
+  - gobernanza-ia
+  - post
 estado: pendiente-captura
 publish: false
 ---

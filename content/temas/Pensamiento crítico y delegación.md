@@ -1,6 +1,8 @@
 ---
 title: "Pensamiento crítico y delegación"
 tipo: tema
+tags:
+  - tema
 slug: pensamiento-critico
 publish: false
 ---
