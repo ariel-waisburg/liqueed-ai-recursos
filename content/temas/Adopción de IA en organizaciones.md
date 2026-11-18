@@ -17,6 +17,7 @@ Cómo las organizaciones y las personas adoptan IA: champions, barreras, uso ace
 - [[Arjun Malhotra - Por qué los agentes todavía no se adoptan]]: Ocho razones por las que los agentes no se masificaron aunque la tecnología ya esté lista.
 - [[Daan van Rossum - People copy people]]: La adopción de IA se contagia entre pares: la gente copia lo que ve hacer a colegas de confianza.
 - [[Félix López - Nuestra estrategia para la adopción de IA]]: Cómo una organización de ingeniería de más de 100 personas, con restricciones fuertes de datos y seguridad, se volvió 'AI First'. _(resumido-parcial)_
+- [[Henrik Kniberg - Generative AI in a Nutshell]]: Explicación dibujada y para todo público de qué es la IA generativa y cómo aprovecharla. _(resumido-parcial)_
 - [[Matías Faure - Matriz de uso aceptable de IA]]: Una matriz para acordar con un equipo qué uso de IA es aceptable antes de empezar a colaborar en un proyecto. _(pendiente-captura)_
 - [[McKinsey - Reconfigurar el trabajo con IA generativa]]: Adoptar IA generativa es fácil; convertirla en valor sostenido requiere gestionar el cambio.
 - [[Mitchell Hashimoto - My AI Adoption Journey]]: Seis pasos con los que un ingeniero escéptico llegó a sacarle valor real a los agentes de código, contados sin hype.
