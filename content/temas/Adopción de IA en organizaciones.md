@@ -15,17 +15,24 @@ Cómo las organizaciones y las personas adoptan IA: champions, barreras, uso ace
 - [[Agility at Scale - Priorización de casos de uso de IA]]: Marco para encontrar casos de uso de IA y elegir los pocos que vale la pena financiar.
 - [[Alex Lieberman - 37 errores en la transformación con IA]]: Lista de errores frecuentes de las empresas cuando encaran la transformación con IA. _(resumido-parcial)_
 - [[Arjun Malhotra - Por qué los agentes todavía no se adoptan]]: Ocho razones por las que los agentes no se masificaron aunque la tecnología ya esté lista.
+- [[Birgitta Böckeler - What AI augmentation means for technical leaders]]: Charla para líderes técnicos sobre qué cambia con la IA aumentada. _(pendiente-captura)_
 - [[Daan van Rossum - People copy people]]: La adopción de IA se contagia entre pares: la gente copia lo que ve hacer a colegas de confianza.
+- [[Digital Applied - Agentic AI Maturity Model]]: Modelo de madurez de cinco etapas para la IA agéntica en empresas.
 - [[Félix López - Nuestra estrategia para la adopción de IA]]: Cómo una organización de ingeniería de más de 100 personas, con restricciones fuertes de datos y seguridad, se volvió 'AI First'. _(resumido-parcial)_
+- [[HBR - When Using AI Leads to Brain Fry]]: Usar y supervisar IA más allá de la capacidad cognitiva genera un agotamiento nuevo. _(resumido-parcial)_
 - [[Henrik Kniberg - Generative AI in a Nutshell]]: Explicación dibujada y para todo público de qué es la IA generativa y cómo aprovecharla. _(resumido-parcial)_
+- [[Hustle Badger - AI Maturity Model]]: Herramienta para medir qué tan preparada está una organización para usar IA.
 - [[Matías Faure - Matriz de uso aceptable de IA]]: Una matriz para acordar con un equipo qué uso de IA es aceptable antes de empezar a colaborar en un proyecto. _(pendiente-captura)_
 - [[McKinsey - Reconfigurar el trabajo con IA generativa]]: Adoptar IA generativa es fácil; convertirla en valor sostenido requiere gestionar el cambio.
 - [[Mitchell Hashimoto - My AI Adoption Journey]]: Seis pasos con los que un ingeniero escéptico llegó a sacarle valor real a los agentes de código, contados sin hype.
 - [[Runroom - AI Dojo y antipatrones de Augmented Coding Patterns]]: Una práctica grupal (randori) para construir con Claude y después revisar la sesión contra antipatrones conocidos.
 - [[SEVEN-G - AI Consulting (Fernando García Varela)]]: Portal con metodologías abiertas para decidir dónde invertir en IA, gobernar cada caso de uso y medir el valor real.
+- [[Shieldbase - AI Champions]]: Qué son los AI champions y cómo cultivarlos dentro de una organización.
 - [[Stanton, Shriber y Rudat - What Top Performers Do Differently with AI]]: La IA no nivela automáticamente el desempeño: gana más quien arma sistemas alrededor de sus fortalezas y usa bien el tiempo que libera. _(resumido-parcial)_
 - [[Stefan Wolpers - Agile's AI-Driven Paradigm Shift]]: La IA cambia el trabajo ágil, pero el desafío principal es cultural, no técnico.
+- [[The Thinking Company - Marcos de transformación con IA]]: Suite de marcos de una consultora: madurez, preparación, gobierno, gestión del cambio y hoja de ruta. _(resumido-parcial)_
 - [[Will Larson - Facilitating AI adoption at Imprint]]: Cómo una empresa encaró la adopción de IA como esfuerzo de toda la compañía, con líderes que construyen.
+- [[Writer - The AI Agent Owner]]: Los roles nuevos que aparecen cuando una empresa empieza a trabajar con agentes.
 
 ## Ideas propias
 
