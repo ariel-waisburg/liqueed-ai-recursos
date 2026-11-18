@@ -22,6 +22,8 @@ Cómo se diseñan, evalúan y operan agentes.
 - [[Vercel - Lead Processing Agent]]: Plantilla de referencia de un agente que califica leads entrantes, con aprobación humana.
 - [[Will Larson - Facilitating AI adoption at Imprint]]: Cómo una empresa encaró la adopción de IA como esfuerzo de toda la compañía, con líderes que construyen.
 - [[Writer - The AI Agent Owner]]: Los roles nuevos que aparecen cuando una empresa empieza a trabajar con agentes.
+- [[angel - Graph Engineering con Opus 5]]: Artículo sobre 'graph engineering' (cómo repartir el trabajo entre varios agentes). _(pendiente-captura)_
+- [[distort - Agent Engineering: las 9 capas alrededor del modelo]]: Mapa de las nueve capas que se construyen alrededor del modelo para que un agente trabaje bien sin supervisión. _(resumido-parcial)_
 
 ## Ideas propias
 

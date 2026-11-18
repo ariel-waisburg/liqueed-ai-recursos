@@ -11,6 +11,7 @@ Qué cambia en el rol de producto, qué vale la pena construir y cómo decidir c
 
 ## Fuentes
 
+- [[AI Engineering from Scratch - Learning paths]]: Sitio abierto y gratuito con lecciones prácticas de ingeniería de IA, organizadas en rutas de aprendizaje. _(resumido-parcial)_
 - [[AI Product Manager's Handbook]]: Libro sobre el rol de product manager en productos con IA. _(pendiente-captura)_
 - [[Boris Cherny - Cinco arquetipos de roles de producto]]: A medida que ingeniería, producto, diseño y datos se funden, los roles se definen menos por función y más por arquetipo.
 - [[Christina Wodtke - I'll Know It When I Build It]]: Construir con IA como forma de descubrir qué querés, en vez de especificarlo antes.
