@@ -14,8 +14,6 @@ estado: resumido
 publish: false
 ---
 
-# AI Dojo: construir con Claude en randori y revisarlo con Augmented Coding Patterns
-
 **Runroom** · post · LinkedIn · 2026-11-17 · [link](https://lnkd.in/p/dPsWcWQF)
 
 Temas: [[Desarrollo con agentes]] · [[Adopción de IA en organizaciones]]

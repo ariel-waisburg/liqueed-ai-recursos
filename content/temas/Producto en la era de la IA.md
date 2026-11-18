@@ -5,8 +5,6 @@ slug: producto-e-ia
 publish: false
 ---
 
-# Producto en la era de la IA
-
 Qué cambia en el rol de producto, qué vale la pena construir y cómo decidir cuando construir es barato.
 
 ## Fuentes

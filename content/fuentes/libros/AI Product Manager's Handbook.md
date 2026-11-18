@@ -13,8 +13,6 @@ estado: pendiente-captura
 publish: false
 ---
 
-# The AI Product Manager's Handbook
-
 **(a confirmar)** · libro · PDF
 
 Temas: [[Producto en la era de la IA]]

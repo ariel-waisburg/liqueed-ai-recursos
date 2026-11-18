@@ -13,8 +13,6 @@ estado: resumido
 publish: false
 ---
 
-# AI and the Future of the Product Role
-
 **Marty Cagan (SVPG)** · articulo · svpg.com · 2026-11-06 · [link](https://www.svpg.com/ai-and-the-future-of-the-product-role/)
 
 Temas: [[Producto en la era de la IA]]

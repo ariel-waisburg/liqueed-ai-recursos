@@ -13,8 +13,6 @@ estado: resumido-parcial
 publish: false
 ---
 
-# What deserves to get built
-
 **Hiten Shah** · articulo-x · X · [link](https://x.com/hnshah/status/2089730386612097473)
 
 Temas: [[Producto en la era de la IA]]

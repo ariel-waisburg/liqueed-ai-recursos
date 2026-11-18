@@ -13,8 +13,6 @@ estado: pendiente-captura
 publish: false
 ---
 
-# Todo lo que necesitas saber sobre el desarrollo con IA
-
 **BettaTech** · video · YouTube · 2026-04 (aprox.) · [link](https://www.youtube.com/watch?v=MgtM_Ktuc5A)
 
 Temas: [[Desarrollo con agentes]]

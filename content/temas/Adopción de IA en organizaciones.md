@@ -5,8 +5,6 @@ slug: adopcion-ia
 publish: false
 ---
 
-# Adopción de IA en organizaciones
-
 Cómo las organizaciones y las personas adoptan IA: champions, barreras, uso aceptable, quién se beneficia.
 
 ## Fuentes

@@ -13,8 +13,6 @@ estado: resumido-parcial
 publish: false
 ---
 
-# El CI está hecho para humanos. Esto armamos para agentes.
-
 **Franco Petruccelli (@fipetru)** · articulo-x · X · [link](https://x.com/fipetru/status/2115451360128692229)
 
 Temas: [[Desarrollo con agentes]]

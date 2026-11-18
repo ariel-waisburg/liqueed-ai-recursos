@@ -13,8 +13,6 @@ estado: resumido
 publish: false
 ---
 
-# Product management in the AI era, for realists
-
 **João Pinho** · curso · builtbyjoao.com · [link](https://www.builtbyjoao.com/resources/realists)
 
 Temas: [[Producto en la era de la IA]]

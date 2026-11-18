@@ -13,8 +13,6 @@ estado: resumido
 publish: false
 ---
 
-# Building always-on agents
-
 **William Hu (Anthropic)** · articulo · claude.com · 2026-11-13 · [link](https://claude.com/resources/articles/building-always-on-agents)
 
 Temas: [[Agentes y evals]]

@@ -5,8 +5,6 @@ slug: gobernanza-ia
 publish: false
 ---
 
-# Gobernanza de IA
-
 Marcos para decidir, gobernar y medir el valor de la IA.
 
 ## Fuentes

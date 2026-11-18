@@ -14,8 +14,6 @@ estado: resumido
 publish: false
 ---
 
-# Some obvious & non-obvious reasons AI agents may not have been widely adopted yet
-
 **Arjun Malhotra (@BadCapitalVC)** · hilo · X · 2026-08-06 · [link](https://x.com/BadCapitalVC/status/2085262600749945153)
 
 Temas: [[Adopción de IA en organizaciones]] · [[Agentes y evals]]

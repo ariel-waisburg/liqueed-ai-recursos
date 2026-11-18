@@ -13,8 +13,6 @@ estado: pendiente-captura
 publish: false
 ---
 
-# Vous faites comment quand un client vous demande un agent IA ?
-
 **Louis Valli (@fj_2304)** · post · X · 2026-11-11 · [link](https://x.com/fj_2304/status/2120493414622126473)
 
 Temas: [[Agentes y evals]]

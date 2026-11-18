@@ -13,8 +13,6 @@ estado: resumido-parcial
 publish: false
 ---
 
-# Hace año y medio revisaba cada cambio de la IA. Ahora coordino seis agentes en paralelo
-
 **Alvaro (@alvarombt)** · articulo-x · X · [link](https://x.com/alvarombt/status/2089362156948987973)
 
 Temas: [[Desarrollo con agentes]]

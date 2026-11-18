@@ -14,8 +14,6 @@ estado: resumido
 publish: false
 ---
 
-# ProtoAIpos
-
 **Félix López** · articulo · Substack · 2026-09-27 · [link](https://flopezluis.substack.com/p/protoaipos)
 
 Temas: [[Producto en la era de la IA]] · [[Desarrollo con agentes]]

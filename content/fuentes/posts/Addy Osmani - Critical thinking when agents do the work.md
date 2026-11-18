@@ -14,8 +14,6 @@ estado: resumido-parcial
 publish: false
 ---
 
-# Critical thinking when agents do the work
-
 **Addy Osmani** · articulo-x · X · [link](https://x.com/addyosmani/status/2117512471930167377)
 
 Temas: [[Pensamiento crítico y delegación]] · [[Desarrollo con agentes]]

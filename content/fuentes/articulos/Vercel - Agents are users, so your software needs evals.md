@@ -13,8 +13,6 @@ estado: resumido
 publish: false
 ---
 
-# Agents are users, so your software needs evals
-
 **George Fahmy y Yury Selivanov (Vercel)** · articulo · vercel.com · 2026-11-16 · [link](https://vercel.com/blog/agent-evals)
 
 Temas: [[Agentes y evals]]

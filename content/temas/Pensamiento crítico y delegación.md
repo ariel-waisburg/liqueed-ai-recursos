@@ -5,8 +5,6 @@ slug: pensamiento-critico
 publish: false
 ---
 
-# Pensamiento crítico y delegación
-
 Qué delegar, qué no, y cómo no perder el criterio propio cuando la IA hace el trabajo.
 
 ## Fuentes

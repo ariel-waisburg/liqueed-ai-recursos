@@ -14,8 +14,6 @@ estado: resumido
 publish: false
 ---
 
-# Cómo evitamos que el AI slop arruine nuestros tests
-
 **Manuel Panichelli (Primo)** · articulo · primo.la · 2026-08-21 · [link](https://www.primo.la/blog/como-evitamos-que-el-ai-slop-arruine-nuestros-tests)
 
 Temas: [[Desarrollo con agentes]] · [[Agentes y evals]]

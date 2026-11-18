@@ -14,8 +14,6 @@ estado: pendiente-captura
 publish: false
 ---
 
-# Matriz para precisar qué es un uso aceptable de la IA
-
 **Matías Faure (@mati_faure)** · post · X · 2026-11-14 · [link](https://x.com/mati_faure/status/2121784292527231264)
 
 Temas: [[Adopción de IA en organizaciones]] · [[Gobernanza de IA]]

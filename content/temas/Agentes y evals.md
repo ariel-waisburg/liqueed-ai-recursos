@@ -5,8 +5,6 @@ slug: agentes-y-evals
 publish: false
 ---
 
-# Agentes y evals
-
 Cómo se diseñan, evalúan y operan agentes.
 
 ## Fuentes

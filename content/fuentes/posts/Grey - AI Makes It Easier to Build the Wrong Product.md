@@ -13,8 +13,6 @@ estado: resumido-parcial
 publish: false
 ---
 
-# AI Makes It Easier to Build the Wrong Product
-
 **Grey (@greyluox)** · articulo-x · X · [link](https://x.com/greyluox/status/2075687482885316940)
 
 Temas: [[Producto en la era de la IA]]

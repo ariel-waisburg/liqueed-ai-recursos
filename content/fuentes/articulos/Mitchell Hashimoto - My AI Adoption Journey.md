@@ -15,8 +15,6 @@ estado: resumido
 publish: false
 ---
 
-# My AI Adoption Journey
-
 **Mitchell Hashimoto** · articulo · mitchellh.com · 2026-02-05 · [link](https://mitchellh.com/writing/my-ai-adoption-journey)
 
 Temas: [[Desarrollo con agentes]] · [[Adopción de IA en organizaciones]] · [[Pensamiento crítico y delegación]]

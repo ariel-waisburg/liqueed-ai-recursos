@@ -13,8 +13,6 @@ estado: pendiente-captura
 publish: false
 ---
 
-# Product Management and AI
-
 **Jeff Gothelf** · libro · PDF
 
 Temas: [[Producto en la era de la IA]]

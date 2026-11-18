@@ -5,8 +5,6 @@ slug: desarrollo-agentico
 publish: false
 ---
 
-# Desarrollo con agentes
-
 Cómo se trabaja con agentes de código: workflows, calidad, tests, CI, slop.
 
 ## Fuentes

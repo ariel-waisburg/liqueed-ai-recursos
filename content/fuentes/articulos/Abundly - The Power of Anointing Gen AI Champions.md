@@ -13,8 +13,6 @@ estado: resumido
 publish: false
 ---
 
-# The Power of Anointing Gen AI Champions
-
 **Nils Janse (Abundly.ai)** · articulo · abundly.ai · 2025-05-05 · [link](https://www.abundly.ai/blog/the-power-of-anointing-gen-ai-champions)
 
 Temas: [[Adopción de IA en organizaciones]]

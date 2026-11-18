@@ -13,8 +13,6 @@ estado: resumido-parcial
 publish: false
 ---
 
-# What Top Performers Do Differently with AI—and Why They See the Biggest Benefits
-
 **Christopher Stanton, Justin Shriber y Simon Rudat** · articulo · Harvard Business Review · 2026-10-08 · [link](https://hbr.org/2026/10/what-top-performers-do-differently-with-ai-and-why-they-see-the-biggest-benefits)
 
 Temas: [[Adopción de IA en organizaciones]]

@@ -13,8 +13,6 @@ estado: resumido
 publish: false
 ---
 
-# Five archetypes for future product roles
-
 **Boris Cherny (@bcherny)** · post · X · 2026-06-28 · [link](https://x.com/bcherny/status/2071379474277613732)
 
 Temas: [[Producto en la era de la IA]]

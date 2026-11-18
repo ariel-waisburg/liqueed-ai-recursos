@@ -14,8 +14,6 @@ estado: resumido-parcial
 publish: false
 ---
 
-# Building software factories (with no slop)
-
 **David Zhang (@dzhng)** · articulo-x · X · [link](https://x.com/dzhng/status/2090252351533973768)
 
 Temas: [[Desarrollo con agentes]] · [[Pensamiento crítico y delegación]]

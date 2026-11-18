@@ -14,8 +14,6 @@ estado: resumido
 publish: false
 ---
 
-# AI Consulting: SEVEN-G, SPHERES y SPAD
-
 **Fernando García Varela** · herramienta · GitHub Pages · 2025-09 (primera versión) · [link](https://seachad.github.io/AI_CONSULTING/index.html)
 
 Temas: [[Gobernanza de IA]] · [[Adopción de IA en organizaciones]]
