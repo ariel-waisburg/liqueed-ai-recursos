@@ -11,11 +11,8 @@ temas:
   - adopcion-ia
   - gobernanza-ia
 tags:
-  - adopcion-ia
-  - gobernanza-ia
   - madurez-ia
-  - gestion-del-cambio
-  - herramienta
+  - cultura-y-cambio
 estado: resumido-parcial
 publish: false
 ---
@@ -33,7 +30,7 @@ Suite de marcos de una consultora: madurez, preparación, gobierno, gestión del
 - Gestión del cambio: destinan al menos 30% del presupuesto del programa a lo organizacional.
 - Hoja de ruta de adopción por fases y una comparación de enfoques (grandes consultoras, boutique, académicos).
 
-> [!note] Nota de captura
+> [!info] Sobre este resumen
 > Agrupa 7 páginas: maturity model, governance framework, adoption roadmap, readiness assessment, change management, servicio de transformación y comparación de marcos (thinking.inc).
 
 ## Relacionado

@@ -10,11 +10,9 @@ guardado: 2026-11-24
 temas:
   - desarrollo-agentico
 tags:
-  - desarrollo-agentico
-  - post
-  - guardrails
+  - calidad-y-evals
   - errores-comunes
-  - agent-skills
+  - agent-engineering
 estado: resumido
 publish: false
 ---

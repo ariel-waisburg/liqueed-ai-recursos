@@ -1,0 +1,22 @@
+{
+  "name": "liqueed-cta",
+  "version": "1.0.0",
+  "description": "Bloque de llamado a la acción de Liqueed al pie de cada página",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "exports": {
+    ".": { "import": "./dist/index.js" },
+    "./components": { "import": "./dist/components/index.js" }
+  },
+  "peerDependencies": { "preact": "^10.0.0" },
+  "quartz": {
+    "name": "liqueed-cta",
+    "displayName": "Liqueed: CTA",
+    "category": "component",
+    "quartzVersion": ">=5.0.0",
+    "components": {
+      "LiqueedCta": { "displayName": "Liqueed: CTA", "defaultPosition": "afterBody", "defaultPriority": 80 }
+    }
+  }
+}

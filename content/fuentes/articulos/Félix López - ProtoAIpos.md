@@ -11,9 +11,7 @@ temas:
   - producto-e-ia
   - desarrollo-agentico
 tags:
-  - producto-e-ia
-  - desarrollo-agentico
-  - articulo
+  - experimentacion-y-prototipado
 estado: resumido
 publish: false
 ---
@@ -32,9 +30,6 @@ Prototipos hechos con IA que parecen terminados pero no tienen lo que hace falta
 - Pregunta de ownership antes de aprobar: ¿quién lo mantiene y a quién despiertan si se cae de noche?
 - 'Harness': infraestructura y defaults seguros que arma ingeniería para que otros prototipen sin generar riesgo en producción (cuesta tiempo y gente).
 - Pods chicos con un PM, un especialista del dominio y un par de ingenieros.
-
-> [!note] Nota de captura
-> Es un relato temprano: el autor promete contar los resultados del experimento con pods.
 
 ## Relacionado
 - [[Hiten Shah - What deserves to get built]]

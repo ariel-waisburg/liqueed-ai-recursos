@@ -11,9 +11,8 @@ temas:
   - desarrollo-agentico
   - adopcion-ia
 tags:
-  - desarrollo-agentico
-  - adopcion-ia
-  - post
+  - formacion
+  - errores-comunes
 estado: resumido
 publish: false
 ---

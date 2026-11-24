@@ -1,8 +1,7 @@
 ---
 title: "Desarrollo con agentes"
 tipo: tema
-tags:
-  - tema
+tags: []
 slug: desarrollo-agentico
 publish: false
 ---

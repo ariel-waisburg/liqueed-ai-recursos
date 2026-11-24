@@ -11,10 +11,7 @@ temas:
   - desarrollo-agentico
   - agentes-y-evals
 tags:
-  - desarrollo-agentico
-  - agentes-y-evals
-  - herramienta
-  - agent-skills
+  - agent-engineering
   - context-engineering
 estado: resumido-parcial
 publish: false

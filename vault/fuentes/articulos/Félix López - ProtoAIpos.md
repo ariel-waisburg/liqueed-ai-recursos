@@ -11,9 +11,7 @@ temas:
   - producto-e-ia
   - desarrollo-agentico
 tags:
-  - producto-e-ia
-  - desarrollo-agentico
-  - articulo
+  - experimentacion-y-prototipado
 estado: resumido
 publish: false
 ---

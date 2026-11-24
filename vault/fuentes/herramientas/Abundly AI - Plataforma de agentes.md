@@ -11,11 +11,8 @@ temas:
   - agentes-y-evals
   - adopcion-ia
 tags:
-  - agentes-y-evals
-  - adopcion-ia
-  - herramienta
-  - guardrails
-  - roles
+  - calidad-y-evals
+  - roles-y-carrera
 estado: resumido
 publish: false
 ---

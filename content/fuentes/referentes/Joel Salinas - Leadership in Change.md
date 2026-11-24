@@ -11,11 +11,8 @@ temas:
   - pensamiento-critico
   - adopcion-ia
 tags:
-  - pensamiento-critico
-  - adopcion-ia
-  - referente
-  - delegacion
-  - gestion-del-cambio
+  - delegacion-y-supervision
+  - cultura-y-cambio
 estado: resumido
 publish: false
 ---

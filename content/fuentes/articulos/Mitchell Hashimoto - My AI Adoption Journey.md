@@ -12,10 +12,7 @@ temas:
   - adopcion-ia
   - pensamiento-critico
 tags:
-  - desarrollo-agentico
-  - adopcion-ia
-  - pensamiento-critico
-  - articulo
+  - workflows-con-agentes
 estado: resumido
 publish: false
 ---

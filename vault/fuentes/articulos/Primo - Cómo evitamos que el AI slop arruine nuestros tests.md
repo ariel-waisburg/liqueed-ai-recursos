@@ -11,9 +11,7 @@ temas:
   - desarrollo-agentico
   - agentes-y-evals
 tags:
-  - desarrollo-agentico
-  - agentes-y-evals
-  - articulo
+  - calidad-y-evals
 estado: resumido
 publish: false
 ---

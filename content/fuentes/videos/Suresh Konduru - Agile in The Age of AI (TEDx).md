@@ -11,11 +11,8 @@ temas:
   - agilidad-e-ia
   - pensamiento-critico
 tags:
-  - agilidad-e-ia
-  - pensamiento-critico
-  - video
-  - delegacion
-  - carrera
+  - delegacion-y-supervision
+  - roles-y-carrera
 estado: resumido-parcial
 publish: false
 ---

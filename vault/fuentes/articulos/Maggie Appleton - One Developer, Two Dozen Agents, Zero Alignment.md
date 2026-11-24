@@ -11,10 +11,7 @@ temas:
   - desarrollo-agentico
   - producto-e-ia
 tags:
-  - desarrollo-agentico
-  - producto-e-ia
-  - colaboracion
-  - articulo
+  - cultura-y-cambio
 estado: resumido
 publish: false
 ---

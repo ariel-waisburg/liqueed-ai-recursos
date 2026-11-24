@@ -11,11 +11,8 @@ temas:
   - adopcion-ia
   - gobernanza-ia
 tags:
-  - adopcion-ia
-  - gobernanza-ia
   - madurez-ia
-  - gestion-del-cambio
-  - herramienta
+  - cultura-y-cambio
 estado: resumido-parcial
 publish: false
 ---

@@ -11,9 +11,7 @@ temas:
   - desarrollo-agentico
   - agentes-y-evals
 tags:
-  - desarrollo-agentico
-  - agentes-y-evals
-  - articulo
+  - calidad-y-evals
 estado: resumido
 publish: false
 ---
@@ -32,9 +30,6 @@ Cómo un equipo argentino-mexicano les enseñó a sus agentes de código a escri
 - Iteraron borrando suites, regenerándolas con agentes y revisando; usaron tests buenos existentes como 'golden standard'.
 - En unos dos meses: 25% más tests de integración, 70% menos tests con mocks, cero con storage mockeado y 54% menos comentarios de review del tipo 'este test está mal'.
 - Límite: los agentes copian tests viejos que no cumplen la norma.
-
-> [!note] Nota de captura
-> Es la parte 1 de una serie sobre agentic coding; las guías y la skill están en un repo público.
 
 ## Relacionado
 - [[Franco Petruccelli - El CI está hecho para humanos]]

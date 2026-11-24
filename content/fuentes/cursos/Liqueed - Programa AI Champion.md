@@ -10,10 +10,8 @@ guardado: 2026-11-24
 temas:
   - adopcion-ia
 tags:
-  - adopcion-ia
-  - curso
   - ai-champions
-  - learning-path
+  - formacion
 estado: resumido
 publish: false
 ---

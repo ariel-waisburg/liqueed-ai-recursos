@@ -11,11 +11,7 @@ temas:
   - pensamiento-critico
   - desarrollo-agentico
 tags:
-  - pensamiento-critico
-  - desarrollo-agentico
-  - ai-slop
-  - manifiesto
-  - articulo-x
+  - calidad-y-evals
 estado: resumido-parcial
 publish: false
 ---
@@ -33,7 +29,7 @@ Un manifiesto contra el 'AI slop', inspirado en el Manifiesto Ágil, surgido en 
 - Usar IA no es slop en sí: lo es pasar output sin hacerse cargo de su calidad ni de quien lo recibe.
 - El slop es asimétrico: producir un PR enorme cuesta casi nada, revisarlo sigue costando lo mismo.
 
-> [!note] Nota de captura
+> [!info] Sobre este resumen
 > El resumen cubre la primera parte del manifiesto.
 
 ## Relacionado

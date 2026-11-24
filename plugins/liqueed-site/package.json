@@ -1,0 +1,22 @@
+{
+  "name": "liqueed-site",
+  "version": "1.0.0",
+  "description": "Footer de Liqueed, metadatos para buscadores y agentes, llms.txt y RSS de fichas",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "exports": {
+    ".": { "import": "./dist/index.js" },
+    "./components": { "import": "./dist/components/index.js" }
+  },
+  "peerDependencies": { "preact": "^10.0.0" },
+  "quartz": {
+    "name": "liqueed-site",
+    "displayName": "Liqueed: sitio",
+    "category": ["emitter", "component"],
+    "quartzVersion": ">=5.0.0",
+    "components": {
+      "LiqueedFooter": { "displayName": "Liqueed: footer", "defaultPosition": "footer", "defaultPriority": 50 }
+    }
+  }
+}

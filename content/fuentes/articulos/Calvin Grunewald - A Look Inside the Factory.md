@@ -11,12 +11,9 @@ temas:
   - desarrollo-agentico
   - agentes-y-evals
 tags:
-  - desarrollo-agentico
-  - agentes-y-evals
-  - articulo
   - harness-engineering
-  - human-in-the-loop
-  - workflow
+  - delegacion-y-supervision
+  - workflows-con-agentes
 estado: resumido
 publish: false
 ---

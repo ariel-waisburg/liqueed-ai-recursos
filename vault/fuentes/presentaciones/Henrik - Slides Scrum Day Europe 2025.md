@@ -11,11 +11,8 @@ temas:
   - agilidad-e-ia
   - desarrollo-agentico
 tags:
-  - agilidad-e-ia
-  - desarrollo-agentico
-  - presentacion
-  - prototipado
-  - roles
+  - experimentacion-y-prototipado
+  - roles-y-carrera
 estado: resumido
 publish: false
 ---

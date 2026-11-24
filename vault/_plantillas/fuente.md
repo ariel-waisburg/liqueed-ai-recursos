@@ -8,6 +8,7 @@ idioma: ""
 publicado: ""
 guardado: {{date:YYYY-MM-DD}}
 temas: []
+tags: []
 estado: pendiente-captura
 publish: false
 ---

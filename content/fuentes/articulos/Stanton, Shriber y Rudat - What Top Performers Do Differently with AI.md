@@ -10,8 +10,7 @@ guardado: 2026-11-18
 temas:
   - adopcion-ia
 tags:
-  - adopcion-ia
-  - articulo
+  - cultura-y-cambio
 estado: resumido-parcial
 publish: false
 ---
@@ -29,7 +28,7 @@ La IA no nivela automáticamente el desempeño: gana más quien arma sistemas al
 - En ventas, la mejora depende de en qué se usa el tiempo ahorrado: entender mejor al cliente, mejor estrategia de cuenta y más juicio humano.
 - Decidir tarea por tarea qué automatizar, qué aumentar y qué dejar humano.
 
-> [!note] Nota de captura
+> [!info] Sobre este resumen
 > Solo se pudo leer el resumen y la introducción (paywall); faltan los datos del estudio.
 
 ## Relacionado

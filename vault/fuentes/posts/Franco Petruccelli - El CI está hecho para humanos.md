@@ -10,8 +10,7 @@ guardado: 2026-11-18
 temas:
   - desarrollo-agentico
 tags:
-  - desarrollo-agentico
-  - articulo-x
+  - calidad-y-evals
 estado: resumido-parcial
 publish: false
 ---

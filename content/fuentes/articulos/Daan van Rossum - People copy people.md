@@ -10,9 +10,7 @@ guardado: 2026-11-18
 temas:
   - adopcion-ia
 tags:
-  - adopcion-ia
   - ai-champions
-  - articulo
 estado: resumido
 publish: false
 ---

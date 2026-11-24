@@ -10,8 +10,7 @@ guardado: 2026-11-18
 temas:
   - desarrollo-agentico
 tags:
-  - desarrollo-agentico
-  - articulo-x
+  - workflows-con-agentes
 estado: resumido-parcial
 publish: false
 ---
@@ -29,7 +28,7 @@ Relato en primera persona de cómo pasó de revisar cambio por cambio en Cursor 
 - El cambio de fondo no fue que escribieran mejor código, sino dejar de supervisar cada acción: revisa el resultado como si fuera la pull request de un compañero, y corrige pidiéndole cambios al agente en vez de editar él.
 - Con agentes que trabajan varios minutos, aparece la idea de correr varios en paralelo; el problema es que en el mismo directorio de trabajo se pisan entre sí.
 
-> [!note] Nota de captura
+> [!info] Sobre este resumen
 > El resumen cubre la primera parte; el resto del artículo cuenta cómo resolvió el trabajo en paralelo.
 
 ## Relacionado

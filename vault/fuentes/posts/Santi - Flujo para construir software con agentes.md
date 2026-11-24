@@ -10,10 +10,7 @@ guardado: 2026-11-18
 temas:
   - desarrollo-agentico
 tags:
-  - desarrollo-agentico
-  - spec-driven-development
-  - workflow
-  - post
+  - workflows-con-agentes
 estado: resumido
 publish: false
 ---

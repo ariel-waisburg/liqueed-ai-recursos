@@ -12,11 +12,7 @@ temas:
   - desarrollo-agentico
   - adopcion-ia
 tags:
-  - agentes-y-evals
-  - desarrollo-agentico
-  - adopcion-ia
-  - articulo
-  - agent-skills
+  - agent-engineering
   - costos-ia
 estado: resumido
 publish: false

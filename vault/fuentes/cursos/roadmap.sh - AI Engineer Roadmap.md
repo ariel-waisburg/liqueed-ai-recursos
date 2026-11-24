@@ -11,11 +11,8 @@ temas:
   - fundamentos-ia
   - agentes-y-evals
 tags:
-  - fundamentos-ia
-  - agentes-y-evals
-  - curso
-  - learning-path
-  - carrera
+  - formacion
+  - roles-y-carrera
 estado: resumido-parcial
 publish: false
 ---

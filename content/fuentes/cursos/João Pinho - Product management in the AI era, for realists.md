@@ -10,8 +10,8 @@ guardado: 2026-11-18
 temas:
   - producto-e-ia
 tags:
-  - producto-e-ia
-  - curso
+  - formacion
+  - roles-y-carrera
 estado: resumido
 publish: false
 ---
@@ -33,9 +33,5 @@ Curso gratuito y autoguiado para PMs que sienten que van atrasados con la IA y n
 - Deja afuera a propósito el entrenamiento de modelos y la matemática de fondo: para un PM son opcionales.
 - Recomienda chequear la fecha de cada fuente, porque el campo cambia rápido.
 
-> [!note] Nota de captura
-> La página no muestra el detalle de los módulos; el resumen sale de la presentación del curso.
-
 ## Relacionado
 - [[Marty Cagan - AI and the Future of the Product Role]]
-- [[Jeff Gothelf - Product Management and AI]]

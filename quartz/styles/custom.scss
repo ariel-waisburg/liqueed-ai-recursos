@@ -1,3 +1,547 @@
 @use "./variables.scss" as *;
 
-// put your custom CSS here!
+// ---------------------------------------------------------------------------
+// Estética Liqueed · AI Champion (servicios.liqueed.org/ai-champion + brief del programa)
+// - Papel cálido (#f4f1eb) y tinta (#141e28); azul champion (#234d96 → #1f4489) en paneles;
+//   naranja (#ff9900) para eyebrows y palabras destacadas; amarillo (#fedc0f) en el botón principal
+//   y en los subrayados.
+// - Poppins 800 con tracking cerrado en títulos, Public Sans en texto, IBM Plex Mono en etiquetas.
+// Este archivo no va dentro de una capa CSS, así que gana sobre los estilos de componentes.
+// ---------------------------------------------------------------------------
+
+:root {
+  --lq-blue: #234d96;
+  --lq-blue-deep: #1f4489;
+  --lq-blue-light: #2756ab;
+  --lq-orange: #ff9900;
+  --lq-orange-ink: #c2410c; // naranja con contraste suficiente sobre papel
+  --lq-yellow: #fedc0f;
+  --lq-paper: #f4f1eb;
+  --lq-ink: #141e28;
+  --lq-card: #ffffff;
+  --lq-radius: 4px;
+}
+:root[saved-theme="dark"] {
+  --lq-orange-ink: #ffb347;
+  --lq-card: #17222e;
+}
+
+// --- Base -------------------------------------------------------------------
+body {
+  font-feature-settings: "ss01";
+}
+
+h1,
+h2,
+h3,
+h4,
+.page-title,
+.article-title {
+  font-family: var(--headerFont);
+  color: var(--dark);
+  letter-spacing: -0.02em;
+}
+h1,
+.article-title {
+  font-weight: 800;
+  line-height: 1.15;
+}
+h2 {
+  font-weight: 700;
+}
+
+.liqueed-mono,
+.liqueed-eyebrow {
+  font-family: var(--codeFont);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+// Enlaces del contenido: sin "pastilla", subrayado amarillo como los destacados de AI Champion.
+article a.internal:not(.tag-link):not([role="anchor"]),
+article a.external {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  color: var(--secondary);
+  text-decoration: underline;
+  text-decoration-color: var(--lq-yellow);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 3px;
+  &:hover {
+    color: var(--dark);
+    text-decoration-color: var(--lq-orange);
+  }
+}
+
+::selection {
+  background: rgba(254, 220, 15, 0.55);
+  color: var(--lq-ink);
+}
+
+// --- Encabezado / panel izquierdo ---------------------------------------------
+.liqueed-brand {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 0 0.5rem;
+  text-decoration: none;
+  background: none;
+  img {
+    height: 48px;
+    width: auto;
+    display: block;
+  }
+}
+.liqueed-logo-dark {
+  display: none !important;
+}
+:root[saved-theme="dark"] {
+  .liqueed-logo-light {
+    display: none !important;
+  }
+  .liqueed-logo-dark {
+    display: block !important;
+  }
+}
+
+.page-title {
+  font-size: 1.45rem;
+  font-weight: 800;
+  line-height: 1.15;
+  margin: 0.25rem 0 0.75rem;
+  a {
+    color: var(--dark);
+    background: none;
+  }
+}
+
+.search > .search-button {
+  border-radius: var(--lq-radius);
+  border: 1px solid var(--lightgray);
+  background: var(--lq-card);
+}
+
+.explorer .folder-container div > a,
+.explorer .folder-container div > button span {
+  font-family: var(--headerFont);
+  font-weight: 600;
+}
+
+@media #{$mobile} {
+  .liqueed-brand {
+    margin: 0 0.6rem 0 0;
+    flex-shrink: 0;
+    img {
+      height: 32px;
+    }
+  }
+  .page-title {
+    font-size: 0.98rem;
+    margin: 0;
+    min-width: 0;
+  }
+}
+
+// --- Chips de tags (como los filtros de AI Champion) ------------------------
+ul.tags {
+  gap: 0.4rem;
+  > li {
+    margin: 0;
+  }
+}
+a.internal.tag-link,
+span.tag-link {
+  display: inline-block;
+  padding: 0.22rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid var(--lightgray);
+  background: var(--lq-card);
+  color: var(--dark);
+  font-family: var(--headerFont);
+  font-weight: 600;
+  font-size: 0.78rem;
+  line-height: 1.3;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease,
+    border-color 0.15s ease;
+  &::before {
+    content: "#";
+    color: var(--gray);
+    margin-right: 0.1rem;
+  }
+}
+a.internal.tag-link:hover {
+  background: var(--lq-blue);
+  border-color: var(--lq-blue);
+  color: #fff;
+  &::before {
+    color: rgba(255, 255, 255, 0.7);
+  }
+}
+
+// --- Botones ------------------------------------------------------------------
+.liqueed-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0.7rem 1.25rem;
+  border-radius: var(--lq-radius);
+  font-family: var(--headerFont);
+  font-weight: 600;
+  font-size: 0.92rem;
+  line-height: 1.2;
+  text-decoration: none;
+  background: none;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease,
+    transform 0.15s ease;
+  &:hover {
+    transform: translateY(-1px);
+  }
+  &.primary {
+    background: var(--lq-yellow);
+    color: var(--lq-ink);
+    border: 1px solid var(--lq-yellow);
+    &:hover {
+      background: #ffe74d;
+      color: var(--lq-ink);
+    }
+  }
+  &.ghost {
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    &:hover {
+      background: #fff;
+      color: var(--lq-blue);
+    }
+  }
+}
+
+// Panel azul compartido por el hero y el CTA (degradé del brief).
+.liqueed-hero,
+.liqueed-cta {
+  position: relative;
+  color: #fff;
+  background:
+    radial-gradient(120% 140% at 100% 0%, rgba(255, 255, 255, 0.1), transparent 55%),
+    linear-gradient(160deg, var(--lq-blue-light) 0%, var(--lq-blue) 45%, var(--lq-blue-deep) 100%);
+  border-radius: var(--lq-radius);
+  overflow: hidden;
+  .liqueed-eyebrow {
+    display: inline-block;
+    margin: 0 0 1.1rem;
+    padding: 0.35rem 0.8rem;
+    background: var(--lq-orange);
+    color: var(--lq-ink);
+  }
+  .liqueed-hl {
+    color: var(--lq-orange);
+  }
+  h1,
+  h2 {
+    color: #fff;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+  }
+  a {
+    background: none;
+  }
+}
+
+// --- Hero de la home ----------------------------------------------------------
+.liqueed-hero {
+  margin: 0 0 2.25rem;
+  padding: 2.5rem 2.5rem 2.25rem;
+  h1 {
+    font-size: clamp(2rem, 4.2vw, 3.1rem);
+    margin: 0 0 1rem;
+    max-width: 16ch;
+  }
+  .liqueed-hero-lead {
+    font-size: 1.08rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 58ch;
+    margin: 0 0 1.5rem;
+  }
+}
+.liqueed-hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 1px solid rgba(255, 255, 255, 0.28);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.28);
+  margin: 0 0 1.6rem;
+  .liqueed-hero-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    padding: 0.8rem 1.4rem 0.8rem 0;
+    margin-right: 1.4rem;
+    border-right: 1px solid rgba(255, 255, 255, 0.28);
+    &:last-child {
+      border-right: 0;
+      margin-right: 0;
+    }
+  }
+  strong {
+    font-family: var(--headerFont);
+    font-weight: 800;
+    font-size: 1.5rem;
+    line-height: 1.1;
+    color: #fff;
+  }
+  span {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
+.liqueed-hero-actions,
+.liqueed-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+// En la home el hero reemplaza al título, la fecha y la línea de conteo (siguen en el HTML para agentes).
+body[data-slug="index"] {
+  .article-title,
+  .content-meta,
+  article .markdown-rendered > p:first-of-type {
+    display: none;
+  }
+  // Temas como tarjetas numeradas.
+  article {
+    counter-reset: tema;
+  }
+  article .markdown-rendered > h2#temas {
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-top: 0;
+  }
+  article .markdown-rendered > h2#temas + ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1rem;
+    > li {
+      counter-increment: tema;
+      margin: 0;
+      padding: 1.1rem 1.2rem 1.2rem;
+      background: var(--lq-card);
+      border: 1px solid var(--lightgray);
+      border-top: 3px solid var(--lq-blue);
+      border-radius: var(--lq-radius);
+      line-height: 1.5;
+      color: var(--darkgray);
+      font-size: 0.95rem;
+      transition:
+        border-color 0.15s ease,
+        transform 0.15s ease;
+      &::before {
+        content: counter(tema, decimal-leading-zero);
+        display: block;
+        font-family: var(--codeFont);
+        font-weight: 600;
+        font-size: 0.78rem;
+        letter-spacing: 0.1em;
+        color: var(--lq-orange-ink);
+        margin-bottom: 0.35rem;
+      }
+      &:hover {
+        border-top-color: var(--lq-orange);
+        transform: translateY(-2px);
+      }
+      > br {
+        display: none;
+      }
+      > em {
+        display: block;
+        margin: 0 0 0.45rem;
+        font-style: normal;
+        font-family: var(--codeFont);
+        font-size: 0.75rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--gray);
+      }
+      > a.internal {
+        display: block;
+        font-family: var(--headerFont);
+        font-weight: 700;
+        font-size: 1.08rem;
+        line-height: 1.25;
+        color: var(--dark);
+        text-decoration: none;
+        margin-bottom: 0.2rem;
+      }
+    }
+  }
+}
+:root[saved-theme="dark"] body[data-slug="index"] article .markdown-rendered > h2#temas + ul > li {
+  border-top-color: #25a6df;
+}
+
+// --- Bloque de CTA + newsletter ------------------------------------------------
+aside.liqueed-cta {
+  margin: 3rem 0 1rem;
+  padding: 2.25rem 2.25rem 2rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: 2rem;
+  align-items: start;
+  h2 {
+    font-size: clamp(1.5rem, 2.6vw, 2rem);
+    line-height: 1.15;
+    margin: 0 0 0.9rem;
+  }
+  .liqueed-cta-text {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    margin: 0 0 1.4rem;
+  }
+}
+.liqueed-newsletter {
+  background: var(--lq-paper);
+  color: var(--lq-ink);
+  border-radius: var(--lq-radius);
+  padding: 1.25rem 1.25rem 0.5rem;
+  .liqueed-newsletter-title {
+    font-family: var(--headerFont);
+    font-weight: 800;
+    font-size: 1.15rem;
+    letter-spacing: -0.01em;
+    margin: 0 0 0.25rem;
+    color: var(--lq-ink);
+  }
+  .liqueed-newsletter-text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0 0 0.5rem;
+    color: #3a4652;
+  }
+  // El form de Kit trae sus propios estilos; acá solo se integra al panel.
+  .formkit-form {
+    max-width: none !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+  .formkit-form .formkit-input {
+    font-family: var(--bodyFont) !important;
+    border-radius: var(--lq-radius) !important;
+  }
+  .formkit-form .formkit-submit {
+    font-family: var(--headerFont) !important;
+    font-weight: 600 !important;
+    border-radius: var(--lq-radius) !important;
+    color: var(--lq-ink) !important;
+  }
+  .formkit-form [data-style="clean"] {
+    padding: 0.5rem 0 0 !important;
+  }
+}
+@media #{$mobile} {
+  .liqueed-hero {
+    padding: 1.75rem 1.25rem 1.5rem;
+  }
+  .liqueed-hero-stats .liqueed-hero-stat {
+    padding-right: 1rem;
+    margin-right: 1rem;
+  }
+  aside.liqueed-cta {
+    grid-template-columns: 1fr;
+    padding: 1.75rem 1.25rem 1.5rem;
+    gap: 1.5rem;
+  }
+  .liqueed-btn {
+    width: 100%;
+  }
+}
+@media #{$tablet} {
+  aside.liqueed-cta {
+    grid-template-columns: 1fr;
+  }
+}
+
+// --- Footer -----------------------------------------------------------------------
+footer.liqueed-footer {
+  margin: 2.5rem 0 4rem;
+  padding-top: 1.75rem;
+  border-top: 2px solid var(--dark);
+  font-size: 0.92rem;
+  color: var(--darkgray);
+  a {
+    background: none;
+    color: var(--dark);
+    font-weight: 600;
+    &:hover {
+      color: var(--secondary);
+    }
+  }
+  .liqueed-footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    img {
+      height: 44px;
+      width: auto;
+      display: block;
+    }
+    p {
+      margin: 0;
+      max-width: 52ch;
+    }
+  }
+  ul {
+    list-style: none;
+    margin: 0.5rem 0 1rem;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.4rem;
+    a {
+      font-family: var(--headerFont);
+    }
+  }
+  .liqueed-footer-agents {
+    font-size: 0.85rem;
+    .liqueed-mono {
+      color: var(--lq-orange-ink);
+      margin-right: 0.35rem;
+    }
+    a {
+      font-family: var(--codeFont);
+      font-weight: 500;
+    }
+  }
+  .liqueed-footer-credit {
+    font-size: 0.78rem;
+    color: var(--gray);
+    margin-top: 0.75rem;
+    a {
+      font-weight: 400;
+      color: var(--gray);
+    }
+  }
+}
+
+// --- Detalles de lectura ----------------------------------------------------------
+article blockquote,
+.callout {
+  border-radius: var(--lq-radius);
+}
+.content-meta {
+  font-family: var(--codeFont);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}

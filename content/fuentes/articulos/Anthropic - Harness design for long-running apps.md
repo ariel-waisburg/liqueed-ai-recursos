@@ -11,9 +11,6 @@ temas:
   - desarrollo-agentico
   - agentes-y-evals
 tags:
-  - desarrollo-agentico
-  - agentes-y-evals
-  - articulo
   - harness-engineering
   - agent-engineering
 estado: resumido

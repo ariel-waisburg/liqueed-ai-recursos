@@ -11,12 +11,7 @@ temas:
   - adopcion-ia
   - producto-e-ia
 tags:
-  - adopcion-ia
-  - producto-e-ia
-  - articulo
-  - roles
-  - carrera
-  - forward-deployed-engineering
+  - roles-y-carrera
 estado: resumido-parcial
 publish: false
 ---

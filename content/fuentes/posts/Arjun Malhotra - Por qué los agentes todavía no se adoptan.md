@@ -11,9 +11,7 @@ temas:
   - adopcion-ia
   - agentes-y-evals
 tags:
-  - adopcion-ia
-  - agentes-y-evals
-  - hilo
+  - errores-comunes
 estado: resumido
 publish: false
 ---
@@ -33,9 +31,6 @@ Ocho razones por las que los agentes no se masificaron aunque la tecnología ya 
 - El salto está en varios agentes trabajando como equipo, y en que el contexto de tu agente llegue a tus colegas; hoy esos traspasos son manuales.
 - La confianza es asimétrica: un chatbot equivocado te hace perder segundos, un agente equivocado manda el mail o edita el archivo.
 - Todavía no hay un trabajo por hacer que el público general sienta como propio.
-
-> [!note] Nota de captura
-> Responde a un post de Josh Miller que se preguntaba por qué casi nadie fuera del mundo tech usa agentes.
 
 ## Relacionado
 - [[Abundly - The Power of Anointing Gen AI Champions]]

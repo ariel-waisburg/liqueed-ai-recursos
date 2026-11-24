@@ -11,9 +11,6 @@ temas:
   - agentes-y-evals
   - desarrollo-agentico
 tags:
-  - agentes-y-evals
-  - desarrollo-agentico
-  - articulo
   - context-engineering
   - agent-engineering
 estado: resumido

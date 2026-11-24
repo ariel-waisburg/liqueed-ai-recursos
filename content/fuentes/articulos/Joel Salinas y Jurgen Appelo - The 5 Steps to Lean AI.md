@@ -11,11 +11,8 @@ temas:
   - pensamiento-critico
   - adopcion-ia
 tags:
-  - pensamiento-critico
-  - adopcion-ia
-  - articulo
-  - delegacion
-  - priorizacion
+  - delegacion-y-supervision
+  - priorizacion-y-casos-de-uso
 estado: resumido
 publish: false
 ---

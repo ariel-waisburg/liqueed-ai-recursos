@@ -10,8 +10,7 @@ guardado: 2026-11-18
 temas:
   - producto-e-ia
 tags:
-  - producto-e-ia
-  - post
+  - roles-y-carrera
 estado: resumido
 publish: false
 ---
@@ -31,9 +30,6 @@ A medida que ingeniería, producto, diseño y datos se funden, los roles se defi
 - Maintainer: hace que un sistema maduro sea seguro, confiable, rápido y eficiente a escala.
 - Mucha gente cubre dos o tres. No están atados a la función: hay diseñadores, ingenieros, PMs y data scientists en cada uno.
 - Mezcla según la etapa: pre-PMF necesita 1+2+3; creciendo con PMF, 2+3+4 y algo de 5; PMF fuerte, 3+4+5 y algo de 2.
-
-> [!note] Nota de captura
-> Lo describe a partir del equipo de Claude Code en Anthropic.
 
 ## Relacionado
 - [[Marty Cagan - AI and the Future of the Product Role]]

@@ -10,10 +10,8 @@ guardado: 2026-11-24
 temas:
   - desarrollo-agentico
 tags:
-  - desarrollo-agentico
-  - articulo
   - costos-ia
-  - ai-slop
+  - calidad-y-evals
 estado: resumido-parcial
 publish: false
 ---

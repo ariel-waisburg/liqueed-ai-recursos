@@ -10,10 +10,7 @@ guardado: 2026-11-18
 temas:
   - fundamentos-ia
 tags:
-  - fundamentos-ia
-  - llm
-  - arquitectura
-  - articulo
+  - fundamentos
 estado: resumido
 publish: false
 ---

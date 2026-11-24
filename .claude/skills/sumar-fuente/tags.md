@@ -1,53 +1,34 @@
-# Tags válidos
+# Tags válidos (vocabulario controlado)
 
-Cada fuente lleva en `tags`:
+Cada fuente lleva en `tags` **de 1 a 3 conceptos** de la tabla de abajo, y nada más.
 
-1. Los slugs de sus temas (ver la tabla de temas en `SKILL.md`).
-2. Su `tipo` (`articulo`, `post`, `video`, etc.).
-3. Entre 1 y 3 **conceptos** de la tabla de abajo.
+- **No** van los temas: ya están en `temas` y cada tema tiene su página.
+- **No** va el tipo (`articulo`, `post`, `video`…): ya está en `tipo` y en la carpeta.
+- Las páginas de tema (`vault/temas/`) llevan `tags: []`.
 
-Antes de inventar un concepto, buscá uno equivalente en esta lista. Si no hay ninguno, agregalo acá en orden alfabético, con una definición de una línea, y avisale a Ari en el informe final.
+El vocabulario es cerrado a propósito (20 conceptos): así cada tag agrupa varias fuentes y la navegación por tags sirve. Antes de proponer un concepto nuevo, buscá uno equivalente acá. Si de verdad no hay ninguno, **no lo agregues solo**: usá el más cercano y proponéselo a Ari en el informe final, con su definición y qué fuentes lo usarían.
 
 ## Conceptos
 
-| tag | qué significa |
-|---|---|
-| agent-engineering | Diseño del sistema alrededor del modelo: herramientas, memoria, orquestación, capas de un agente. |
-| agent-skills | Skills de agentes: paquetes de instrucciones y scripts que un agente carga bajo demanda. |
-| ai-champions | Personas que impulsan la adopción de IA dentro de una organización. |
-| ai-slop | Código o contenido de baja calidad generado con IA, y cómo evitarlo. |
-| arquitectura | Decisiones de arquitectura de software o de sistemas con IA. |
-| bienestar | Impacto de la IA en la salud mental, la carga cognitiva o el agotamiento. |
-| carrera | Trayectorias profesionales, contratación y compensación en roles ligados a la IA. |
-| casos-de-uso | Identificar, priorizar o describir casos de uso concretos de IA. |
-| colaboracion | Cómo trabajan juntas las personas, o personas y agentes, en un equipo. |
-| consultoria-ia | Cómo se venden, entregan y mantienen proyectos de IA para clientes. |
-| context-engineering | Gestión del contexto que recibe un modelo o un agente. |
-| costos-ia | Costo de usar modelos y agentes (tokens, gasto) y cómo bajarlo. |
-| cultura | Cultura organizacional y hábitos de trabajo frente a la IA. |
-| delegacion | Qué delegar a la IA y qué no. |
-| discovery | Descubrimiento de producto: entender problemas y validar ideas. |
-| errores-comunes | Antipatrones y errores frecuentes al adoptar o usar IA. |
-| experimentacion | Probar, medir e iterar con IA. |
-| forward-deployed-engineering | Ingenieros que trabajan dentro del cliente para llevar IA a producción. |
-| fundamentos | Conceptos básicos de cómo funciona la IA generativa, para todo público. |
-| gestion-del-cambio | Cómo acompañar el cambio organizacional que trae la IA. |
-| guardrails | Límites, controles y salvaguardas en sistemas con IA. |
-| harness-engineering | Configuración del entorno alrededor de un agente de código: reglas, herramientas, hooks. |
-| human-in-the-loop | Puntos donde una persona revisa o decide dentro de un flujo con IA. |
-| learning-path | Rutas de aprendizaje y material de formación. |
-| liderazgo-tecnico | Qué cambia para líderes técnicos, CTOs y tech leads. |
-| llm | Funcionamiento interno de los modelos de lenguaje. |
-| madurez-ia | Modelos y escalas para medir la madurez de una organización en IA. |
-| manifiesto | Declaraciones de principios. |
-| mlops | Operación de sistemas de machine learning en producción. |
-| priorizacion | Cómo decidir qué hacer primero. |
-| prompt-library | Colecciones de prompts reutilizables. |
-| prototipado | Prototipos rápidos con IA y sus límites. |
-| roles | Roles nuevos o roles que cambian con la IA. |
-| spec-driven-development | Desarrollo guiado por especificaciones con agentes. |
-| workflow | Flujos de trabajo concretos con IA o con agentes. |
-
-## Para unificar
-
-- `caso-de-uso` → usar `casos-de-uso`.
+| tag | qué significa | antes se usaba |
+|---|---|---|
+| agent-engineering | Diseño del sistema alrededor del modelo: herramientas, memoria, orquestación, skills, capas de un agente. | agent-engineering, agent-skills |
+| ai-champions | Personas que impulsan la adopción de IA dentro de una organización. | ai-champions |
+| bienestar | Impacto de la IA en la salud mental, la carga cognitiva o el agotamiento. | bienestar |
+| calidad-y-evals | Calidad de lo que produce la IA: evals, tests, guardrails, AI slop y cómo evitarlo. | ai-slop, guardrails, manifiesto |
+| consultoria-ia | Cómo se venden, entregan y mantienen proyectos de IA para clientes. | consultoria-ia |
+| context-engineering | Gestión del contexto que recibe un modelo o un agente, incluidos prompts reutilizables. | context-engineering, prompt-library |
+| costos-ia | Costo de usar modelos y agentes (tokens, gasto) y cómo bajarlo. | costos-ia |
+| cultura-y-cambio | Cultura organizacional, colaboración y gestión del cambio frente a la IA. | cultura, gestion-del-cambio, colaboracion |
+| delegacion-y-supervision | Qué delegar a la IA, qué no, y dónde una persona revisa o decide (human-in-the-loop, uso aceptable). | delegacion, human-in-the-loop |
+| errores-comunes | Antipatrones y errores frecuentes al adoptar o usar IA. | errores-comunes |
+| experimentacion-y-prototipado | Probar, prototipar, validar ideas (discovery) e iterar con IA. | experimentacion, prototipado, discovery |
+| formacion | Rutas de aprendizaje, cursos y prácticas de formación en IA. | learning-path |
+| fundamentos | Cómo funciona la IA generativa: desde lo básico para todo público hasta la arquitectura de los modelos. | fundamentos, llm, arquitectura |
+| harness-engineering | Configuración del entorno alrededor de un agente de código: reglas, herramientas, hooks. | harness-engineering |
+| liderazgo | Qué cambia para quienes lideran: líderes técnicos, CTOs, tech leads, gerencias. | liderazgo-tecnico |
+| madurez-ia | Modelos y escalas para medir la madurez de una organización en IA. | madurez-ia |
+| mlops | Operación de sistemas de machine learning en producción. | mlops |
+| priorizacion-y-casos-de-uso | Identificar, priorizar o describir casos de uso concretos; decidir qué vale la pena construir. | casos-de-uso, caso-de-uso, priorizacion |
+| roles-y-carrera | Roles nuevos o que cambian con la IA, trayectorias, contratación (incluye forward deployed engineering). | roles, carrera, forward-deployed-engineering |
+| workflows-con-agentes | Flujos de trabajo concretos con agentes, incluido el desarrollo guiado por especificaciones. | workflow, spec-driven-development |

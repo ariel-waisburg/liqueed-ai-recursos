@@ -10,9 +10,7 @@ guardado: 2026-11-24
 temas:
   - desarrollo-agentico
 tags:
-  - desarrollo-agentico
-  - post
-  - workflow
+  - workflows-con-agentes
 estado: resumido
 publish: false
 ---

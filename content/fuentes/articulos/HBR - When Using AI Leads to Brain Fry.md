@@ -11,10 +11,7 @@ temas:
   - adopcion-ia
   - pensamiento-critico
 tags:
-  - adopcion-ia
-  - pensamiento-critico
   - bienestar
-  - articulo
 estado: resumido-parcial
 publish: false
 ---
@@ -32,7 +29,7 @@ Usar y supervisar IA más allá de la capacidad cognitiva genera un agotamiento 
 - Aumenta errores, fatiga de decisión y ganas de renunciar.
 - Se reduce diseñando bien los flujos de trabajo y las prácticas de gestión.
 
-> [!note] Nota de captura
+> [!info] Sobre este resumen
 > Resumen a partir de la parte accesible del artículo.
 
 ## Relacionado

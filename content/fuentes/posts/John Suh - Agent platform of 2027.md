@@ -11,10 +11,7 @@ temas:
   - agentes-y-evals
   - producto-e-ia
 tags:
-  - agentes-y-evals
-  - producto-e-ia
-  - post
-  - arquitectura
+  - fundamentos
   - agent-engineering
 estado: resumido
 publish: false

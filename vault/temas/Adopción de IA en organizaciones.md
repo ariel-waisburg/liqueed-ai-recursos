@@ -1,8 +1,7 @@
 ---
 title: "Adopción de IA en organizaciones"
 tipo: tema
-tags:
-  - tema
+tags: []
 slug: adopcion-ia
 publish: false
 ---

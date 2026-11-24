@@ -11,10 +11,7 @@ temas:
   - adopcion-ia
   - agentes-y-evals
 tags:
-  - adopcion-ia
-  - agentes-y-evals
-  - prompt-library
-  - articulo
+  - context-engineering
 estado: resumido
 publish: false
 ---

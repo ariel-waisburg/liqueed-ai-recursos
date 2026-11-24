@@ -11,10 +11,7 @@ temas:
   - adopcion-ia
   - producto-e-ia
 tags:
-  - adopcion-ia
-  - producto-e-ia
-  - articulo
-  - gestion-del-cambio
+  - cultura-y-cambio
   - errores-comunes
 estado: resumido
 publish: false

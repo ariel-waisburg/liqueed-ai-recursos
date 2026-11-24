@@ -5,6 +5,12 @@ configuration:
   enableSPA: true
   enablePopovers: true
   locale: es-ES
+  # GA4 de liqueed.org (G-1EWL68QK9C, visible en el HTML público del sitio).
+  # TODO(Ari): confirmar que este sitio debe medir en la misma propiedad, o reemplazar por otro ID.
+  # Para apagar analytics: `analytics: null`.
+  analytics:
+    provider: google
+    tagId: G-1EWL68QK9C
   baseUrl: ariel-waisburg.github.io/liqueed-ai-recursos
   ignorePatterns:
     - private
@@ -14,35 +20,38 @@ configuration:
     fontOrigin: googleFonts
     cdnCaching: true
     typography:
-      header: Schibsted Grotesk
-      body: Source Sans Pro
+      # Estética AI Champion de Liqueed: Poppins en títulos, Public Sans en texto, IBM Plex Mono en etiquetas.
+      header: Poppins
+      body: Public Sans
       code: IBM Plex Mono
     colors:
       lightMode:
-        light: "#faf8f8"
-        lightgray: "#e5e5e5"
-        gray: "#b8b8b8"
-        darkgray: "#4e4e4e"
-        dark: "#2b2b2b"
-        secondary: "#284b63"
-        tertiary: "#84a59d"
-        highlight: rgba(143, 159, 169, 0.15)
-        textHighlight: "#fff23688"
+        # champion-paper, champion-ink, champion-blue, champion-orange, champion-yellow
+        light: "#f4f1eb"
+        lightgray: "#e0dbd0"
+        gray: "#8f8a80"
+        darkgray: "#2f3a45"
+        dark: "#141e28"
+        secondary: "#234d96"
+        tertiary: "#e2531f"
+        highlight: rgba(35, 77, 150, 0.07)
+        textHighlight: "#fedc0f88"
       darkMode:
-        light: "#161618"
-        lightgray: "#393639"
-        gray: "#646464"
-        darkgray: "#d4d4d4"
-        dark: "#ebebec"
-        secondary: "#7b97aa"
-        tertiary: "#84a59d"
-        highlight: rgba(143, 159, 169, 0.15)
-        textHighlight: "#b3aa0288"
+        light: "#101a24"
+        lightgray: "#24313f"
+        gray: "#6f7c8a"
+        darkgray: "#d3d9e0"
+        dark: "#f4f1eb"
+        secondary: "#25a6df"
+        tertiary: "#fedc0f"
+        highlight: rgba(37, 166, 223, 0.12)
+        textHighlight: "#fedc0f55"
   links:
     markdownLinkResolution: shortest
   contentIndex:
     enableSiteMap: true
-    enableRSS: true
+    # El RSS lo genera plugins/liqueed-site (solo fichas, no páginas de carpeta).
+    enableRSS: false
 plugins:
   - source: "@quartz-community/created-modified-date"
     enabled: true
@@ -104,8 +113,9 @@ plugins:
     order: 92
   - source: "@quartz-community/quartz-fonts"
     enabled: true
+  # Desactivado: su paleta (violeta/amarillo) pisaba los colores de Liqueed. Los estilos propios están en quartz/styles/custom.scss.
   - source: "@quartz-themes/core"
-    enabled: true
+    enabled: false
     options:
       theme: default
       mode: both
@@ -178,7 +188,7 @@ plugins:
       position: beforeBody
       priority: 20
   - source: "@quartz-community/tag-list"
-    enabled: false
+    enabled: true
     layout:
       position: beforeBody
       priority: 30
@@ -214,7 +224,7 @@ plugins:
       position: afterBody
       priority: 10
   - source: "@quartz-community/footer"
-    enabled: true
+    enabled: false
     options:
       links:
         Hecho con Quartz: https://quartz.jzhao.xyz
@@ -244,7 +254,7 @@ plugins:
         - tags
         - aliases
       excludedProperties: []
-      hidePropertiesView: false
+      hidePropertiesView: true
     order: 5
     layout:
       position: beforeBody
@@ -257,6 +267,50 @@ plugins:
       darkMode: auto
       exportPadding: 20
     order: 50
+  # --- Plugins locales de Liqueed (ver plugins/README.md) ---
+  - source: ./plugins/liqueed-brand
+    enabled: true
+    options:
+      href: https://liqueed.org
+      label: Liqueed
+    layout:
+      position: left
+      priority: 5
+  - source: ./plugins/liqueed-hero
+    enabled: true
+    options:
+      serviciosUrl: https://servicios.liqueed.org/ia
+    layout:
+      position: beforeBody
+      priority: 1
+  - source: ./plugins/liqueed-cta
+    enabled: true
+    options:
+      serviciosUrl: https://servicios.liqueed.org/ia
+      # Link de "Agendar una conversación" de servicios.liqueed.org/ia
+      agendaUrl: https://calendar.app.google/CAiHee2GU6LagupaA
+      # Embed oficial de Kit del newsletter de Liqueed.
+      kitUid: 7bc27ec38d
+      kitSrc: https://liqueed.kit.com/7bc27ec38d/index.js
+    layout:
+      position: afterBody
+      priority: 80
+  - source: ./plugins/liqueed-site
+    enabled: true
+    options:
+      siteTitle: Recursos de IA · Liqueed
+      temaOrder:
+        - Adopción de IA en organizaciones
+        - Producto en la era de la IA
+        - Desarrollo con agentes
+        - Agentes y evals
+        - Pensamiento crítico y delegación
+        - Agilidad e IA
+        - Fundamentos técnicos de IA
+        - Gobernanza de IA
+    layout:
+      position: footer
+      priority: 50
 layout:
   groups:
     toolbar:

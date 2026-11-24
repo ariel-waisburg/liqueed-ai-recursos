@@ -10,8 +10,7 @@ guardado: 2026-11-18
 temas:
   - producto-e-ia
 tags:
-  - producto-e-ia
-  - articulo-x
+  - priorizacion-y-casos-de-uso
 estado: resumido-parcial
 publish: false
 ---
@@ -30,7 +29,7 @@ Cuando construir se vuelve barato, se pierde el filtro que hacía la escasez de 
 - Con el comportamiento claro, buscá sistemas que ya resolvieron el mismo problema humano (confianza entre desconocidos en marketplaces, review asincrónica en GitHub).
 - Copiar lo visible no alcanza: Instagram Stories y Twitter Fleets se parecían, pero lo que hacía funcionar el comportamiento (red, hábitos, audiencia) no viene con la interfaz.
 
-> [!note] Nota de captura
+> [!info] Sobre este resumen
 > El resumen cubre la primera parte del artículo.
 
 ## Relacionado

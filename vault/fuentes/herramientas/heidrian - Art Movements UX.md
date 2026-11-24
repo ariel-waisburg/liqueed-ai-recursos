@@ -11,11 +11,8 @@ temas:
   - desarrollo-agentico
   - producto-e-ia
 tags:
-  - desarrollo-agentico
-  - producto-e-ia
-  - herramienta
-  - agent-skills
-  - ai-slop
+  - agent-engineering
+  - calidad-y-evals
 estado: resumido-parcial
 publish: false
 ---

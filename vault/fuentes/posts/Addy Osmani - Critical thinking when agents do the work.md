@@ -11,9 +11,7 @@ temas:
   - pensamiento-critico
   - desarrollo-agentico
 tags:
-  - pensamiento-critico
-  - desarrollo-agentico
-  - articulo-x
+  - delegacion-y-supervision
 estado: resumido-parcial
 publish: false
 ---

@@ -1,8 +1,7 @@
 ---
 title: "Fundamentos técnicos de IA"
 tipo: tema
-tags:
-  - tema
+tags: []
 slug: fundamentos-ia
 publish: false
 ---

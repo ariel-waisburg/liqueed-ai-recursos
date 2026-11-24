@@ -11,10 +11,7 @@ temas:
   - adopcion-ia
   - agentes-y-evals
 tags:
-  - adopcion-ia
-  - agentes-y-evals
-  - video
-  - casos-de-uso
+  - priorizacion-y-casos-de-uso
   - ai-champions
   - madurez-ia
 estado: resumido-parcial

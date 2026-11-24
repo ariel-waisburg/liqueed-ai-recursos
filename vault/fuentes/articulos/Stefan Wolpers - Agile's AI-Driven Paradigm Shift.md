@@ -11,10 +11,7 @@ temas:
   - agilidad-e-ia
   - adopcion-ia
 tags:
-  - agilidad-e-ia
-  - adopcion-ia
-  - cultura
-  - articulo
+  - cultura-y-cambio
 estado: resumido
 publish: false
 ---

@@ -10,10 +10,8 @@ guardado: 2026-11-18
 temas:
   - agentes-y-evals
 tags:
-  - agentes-y-evals
-  - articulo-x
   - agent-engineering
-  - workflow
+  - workflows-con-agentes
   - costos-ia
 estado: resumido-parcial
 publish: false

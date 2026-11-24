@@ -11,10 +11,7 @@ temas:
   - adopcion-ia
   - gobernanza-ia
 tags:
-  - adopcion-ia
-  - gobernanza-ia
-  - experimentacion
-  - articulo
+  - experimentacion-y-prototipado
 estado: resumido-parcial
 publish: false
 ---
@@ -33,7 +30,7 @@ Cómo una organización de ingeniería de más de 100 personas, con restriccione
 - Presupuesto de experimentación de USD 200 por persona y pruebas limitadas a 4 semanas, con aprendizajes documentados.
 - Para adoptar en serio, un proceso más completo con legal, finanzas y seguridad.
 
-> [!note] Nota de captura
+> [!info] Sobre este resumen
 > El resumen cubre la primera parte del artículo.
 
 ## Relacionado

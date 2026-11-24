@@ -10,9 +10,7 @@ guardado: 2026-11-24
 temas:
   - desarrollo-agentico
 tags:
-  - desarrollo-agentico
-  - articulo-x
-  - workflow
+  - workflows-con-agentes
   - costos-ia
 estado: resumido-parcial
 publish: false

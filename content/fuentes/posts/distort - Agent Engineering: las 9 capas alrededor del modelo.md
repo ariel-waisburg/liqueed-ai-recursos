@@ -11,12 +11,9 @@ temas:
   - agentes-y-evals
   - desarrollo-agentico
 tags:
-  - agentes-y-evals
-  - desarrollo-agentico
   - agent-engineering
   - harness-engineering
   - context-engineering
-  - articulo-x
 estado: resumido-parcial
 publish: false
 ---
@@ -34,7 +31,7 @@ Mapa de las nueve capas que se construyen alrededor del modelo para que un agent
 - Agente: verificación (cómo sabe que terminó), loop (cómo corrige) y memoria (qué guarda entre corridas).
 - Sistema: harness (dónde corre), grafo (quién hace qué) y tokens (cuánto cuesta).
 
-> [!note] Nota de captura
+> [!info] Sobre este resumen
 > El resumen cubre la primera parte; el artículo cierra con un AGENT.md que integra las nueve capas.
 
 ## Relacionado

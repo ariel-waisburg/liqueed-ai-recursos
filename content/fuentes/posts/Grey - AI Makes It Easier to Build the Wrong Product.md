@@ -10,8 +10,7 @@ guardado: 2026-11-18
 temas:
   - producto-e-ia
 tags:
-  - producto-e-ia
-  - articulo-x
+  - experimentacion-y-prototipado
 estado: resumido-parcial
 publish: false
 ---
@@ -30,7 +29,7 @@ La IA abarata producir software, pero no abarata equivocarse: el tamaño de cada
 - 'Decision debt': la brecha creciente entre lo que se aprobó, lo que se construyó y lo que el equipo ya sabe que es cierto.
 - Propone entrega progresiva tipo 'skateboard' de Henrik Kniberg: rebanadas verticales que producen un resultado para el usuario y evidencia para la próxima decisión.
 
-> [!note] Nota de captura
+> [!info] Sobre este resumen
 > El resumen cubre la primera parte del artículo.
 
 ## Relacionado

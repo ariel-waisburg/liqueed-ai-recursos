@@ -10,8 +10,6 @@ guardado: 2026-11-24
 temas:
   - agentes-y-evals
 tags:
-  - agentes-y-evals
-  - articulo
   - agent-engineering
   - context-engineering
 estado: resumido

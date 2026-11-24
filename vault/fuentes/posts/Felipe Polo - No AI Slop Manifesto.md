@@ -11,11 +11,7 @@ temas:
   - pensamiento-critico
   - desarrollo-agentico
 tags:
-  - pensamiento-critico
-  - desarrollo-agentico
-  - ai-slop
-  - manifiesto
-  - articulo-x
+  - calidad-y-evals
 estado: resumido-parcial
 publish: false
 ---

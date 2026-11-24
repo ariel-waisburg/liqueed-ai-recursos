@@ -10,11 +10,9 @@ guardado: 2026-11-18
 temas:
   - desarrollo-agentico
 tags:
-  - desarrollo-agentico
   - harness-engineering
   - context-engineering
-  - spec-driven-development
-  - articulo
+  - workflows-con-agentes
 estado: resumido
 publish: false
 ---

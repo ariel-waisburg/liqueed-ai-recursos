@@ -10,10 +10,8 @@ guardado: 2026-11-24
 temas:
   - agilidad-e-ia
 tags:
-  - agilidad-e-ia
-  - articulo
-  - roles
-  - colaboracion
+  - roles-y-carrera
+  - cultura-y-cambio
 estado: resumido
 publish: false
 ---

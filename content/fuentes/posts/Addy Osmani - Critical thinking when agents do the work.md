@@ -11,9 +11,7 @@ temas:
   - pensamiento-critico
   - desarrollo-agentico
 tags:
-  - pensamiento-critico
-  - desarrollo-agentico
-  - articulo-x
+  - delegacion-y-supervision
 estado: resumido-parcial
 publish: false
 ---
@@ -36,7 +34,7 @@ Cómo sostener el pensamiento crítico cuando casi todo el trabajo pasa por agen
 - Regla de delegación: delegá entero donde equivocarse es barato; quedate con el razonamiento donde otros van a cargar con las consecuencias.
 - Preguntas que se hace: ¿formulé una hipótesis antes de preguntar? ¿le pido que me ayude a pensar o que piense por mí? ¿qué tendría que ser cierto para que esto esté mal? Si no tenés hipótesis, pedí una 'blind spot pass' (idea de Thariq Shihipar): darle lo que sabés para que encuentre lo que no sabés que no sabés.
 
-> [!note] Nota de captura
+> [!info] Sobre este resumen
 > Artículo largo (14 min): el resumen cubre la primera parte.
 
 ## Relacionado

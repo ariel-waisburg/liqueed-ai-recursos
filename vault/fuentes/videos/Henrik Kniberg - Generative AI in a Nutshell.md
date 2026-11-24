@@ -10,9 +10,7 @@ guardado: 2026-11-18
 temas:
   - adopcion-ia
 tags:
-  - adopcion-ia
   - fundamentos
-  - video
 estado: resumido-parcial
 publish: false
 ---

@@ -10,10 +10,8 @@ guardado: 2026-11-18
 temas:
   - fundamentos-ia
 tags:
-  - fundamentos-ia
   - mlops
-  - carrera
-  - curso
+  - roles-y-carrera
 estado: resumido
 publish: false
 ---
