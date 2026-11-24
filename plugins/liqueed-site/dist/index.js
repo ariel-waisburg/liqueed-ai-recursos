@@ -300,8 +300,15 @@ export default function LiqueedSite(userOpts = {}) {
                   : null,
                 jsx("link", { rel: "alternate", type: "application/rss+xml", title: o.siteTitle, href: rssUrl }),
                 jsx("link", { rel: "stylesheet", href: EXTRA_FONTS }),
-                // Favicon de Liqueed (el ojo). Va después del icon.png de Quartz, así el navegador usa este.
-                jsx("link", { rel: "icon", type: "image/svg+xml", href: `${relRoot(fileData?.slug)}/static/liqueed-icon.svg` }),
+                // Favicon de Liqueed. Quartz ya pone static/icon.png (logo oscuro, para pestañas claras);
+                // este va después y lo reemplaza por la versión blanca cuando el navegador está en modo oscuro.
+                jsx("link", {
+                  rel: "icon",
+                  type: "image/png",
+                  media: "(prefers-color-scheme: dark)",
+                  href: `${relRoot(fileData?.slug)}/static/icon-dark.png`,
+                }),
+                jsx("link", { rel: "apple-touch-icon", href: `${relRoot(fileData?.slug)}/static/icon.png` }),
               ],
             }),
         ],
