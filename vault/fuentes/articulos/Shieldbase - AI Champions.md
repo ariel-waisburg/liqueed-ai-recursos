@@ -1,0 +1,46 @@
+---
+title: "AI Champions: How to Cultivate Internal Advocates for Transformation"
+autor: "Shieldbase"
+tipo: articulo
+plataforma: "shieldbase.ai"
+url: "https://shieldbase.ai/blog/ai-champions-how-to-cultivate-internal-advocates-for-transformation"
+idioma: "en"
+publicado: ""
+guardado: 2026-11-18
+temas:
+  - adopcion-ia
+tags:
+  - adopcion-ia
+  - ai-champions
+  - articulo
+estado: resumido
+publish: false
+---
+
+# AI Champions: How to Cultivate Internal Advocates for Transformation
+
+**Shieldbase** · articulo · shieldbase.ai · [link](https://shieldbase.ai/blog/ai-champions-how-to-cultivate-internal-advocates-for-transformation)
+
+Temas: [[Adopción de IA en organizaciones]]
+
+## Por qué lo guardé
+_(completar)_
+
+## En una línea
+Qué son los AI champions y cómo cultivarlos dentro de una organización.
+
+## Ideas clave
+- Son personas internas que impulsan la adopción.
+- Muchas veces vienen de áreas no técnicas: finanzas, operaciones, marketing.
+- Bajan la resistencia cultural y traducen la IA en valor de negocio.
+- Se cultivan con formación práctica, reconocimiento, participación estratégica y apoyo ejecutivo.
+
+## Relacionado
+- [[Abundly - The Power of Anointing Gen AI Champions]]
+- [[Daan van Rossum - People copy people]]
+
+## Mis notas
+
+
+## Texto original
+_(Pegá acá el texto completo, o guardalo con el Web Clipper.)_

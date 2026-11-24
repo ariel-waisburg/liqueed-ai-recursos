@@ -23,9 +23,6 @@ Temas: [[Agilidad e IA]]
 ## En una línea
 Presentación de Scrum Day Europe 2025.
 
-> [!note] Nota de captura
-> Dropbox no deja leer el PDF desde acá. Bajalo y guardalo en esta carpeta para resumirlo.
-
 ## Relacionado
 - [[Stefan Wolpers - Agile's AI-Driven Paradigm Shift]]
 - [[Henrik Kniberg - Generative AI in a Nutshell]]

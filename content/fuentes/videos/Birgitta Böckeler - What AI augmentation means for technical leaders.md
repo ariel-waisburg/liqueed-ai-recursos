@@ -26,8 +26,5 @@ Temas: [[Desarrollo con agentes]] · [[Adopción de IA en organizaciones]]
 ## En una línea
 Charla para líderes técnicos sobre qué cambia con la IA aumentada.
 
-> [!note] Nota de captura
-> Falta la transcripción para resumirla.
-
 ## Relacionado
 - [[Birgitta Böckeler - Sitio personal]]

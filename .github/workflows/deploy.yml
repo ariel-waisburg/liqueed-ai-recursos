@@ -36,6 +36,8 @@ jobs:
         run: npm ci
       - name: Install Quartz plugins
         run: npx quartz plugin install
+      - name: Generar content/ desde vault/
+        run: python3 scripts/publicar.py vault content "Recursos de IA · Liqueed"
       - name: Build Quartz
         run: npx quartz build
       - name: Upload artifact
