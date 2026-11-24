@@ -11,9 +11,7 @@ temas:
   - desarrollo-agentico
   - pensamiento-critico
 tags:
-  - desarrollo-agentico
-  - pensamiento-critico
-  - articulo-x
+  - calidad-y-evals
 estado: resumido-parcial
 publish: false
 ---
@@ -31,7 +29,7 @@ El slop no es un problema de calidad del modelo: aparece cuando la generación n
 - Predice que el código va a ser cada vez menos legible para humanos, así que los revisores pegados al código (incluso otros modelos) pierden relevancia.
 - Ingeniería no es escribir código sino resolver problemas: el entregable pasa a ser el sistema para trabajar con IA (qué se especifica, qué se delega, qué se verifica y cuándo confiar).
 
-> [!note] Nota de captura
+> [!info] Sobre este resumen
 > El resumen cubre la primera parte; el resto propone cómo armar esa 'fábrica' sin slop.
 
 ## Relacionado

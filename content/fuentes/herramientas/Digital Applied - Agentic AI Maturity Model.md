@@ -11,10 +11,7 @@ temas:
   - adopcion-ia
   - agentes-y-evals
 tags:
-  - adopcion-ia
-  - agentes-y-evals
   - madurez-ia
-  - herramienta
 estado: resumido
 publish: false
 ---

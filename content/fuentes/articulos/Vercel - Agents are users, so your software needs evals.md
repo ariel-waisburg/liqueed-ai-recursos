@@ -10,8 +10,7 @@ guardado: 2026-11-18
 temas:
   - agentes-y-evals
 tags:
-  - agentes-y-evals
-  - articulo
+  - calidad-y-evals
 estado: resumido
 publish: false
 ---
@@ -30,9 +29,6 @@ Si los agentes usan tu software en nombre de las personas, hay que medir qué ta
 - Métricas: tasa de éxito; pass@k (¿puede hacerlo alguna vez?); pass^k (¿lo hace siempre?). La métrica depende de cuánto le cuesta el error al usuario.
 - Diseño de tareas: instrucción, entorno inicial fijo, verificador, edge cases y al menos un pedido donde lo correcto es negarse.
 - Leer las trazas, no solo los puntajes: los puntajes dicen cuánto falla, las trazas dicen por qué. Un 'pass' solo significa que el verificador quedó conforme.
-
-> [!note] Nota de captura
-> Usan Harbor, un framework open source para correr agentes en contenedores.
 
 ## Relacionado
 - [[Anthropic - Building always-on agents]]

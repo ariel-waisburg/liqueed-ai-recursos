@@ -12,11 +12,7 @@ temas:
   - desarrollo-agentico
   - producto-e-ia
 tags:
-  - fundamentos-ia
-  - desarrollo-agentico
-  - producto-e-ia
-  - learning-path
-  - curso
+  - formacion
 estado: resumido-parcial
 publish: false
 ---
@@ -34,7 +30,7 @@ Sitio abierto y gratuito con lecciones prácticas de ingeniería de IA, organiza
 - Ingeniería asistida por agentes: planificar, delegar, verificar y mejorar el trabajo.
 - Juicio de producto: resultados, riesgos, métricas y decisiones de entrega.
 
-> [!note] Nota de captura
+> [!info] Sobre este resumen
 > Resumen del índice de rutas; cada ruta tiene muchas lecciones que valen notas propias.
 
 ## Relacionado

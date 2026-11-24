@@ -11,11 +11,8 @@ temas:
   - adopcion-ia
   - desarrollo-agentico
 tags:
-  - adopcion-ia
-  - desarrollo-agentico
-  - curso
-  - forward-deployed-engineering
-  - learning-path
+  - roles-y-carrera
+  - formacion
   - consultoria-ia
 estado: resumido-parcial
 publish: false

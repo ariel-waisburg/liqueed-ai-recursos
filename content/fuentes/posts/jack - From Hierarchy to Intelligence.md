@@ -11,11 +11,8 @@ temas:
   - adopcion-ia
   - producto-e-ia
 tags:
-  - adopcion-ia
-  - producto-e-ia
-  - articulo-x
-  - roles
-  - arquitectura
+  - roles-y-carrera
+  - fundamentos
 estado: resumido-parcial
 publish: false
 ---

@@ -10,10 +10,8 @@ guardado: 2026-11-24
 temas:
   - desarrollo-agentico
 tags:
-  - desarrollo-agentico
-  - articulo
-  - workflow
-  - human-in-the-loop
+  - workflows-con-agentes
+  - delegacion-y-supervision
 estado: resumido-parcial
 publish: false
 ---

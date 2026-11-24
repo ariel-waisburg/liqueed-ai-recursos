@@ -10,10 +10,8 @@ guardado: 2026-11-18
 temas:
   - agentes-y-evals
 tags:
-  - agentes-y-evals
-  - caso-de-uso
-  - human-in-the-loop
-  - herramienta
+  - priorizacion-y-casos-de-uso
+  - delegacion-y-supervision
 estado: resumido
 publish: false
 ---

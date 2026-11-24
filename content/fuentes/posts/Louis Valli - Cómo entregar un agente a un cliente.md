@@ -10,9 +10,8 @@ guardado: 2026-11-18
 temas:
   - agentes-y-evals
 tags:
-  - agentes-y-evals
-  - post
   - consultoria-ia
+  - agent-engineering
 estado: resumido-parcial
 publish: false
 ---

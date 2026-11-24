@@ -10,10 +10,8 @@ guardado: 2026-11-24
 temas:
   - desarrollo-agentico
 tags:
-  - desarrollo-agentico
-  - articulo
-  - agent-skills
-  - workflow
+  - agent-engineering
+  - workflows-con-agentes
 estado: resumido
 publish: false
 ---

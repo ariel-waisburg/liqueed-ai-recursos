@@ -10,9 +10,7 @@ guardado: 2026-11-18
 temas:
   - adopcion-ia
 tags:
-  - adopcion-ia
   - fundamentos
-  - video
 estado: resumido-parcial
 publish: false
 ---
@@ -29,7 +27,7 @@ Explicación dibujada y para todo público de qué es la IA generativa y cómo a
 - Usa la metáfora de tener 'un Einstein en el sótano': un recurso enorme cuyo valor depende de cómo le pedís las cosas.
 - Pone el foco en aprender a dar buenas instrucciones y contexto (prompt engineering) como habilidad clave.
 
-> [!note] Nota de captura
+> [!info] Sobre este resumen
 > Resumen general sin transcripción: conviene pegar la transcripción para completarlo.
 
 ## Relacionado

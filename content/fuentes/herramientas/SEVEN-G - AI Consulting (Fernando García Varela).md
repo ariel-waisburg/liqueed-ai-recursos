@@ -11,9 +11,8 @@ temas:
   - gobernanza-ia
   - adopcion-ia
 tags:
-  - gobernanza-ia
-  - adopcion-ia
-  - herramienta
+  - madurez-ia
+  - priorizacion-y-casos-de-uso
 estado: resumido
 publish: false
 ---
@@ -34,5 +33,4 @@ Portal con metodologías abiertas para decidir dónde invertir en IA, gobernar c
 - Licencia CC BY 4.0 (contenido) y MIT (código); versión 0.x en revisión. Se puede instalar por cliente, útil para consultoras.
 
 ## Relacionado
-- [[Matías Faure - Matriz de uso aceptable de IA]]
 - [[Abundly - The Power of Anointing Gen AI Champions]]

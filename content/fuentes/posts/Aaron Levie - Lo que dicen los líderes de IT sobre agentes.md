@@ -11,10 +11,7 @@ temas:
   - adopcion-ia
   - agentes-y-evals
 tags:
-  - adopcion-ia
-  - agentes-y-evals
-  - post
-  - gestion-del-cambio
+  - cultura-y-cambio
   - costos-ia
 estado: resumido
 publish: false
