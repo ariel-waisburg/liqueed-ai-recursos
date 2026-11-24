@@ -5,3 +5,7 @@ public/
 
 # Basura de macOS
 .DS_Store
+
+# Plugins locales: Quartz los enlaza en .quartz/plugins y les crea node_modules/
+.quartz/
+plugins/*/node_modules/

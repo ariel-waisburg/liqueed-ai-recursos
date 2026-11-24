@@ -77,11 +77,11 @@ Asigná de 1 a 3 temas:
 En cada tema, agregá la fuente en **orden alfabético** dentro de `## Fuentes`:
 `- [[Archivo sin .md]]: en una línea _(estado)_`. El `_(estado)_` va solo si no es `resumido`. Si estás completando una nota que ya estaba, actualizá su línea existente en vez de duplicarla.
 
-**Tema nuevo:** si la fuente no encaja en ninguno, creá `vault/temas/<Nombre>.md` copiando la estructura de un tema existente (frontmatter con `title`, `tipo: tema`, `tags: [tema]`, `slug`, `publish: false`; H1; descripción de una línea; `## Fuentes`; `## Ideas propias`). Después agregá la fila a esta tabla, a la del `CLAUDE.md` de la raíz y a `vault/Inicio.md`, y avisá en el informe para que Ari lo confirme o lo fusione.
+**Tema nuevo:** si la fuente no encaja en ninguno, creá `vault/temas/<Nombre>.md` copiando la estructura de un tema existente (frontmatter con `title`, `tipo: tema`, `tags: []`, `slug`, `publish: false`; H1; descripción de una línea; `## Fuentes`; `## Ideas propias`). Después agregá la fila a esta tabla, a la del `CLAUDE.md` de la raíz y a `vault/Inicio.md`, y avisá en el informe para que Ari lo confirme o lo fusione.
 
 ## 6. Tags
 
-`tags` = slugs de los temas + `tipo` + de 1 a 3 conceptos de [tags.md](tags.md). Un concepto nuevo solo si no hay uno equivalente; si lo agregás, sumalo a `tags.md` con su definición y avisá en el informe.
+`tags` = **de 1 a 3 conceptos** del vocabulario controlado de [tags.md](tags.md). No pongas los temas ni el tipo en `tags` (ya están en `temas` y `tipo`). No inventes conceptos: si ninguno encaja, usá el más cercano y proponé el nuevo en el informe.
 
 ## 7. Relacionado
 
@@ -118,4 +118,4 @@ Decile a Ari, en pocas líneas:
 - Qué entró nuevo y qué se completó.
 - Qué quedó `resumido-parcial` o `pendiente-captura`, y qué hace falta para completarlo.
 - Qué links ya estaban.
-- Qué se creó: tipos, temas o tags nuevos.
+- Qué se creó: tipos o temas nuevos, y qué conceptos nuevos proponés para `tags.md`.

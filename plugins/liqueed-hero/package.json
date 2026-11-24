@@ -1,0 +1,22 @@
+{
+  "name": "liqueed-hero",
+  "version": "1.0.0",
+  "description": "Hero de la home de Recursos de IA de Liqueed (propuesta de valor y números)",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "exports": {
+    ".": { "import": "./dist/index.js" },
+    "./components": { "import": "./dist/components/index.js" }
+  },
+  "peerDependencies": { "preact": "^10.0.0" },
+  "quartz": {
+    "name": "liqueed-hero",
+    "displayName": "Liqueed: hero de la home",
+    "category": "component",
+    "quartzVersion": ">=5.0.0",
+    "components": {
+      "LiqueedHero": { "displayName": "Liqueed: hero de la home", "defaultPosition": "beforeBody", "defaultPriority": 1 }
+    }
+  }
+}
