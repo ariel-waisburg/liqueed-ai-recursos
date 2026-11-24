@@ -11,9 +11,8 @@ temas:
   - gobernanza-ia
   - adopcion-ia
 tags:
-  - gobernanza-ia
-  - adopcion-ia
-  - herramienta
+  - madurez-ia
+  - priorizacion-y-casos-de-uso
 estado: resumido
 publish: false
 ---

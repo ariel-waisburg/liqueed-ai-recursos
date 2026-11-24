@@ -10,9 +10,7 @@ guardado: 2026-11-18
 temas:
   - desarrollo-agentico
 tags:
-  - desarrollo-agentico
   - context-engineering
-  - articulo
 estado: resumido
 publish: false
 ---

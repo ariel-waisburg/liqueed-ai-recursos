@@ -1,8 +1,7 @@
 ---
 title: "Producto en la era de la IA"
 tipo: tema
-tags:
-  - tema
+tags: []
 slug: producto-e-ia
 publish: false
 ---

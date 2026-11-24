@@ -12,11 +12,7 @@ temas:
   - desarrollo-agentico
   - producto-e-ia
 tags:
-  - fundamentos-ia
-  - desarrollo-agentico
-  - producto-e-ia
-  - learning-path
-  - curso
+  - formacion
 estado: resumido-parcial
 publish: false
 ---

@@ -10,9 +10,7 @@ guardado: 2026-11-18
 temas:
   - producto-e-ia
 tags:
-  - producto-e-ia
-  - discovery
-  - articulo
+  - experimentacion-y-prototipado
 estado: resumido
 publish: false
 ---

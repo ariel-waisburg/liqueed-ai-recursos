@@ -11,11 +11,8 @@ temas:
   - adopcion-ia
   - agentes-y-evals
 tags:
-  - adopcion-ia
-  - agentes-y-evals
-  - roles
+  - roles-y-carrera
   - ai-champions
-  - articulo
 estado: resumido
 publish: false
 ---

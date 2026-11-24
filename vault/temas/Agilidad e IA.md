@@ -1,8 +1,7 @@
 ---
 title: "Agilidad e IA"
 tipo: tema
-tags:
-  - tema
+tags: []
 slug: agilidad-e-ia
 publish: false
 ---

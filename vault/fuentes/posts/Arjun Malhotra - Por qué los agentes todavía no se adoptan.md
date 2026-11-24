@@ -11,9 +11,7 @@ temas:
   - adopcion-ia
   - agentes-y-evals
 tags:
-  - adopcion-ia
-  - agentes-y-evals
-  - hilo
+  - errores-comunes
 estado: resumido
 publish: false
 ---

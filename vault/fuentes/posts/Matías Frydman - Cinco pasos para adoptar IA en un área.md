@@ -10,11 +10,8 @@ guardado: 2026-11-18
 temas:
   - adopcion-ia
 tags:
-  - adopcion-ia
-  - post
   - ai-champions
-  - casos-de-uso
-  - priorizacion
+  - priorizacion-y-casos-de-uso
 estado: resumido
 publish: false
 ---

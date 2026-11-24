@@ -1,8 +1,7 @@
 ---
 title: "Gobernanza de IA"
 tipo: tema
-tags:
-  - tema
+tags: []
 slug: gobernanza-ia
 publish: false
 ---

@@ -11,10 +11,7 @@ temas:
   - adopcion-ia
   - gobernanza-ia
 tags:
-  - adopcion-ia
-  - gobernanza-ia
-  - experimentacion
-  - articulo
+  - experimentacion-y-prototipado
 estado: resumido-parcial
 publish: false
 ---

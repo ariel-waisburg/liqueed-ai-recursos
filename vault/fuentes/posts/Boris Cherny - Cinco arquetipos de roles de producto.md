@@ -10,8 +10,7 @@ guardado: 2026-11-18
 temas:
   - producto-e-ia
 tags:
-  - producto-e-ia
-  - post
+  - roles-y-carrera
 estado: resumido
 publish: false
 ---

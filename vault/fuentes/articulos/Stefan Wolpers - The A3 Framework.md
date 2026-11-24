@@ -11,10 +11,7 @@ temas:
   - pensamiento-critico
   - agilidad-e-ia
 tags:
-  - pensamiento-critico
-  - agilidad-e-ia
-  - delegacion
-  - articulo
+  - delegacion-y-supervision
 estado: resumido
 publish: false
 ---

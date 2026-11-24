@@ -11,11 +11,8 @@ temas:
   - agentes-y-evals
   - adopcion-ia
 tags:
-  - agentes-y-evals
-  - adopcion-ia
-  - articulo-x
-  - workflow
-  - delegacion
+  - workflows-con-agentes
+  - delegacion-y-supervision
 estado: resumido-parcial
 publish: false
 ---

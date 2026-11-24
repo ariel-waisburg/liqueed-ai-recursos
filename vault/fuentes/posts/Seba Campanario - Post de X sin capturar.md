@@ -9,9 +9,7 @@ publicado: "2026-04-17"
 guardado: 2026-11-24
 temas:
   - desarrollo-agentico
-tags:
-  - desarrollo-agentico
-  - post
+tags: []
 estado: pendiente-captura
 publish: false
 ---

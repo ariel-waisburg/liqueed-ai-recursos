@@ -10,11 +10,9 @@ guardado: 2026-11-24
 temas:
   - adopcion-ia
 tags:
-  - adopcion-ia
-  - articulo
   - madurez-ia
   - ai-champions
-  - gestion-del-cambio
+  - cultura-y-cambio
 estado: resumido-parcial
 publish: false
 ---

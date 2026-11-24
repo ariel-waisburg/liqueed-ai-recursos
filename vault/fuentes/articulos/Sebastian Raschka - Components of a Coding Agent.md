@@ -11,10 +11,7 @@ temas:
   - desarrollo-agentico
   - fundamentos-ia
 tags:
-  - desarrollo-agentico
-  - fundamentos-ia
   - harness-engineering
-  - articulo
 estado: resumido
 publish: false
 ---

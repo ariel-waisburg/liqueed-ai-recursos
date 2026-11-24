@@ -10,10 +10,8 @@ guardado: 2026-11-24
 temas:
   - desarrollo-agentico
 tags:
-  - desarrollo-agentico
-  - post
-  - workflow
-  - guardrails
+  - workflows-con-agentes
+  - calidad-y-evals
 estado: resumido
 publish: false
 ---

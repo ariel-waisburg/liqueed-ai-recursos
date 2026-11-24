@@ -10,9 +10,7 @@ guardado: 2026-11-18
 temas:
   - adopcion-ia
 tags:
-  - adopcion-ia
-  - gestion-del-cambio
-  - articulo
+  - cultura-y-cambio
 estado: resumido
 publish: false
 ---

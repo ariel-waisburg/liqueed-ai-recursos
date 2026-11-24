@@ -11,10 +11,7 @@ temas:
   - adopcion-ia
   - pensamiento-critico
 tags:
-  - adopcion-ia
-  - pensamiento-critico
   - bienestar
-  - articulo
 estado: resumido-parcial
 publish: false
 ---

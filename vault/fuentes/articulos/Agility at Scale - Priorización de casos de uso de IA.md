@@ -11,11 +11,7 @@ temas:
   - gobernanza-ia
   - adopcion-ia
 tags:
-  - gobernanza-ia
-  - adopcion-ia
-  - casos-de-uso
-  - priorizacion
-  - articulo
+  - priorizacion-y-casos-de-uso
 estado: resumido
 publish: false
 ---

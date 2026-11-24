@@ -11,9 +11,7 @@ temas:
   - desarrollo-agentico
   - pensamiento-critico
 tags:
-  - desarrollo-agentico
-  - pensamiento-critico
-  - articulo-x
+  - calidad-y-evals
 estado: resumido-parcial
 publish: false
 ---

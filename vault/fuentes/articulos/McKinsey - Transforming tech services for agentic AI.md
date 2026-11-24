@@ -11,9 +11,6 @@ temas:
   - adopcion-ia
   - agentes-y-evals
 tags:
-  - adopcion-ia
-  - agentes-y-evals
-  - articulo
   - consultoria-ia
 estado: resumido-parcial
 publish: false

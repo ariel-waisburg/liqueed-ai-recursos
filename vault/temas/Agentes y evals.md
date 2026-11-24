@@ -1,8 +1,7 @@
 ---
 title: "Agentes y evals"
 tipo: tema
-tags:
-  - tema
+tags: []
 slug: agentes-y-evals
 publish: false
 ---

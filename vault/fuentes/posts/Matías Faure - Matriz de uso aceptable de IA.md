@@ -11,9 +11,7 @@ temas:
   - adopcion-ia
   - gobernanza-ia
 tags:
-  - adopcion-ia
-  - gobernanza-ia
-  - post
+  - delegacion-y-supervision
 estado: pendiente-captura
 publish: false
 ---

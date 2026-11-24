@@ -11,10 +11,7 @@ temas:
   - adopcion-ia
   - gobernanza-ia
 tags:
-  - adopcion-ia
-  - gobernanza-ia
   - madurez-ia
-  - herramienta
 estado: resumido
 publish: false
 ---

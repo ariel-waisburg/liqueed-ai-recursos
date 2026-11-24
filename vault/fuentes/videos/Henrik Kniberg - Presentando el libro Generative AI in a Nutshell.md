@@ -10,10 +10,8 @@ guardado: 2026-11-24
 temas:
   - fundamentos-ia
 tags:
-  - fundamentos-ia
-  - video
   - fundamentos
-  - learning-path
+  - formacion
 estado: resumido-parcial
 publish: false
 ---
