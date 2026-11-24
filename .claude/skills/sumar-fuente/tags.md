@@ -21,6 +21,7 @@ Antes de inventar un concepto, buscá uno equivalente en esta lista. Si no hay n
 | carrera | Trayectorias profesionales, contratación y compensación en roles ligados a la IA. |
 | casos-de-uso | Identificar, priorizar o describir casos de uso concretos de IA. |
 | colaboracion | Cómo trabajan juntas las personas, o personas y agentes, en un equipo. |
+| consultoria-ia | Cómo se venden, entregan y mantienen proyectos de IA para clientes. |
 | context-engineering | Gestión del contexto que recibe un modelo o un agente. |
 | costos-ia | Costo de usar modelos y agentes (tokens, gasto) y cómo bajarlo. |
 | cultura | Cultura organizacional y hábitos de trabajo frente a la IA. |

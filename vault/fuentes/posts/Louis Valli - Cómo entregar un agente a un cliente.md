@@ -12,7 +12,8 @@ temas:
 tags:
   - agentes-y-evals
   - post
-estado: pendiente-captura
+  - consultoria-ia
+estado: resumido-parcial
 publish: false
 ---
 
@@ -26,19 +27,20 @@ Temas: [[Agentes y evals]]
 _(completar)_
 
 ## En una línea
-Pregunta abierta: cuando un cliente te pide un agente de IA, ¿qué usás y dónde lo alojás?
+Pregunta abierta sobre cómo entregarle un agente de IA a un cliente (con qué herramientas y dónde alojarlo), con una respuesta destacada que propone tres modelos de entrega.
 
 ## Ideas clave
-- El valor está en las respuestas (más de 20), que no capturé.
-
-> [!note] Nota de captura
-> Para guardarlo bien, abrí el post y guardá las respuestas que te sirvan.
+- La pregunta de fondo no es técnica: es quién es dueño de la infraestructura y de las cuentas de IA, y si mantener el agente va a ser parte de tu negocio.
+- Modelo 1, llave en mano: te hacés cargo de todo (servidor, cuentas de IA, mantenimiento) y le vendés al cliente el servicio terminado.
+- Modelo 2, a nombre del cliente: armás la configuración en un servidor y en cuentas de IA que son del cliente, y cobrás aparte el mantenimiento.
+- Modelo 3, solución empaquetada: solo implementás una plataforma de agentes ya armada. Es más barato para el cliente y menos carga para vos si no querés vivir del mantenimiento.
 
 ## Relacionado
 - [[Anthropic - Building always-on agents]]
+- [[Gergely Orosz - Forward Deployed Engineers]]
 
 ## Mis notas
 
 
 ## Texto original
-_(Pegá acá el texto completo, o guardalo con el Web Clipper.)_
+_(Resumido a partir de la pregunta y de la respuesta más destacada que mostró X. No se leyó el resto de las respuestas.)_

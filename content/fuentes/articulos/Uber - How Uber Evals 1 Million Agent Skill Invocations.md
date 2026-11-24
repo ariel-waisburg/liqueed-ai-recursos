@@ -1,9 +1,9 @@
 ---
 title: "How Uber Evals 1 Million Agent Skill Invocations a Month"
-autor: "Uber Engineering"
-tipo: articulo-x
-plataforma: "X"
-url: "https://x.com/UberEng/status/2125008806249930999"
+autor: "Andrew Mager, Jason Varbedian y Uday Kiran Medisetty (Uber)"
+tipo: articulo
+plataforma: "uber.com"
+url: "https://www.uber.com/us/en/blog/optimizing-ubers-agent-skills/"
 idioma: "en"
 publicado: "2026-11-23"
 guardado: 2026-11-24
@@ -15,14 +15,14 @@ tags:
   - agentes-y-evals
   - desarrollo-agentico
   - adopcion-ia
-  - articulo-x
+  - articulo
   - agent-skills
   - costos-ia
 estado: resumido
 publish: false
 ---
 
-**Uber Engineering** · articulo-x · X · 2026-11-23 · [link](https://x.com/UberEng/status/2125008806249930999)
+**Andrew Mager, Jason Varbedian y Uday Kiran Medisetty (Uber)** · articulo · uber.com · 2026-11-23 · [link](https://www.uber.com/us/en/blog/optimizing-ubers-agent-skills/)
 
 Temas: [[Agentes y evals]] · [[Desarrollo con agentes]] · [[Adopción de IA en organizaciones]]
 

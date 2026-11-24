@@ -40,7 +40,7 @@ Sitio de la especificación abierta Agent Skills: un formato basado en carpetas 
 - Recomienda que el cuerpo tenga menos de 500 líneas y ofrece una herramienta para validar las skills.
 
 ## Relacionado
-- [[Uber Engineering - How Uber Evals 1 Million Agent Skill Invocations]]
+- [[Uber - How Uber Evals 1 Million Agent Skill Invocations]]
 - [[HumanLayer - Skill Issue: Harness Engineering]]
 - [[HumanLayer - Advanced Context Engineering for Coding Agents]]
 

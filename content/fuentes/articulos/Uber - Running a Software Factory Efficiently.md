@@ -36,6 +36,6 @@ Cómo Uber trata el costo de su "fábrica de software" con agentes como un probl
 - Cada agente gestionado tiene su propio benchmark con trabajo real, y se elige el modelo con mejor relación costo-calidad. Los subagentes usan un modelo más barato y el principal planifica y revisa. Además hay contador de costo en vivo y alertas por gasto.
 
 ## Relacionado
-- [[Uber Engineering - How Uber Evals 1 Million Agent Skill Invocations]]
+- [[Uber - How Uber Evals 1 Million Agent Skill Invocations]]
 - [[Cloudflare - Code Mode]]
 - [[David Zhang - Building software factories (with no slop)]]
