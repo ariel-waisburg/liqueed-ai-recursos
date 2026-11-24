@@ -19,6 +19,7 @@ Cómo las organizaciones y las personas adoptan IA: champions, barreras, uso ace
 - [[Daan van Rossum - People copy people]]: La adopción de IA se contagia entre pares: la gente copia lo que ve hacer a colegas de confianza.
 - [[Digital Applied - Agentic AI Maturity Model]]: Modelo de madurez de cinco etapas para la IA agéntica en empresas.
 - [[Félix López - Nuestra estrategia para la adopción de IA]]: Cómo una organización de ingeniería de más de 100 personas, con restricciones fuertes de datos y seguridad, se volvió 'AI First'. _(resumido-parcial)_
+- [[Gergely Orosz - Forward Deployed Engineers]]: Qué es el Forward Deployed Engineer, el ingeniero que trabaja dentro del cliente, y por qué las empresas de IA lo buscan para llevar sus modelos a casos reales. _(resumido-parcial)_
 - [[HBR - When Using AI Leads to Brain Fry]]: Usar y supervisar IA más allá de la capacidad cognitiva genera un agotamiento nuevo. _(resumido-parcial)_
 - [[Henrik Kniberg - Generative AI in a Nutshell]]: Explicación dibujada y para todo público de qué es la IA generativa y cómo aprovecharla. _(resumido-parcial)_
 - [[Hustle Badger - AI Maturity Model]]: Herramienta para medir qué tan preparada está una organización para usar IA.
@@ -31,6 +32,7 @@ Cómo las organizaciones y las personas adoptan IA: champions, barreras, uso ace
 - [[Stanton, Shriber y Rudat - What Top Performers Do Differently with AI]]: La IA no nivela automáticamente el desempeño: gana más quien arma sistemas alrededor de sus fortalezas y usa bien el tiempo que libera. _(resumido-parcial)_
 - [[Stefan Wolpers - Agile's AI-Driven Paradigm Shift]]: La IA cambia el trabajo ágil, pero el desafío principal es cultural, no técnico.
 - [[The Thinking Company - Marcos de transformación con IA]]: Suite de marcos de una consultora: madurez, preparación, gobierno, gestión del cambio y hoja de ruta. _(resumido-parcial)_
+- [[Uber Engineering - How Uber Evals 1 Million Agent Skill Invocations]]: Cómo Uber distribuye, evalúa y mejora más de 5.000 skills de agentes en toda la empresa.
 - [[Will Larson - Facilitating AI adoption at Imprint]]: Cómo una empresa encaró la adopción de IA como esfuerzo de toda la compañía, con líderes que construyen.
 - [[Writer - The AI Agent Owner]]: Los roles nuevos que aparecen cuando una empresa empieza a trabajar con agentes.
 

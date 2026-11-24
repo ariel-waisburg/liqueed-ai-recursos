@@ -1,0 +1,7 @@
+# Dependencias y archivos generados por el build: se regeneran solos
+node_modules/
+public/
+.quartz-cache/
+
+# Basura de macOS
+.DS_Store
