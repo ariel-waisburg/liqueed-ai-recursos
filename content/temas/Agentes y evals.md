@@ -10,12 +10,14 @@ Cómo se diseñan, evalúan y operan agentes.
 
 ## Fuentes
 
+- [[Aaron Levie - La mayoría de los flujos enterprise todavía no tiene agentes]]: El CEO de Box sostiene que la mayoría de los flujos enterprise todavía no tiene agentes de verdad, y que el salto viene de rediseñar procesos, no de prompts individuales.
 - [[Aaron Levie - Lo que dicen los líderes de IT sobre agentes]]: Lo que el CEO de Box escuchó de líderes de IT de grandes empresas: de la era del chat a los agentes, gestión del cambio, presupuestos de tokens y sistemas legados.
 - [[Abundly - Webinar Road to AI Agents in Your Organization]]: Webinar sobre cómo pasar del chat con IA a agentes que generan valor: dónde buscar casos de uso, el problema de la caja negra y de piloto a portfolio.
 - [[Abundly AI - Plataforma de agentes]]: Plataforma europea donde los equipos de negocio construyen sus propios agentes en lenguaje natural y IT pone los controles.
 - [[Agent Skills - Especificación abierta]]: Especificación abierta de Agent Skills: carpetas con instrucciones y scripts que un agente carga solo cuando las necesita.
 - [[angel - Graph Engineering con Opus 5]]: 14 pasos para pasar de agentes en fila a un grafo que reparte el trabajo entre varios agentes, verifica lo que sale y controla el costo.
 - [[Anthropic - Building always-on agents]]: Arquitectura de agentes con estado que trabajan solos en segundo plano: cuándo se despiertan, qué recuerdan y cómo le avisan al usuario.
+- [[Anthropic - Building effective agent automations]]: Patrones para agentes que corren solos con una agenda: un marcador por fuente, no confundir una lectura fallida con un día en calma, y confirmar el envío antes de registrarlo.
 - [[Anthropic - Effective context engineering for AI agents]]: Guía de Anthropic para elegir en cada paso la información mínima y útil que ve un agente, porque el contexto es un presupuesto de atención.
 - [[Anthropic - Harness design for long-running apps]]: Cómo Anthropic usa un planificador, un generador y un evaluador para que Claude construya apps completas en corridas de horas, y por qué simplificarlo cuando mejoran los modelos.
 - [[Arjun Malhotra - Por qué los agentes todavía no se adoptan]]: Ocho razones por las que los agentes no se masificaron aunque la tecnología ya esté lista.
@@ -26,12 +28,15 @@ Cómo se diseñan, evalúan y operan agentes.
 - [[Digital Applied - Agentic AI Maturity Model]]: Modelo de madurez de cinco etapas para la IA agéntica en empresas.
 - [[distort - Agent Engineering: las 9 capas alrededor del modelo]]: Mapa de las nueve capas que se construyen alrededor del modelo para que un agente trabaje bien sin supervisión.
 - [[John Suh - Agent platform of 2027]]: Visión de una plataforma de agentes como sistema operativo de la capa de aplicación: actores, filesystem compartido, inbox, listeners y apps que cada usuario modifica.
+- [[Kiran Prakash - Long-horizon agents and durable execution]]: Patrón de ejecución durable para agentes que trabajan días o semanas: recuperarse de una falla sin repetir pasos ni perder estado.
 - [[lauren - Automate Anything with Grok Bot]]: Cómo pensar una automatización con un bot (objetivo, proceso, criterio implícito, feedback y disparadores), contado para cualquier persona.
 - [[Louis Valli - Cómo entregar un agente a un cliente]]: Cómo entregarle un agente de IA a un cliente: tres modelos, desde llave en mano hasta una solución empaquetada.
+- [[Matteo Vaccari - Tests as data]]: Si la IA escribe código y tests, el contrato tiene que estar en datos de test legibles, no en el código de test que el agente puede cambiar.
 - [[McKinsey - Transforming tech services for agentic AI]]: La IA agéntica amenaza el negocio de los proveedores de servicios tecnológicos pero también les abre una oportunidad mayor, si reinventan su propuesta.
 - [[OpenAI - A practical guide to building agents]]: Guía práctica de OpenAI para diseñar y desplegar agentes.
 - [[Primo - Cómo evitamos que el AI slop arruine nuestros tests]]: Cómo un equipo argentino-mexicano les enseñó a sus agentes de código a escribir tests que valgan la pena.
 - [[roadmap.sh - AI Engineer Roadmap]]: Roadmap interactivo y comunitario para volverse AI engineer: LLMs, prompting, seguridad, embeddings, bases vectoriales, RAG, agentes, multimodal y MCP.
+- [[Santi - Cuándo usar un workflow y cuándo un agente]]: La diferencia entre un workflow y un agente está en quién decide el siguiente paso; autonomía solo cuando hace falta.
 - [[Santi - Harness Engineering explicado desde cero]]: Introducción desde cero al harness engineering: las piezas del sistema que rodea al modelo y por qué hay que medirlo y mejorarlo.
 - [[Uber - How Uber Evals 1 Million Agent Skill Invocations]]: Cómo Uber distribuye, evalúa y mejora más de 5.000 skills de agentes en toda la empresa.
 - [[Uber - Running a Software Factory Efficiently]]: Cómo Uber controla el costo de su fábrica de software con agentes sin frenar la adopción.
