@@ -4,8 +4,9 @@ autor: "Henrik Kniberg"
 tipo: video
 plataforma: "youtube.com"
 url: "https://www.youtube.com/watch?v=a2MmNFwZ5kQ"
+miniatura: "https://i.ytimg.com/vi/a2MmNFwZ5kQ/hqdefault.jpg"
 idioma: "en"
-publicado: ""
+publicado: "2025-03-23"
 guardado: 2026-11-24
 temas:
   - fundamentos-ia
@@ -16,7 +17,7 @@ estado: resumido-parcial
 publish: false
 ---
 
-**Henrik Kniberg** · video · youtube.com · [link](https://www.youtube.com/watch?v=a2MmNFwZ5kQ)
+**Henrik Kniberg** · video · youtube.com · 2025-03-23 · [link](https://www.youtube.com/watch?v=a2MmNFwZ5kQ)
 
 Temas: [[Fundamentos técnicos de IA]]
 
