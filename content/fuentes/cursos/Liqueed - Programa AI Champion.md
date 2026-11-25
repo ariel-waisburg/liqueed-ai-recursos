@@ -4,6 +4,8 @@ autor: "Liqueed"
 tipo: curso
 plataforma: "servicios.liqueed.org"
 url: "https://servicios.liqueed.org/ai-champion"
+miniatura: "https://servicios.liqueed.org/ai-champion-og-v6.png"
+proveedor: "Liqueed"
 idioma: "es"
 publicado: ""
 guardado: 2026-11-24
