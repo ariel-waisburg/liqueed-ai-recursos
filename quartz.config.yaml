@@ -6,7 +6,8 @@ configuration:
   enablePopovers: true
   locale: es-ES
   # GA4 de liqueed.org (G-1EWL68QK9C, visible en el HTML público del sitio).
-  # TODO(Ari): confirmar que este sitio debe medir en la misma propiedad, o reemplazar por otro ID.
+  # Mide en la propiedad "web liqueed" (514773822); en los reportes se separa por hostName = ariel-waisburg.github.io.
+  # No mide en localhost/127.0.0.1 (ver quartz/plugins/emitters/componentResources.ts).
   # Para apagar analytics: `analytics: null`.
   analytics:
     provider: google

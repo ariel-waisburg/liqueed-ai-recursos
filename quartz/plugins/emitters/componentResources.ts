@@ -103,25 +103,41 @@ function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentReso
   const analytics = cfg.analytics
 
   if (analytics?.provider === "google") {
+    // liqueed: no medir en desarrollo local (127.0.0.1 ensuciaba la propiedad de liqueed.org) y
+    // mandar un solo page_view por página: Quartz también dispara "nav" en la carga inicial, y
+    // según qué terminaba antes (gtag.js o "nav") la primera vista se contaba doble.
     componentResources.afterDOMLoaded.push(`
-      const tagId = ${js(analytics.tagId)};
-      const gtagScript = document.createElement('script');
-      gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(tagId);
-      gtagScript.defer = true;
-      gtagScript.onload = () => {
+      (function () {
+        const host = location.hostname;
+        const isLocal =
+          host === 'localhost' || host === '127.0.0.1' || host === '0.0.0.0' || host === '[::1]' ||
+          host.endsWith('.local') || location.protocol === 'file:';
+        if (isLocal || window.__quartzGtagInit) return;
+        window.__quartzGtagInit = true;
+
+        const tagId = ${js(analytics.tagId)};
         window.dataLayer = window.dataLayer || [];
         function gtag() {
-          dataLayer.push(arguments);
+          window.dataLayer.push(arguments);
         }
+        window.gtag = window.gtag || gtag;
         gtag('js', new Date());
         gtag('config', tagId, { send_page_view: false });
-        gtag('event', 'page_view', { page_title: document.title, page_location: location.href });
-        document.addEventListener('nav', () => {
-          gtag('event', 'page_view', { page_title: document.title, page_location: location.href });
-        });
-      };
 
-      document.head.appendChild(gtagScript);
+        let lastLocation = null;
+        const sendPageView = () => {
+          if (location.href === lastLocation) return;
+          lastLocation = location.href;
+          gtag('event', 'page_view', { page_title: document.title, page_location: location.href });
+        };
+        sendPageView();
+        document.addEventListener('nav', sendPageView);
+
+        const gtagScript = document.createElement('script');
+        gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(tagId);
+        gtagScript.async = true;
+        document.head.appendChild(gtagScript);
+      })();
     `)
   } else if (analytics?.provider === "plausible") {
     componentResources.afterDOMLoaded.push(`

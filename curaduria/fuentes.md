@@ -30,7 +30,7 @@ Límites del conector (al 24/11/2026): 30 lecturas por minuto y 1000 por día.
 
 | Referente | Feed o canal verificado | Último ítem al 24/11/2026 | Estado | Cadencia | Notas |
 |---|---|---|---|---|---|
-| Henrik Kniberg | YouTube RSS: https://www.youtube.com/feeds/videos.xml?channel_id=UCW0cG4zyFG8oKAlOom4KonQ | 22/04/2026 | confiable | Semanal | Blog de Abundly sin RSS: https://www.abundly.ai/blog (el sitemap https://www.abundly.ai/sitemap.xml no trae fechas). El feed de Crisp (https://blog.crisp.se/author/henrikkniberg/feed) está inactivo desde 2023. Publica mucho en LinkedIn, que no leemos. |
+| Henrik Kniberg | YouTube RSS: https://www.youtube.com/feeds/videos.xml?channel_id=UCW0cG4zyFG8oKAlOom4KonQ | 22/04/2026 | confiable | Semanal | El blog de Abundly, su empresa, tiene fila propia más abajo. El feed de Crisp (https://blog.crisp.se/author/henrikkniberg/feed) está inactivo desde 2023. Publica mucho en LinkedIn, que no leemos. |
 | Marty Cagan | https://www.svpg.com/feed/ | 06/11/2026 | confiable | Semanal | |
 | Roman Pichler | https://www.romanpichler.com/feed/ | 24/11/2026 | confiable | Semanal | Desde el box, curl da timeout: leer con web fetch. |
 | Aaron Levie | Sin blog ni feed. X: @levie (id `914061`) | 23/11/2026 (X) | confiable | Diaria (por la lista Tech) | Ya es miembro de la lista Tech. Publica posts largos de opinión sobre agentes en la empresa: casi siempre sin datos, por eso puntúan bajo en evidencia. |
@@ -39,10 +39,22 @@ Límites del conector (al 24/11/2026): 30 lecturas por minuto y 1000 por día.
 | Thinking Inc | Sin RSS. Sitemap: https://thinking.inc/sitemap-0.xml | Sin fecha por página (el sitemap tiene un único `lastmod`, 12/11/2026) | a prueba | Mensual | Detectar páginas nuevas comparando el sitemap con la corrida anterior; la fecha real está en el `datePublished` del JSON-LD de cada página. Contenido de consultora, orientado a SEO: verificar las estadísticas que cita antes de usarlas. Ya hay una ficha suya en el vault. |
 | Jurgen Appelo | https://substack.jurgenappelo.com/feed | 14/10/2026 | confiable | Semanal | La URL `jurgenappelo.substack.com/feed` da error ("invite-only"): usar la de arriba. |
 | Agility at Scale | https://agility-at-scale.com/feed/ | 22/11/2026 | a prueba | Semanal | Ari tiene que confirmar que es el sitio que quiso decir. Publica guías largas de gestión del cambio (ADKAR, Kotter, Cynefin), casi sin IA: ver la pregunta abierta en `rubrica.md`. |
+| Chip Huyen | https://huyenchip.com/feed.xml | 16/01/2025 | confiable | Mensual | Sumada por Ari el 24/11/2026. Publica poco pero en profundidad (AI Engineering, agentes, plataformas de IA generativa). No tiene newsletter activo (lo dice en su sitio). Su X (@chipro) no está en la lista Tech. |
+
+## Consultoras que valoramos (sumadas por Ari el 24/11/2026)
+
+Entran con la misma rúbrica que el resto: si son el mejor recurso del tema, aunque compitan con liqueed. Penalizar el tono de infomercial (casos de éxito propios sin datos, CTA a sus programas).
+
+| Consultora | Feed o método verificado | Último ítem al 24/11/2026 | Estado | Cadencia | Notas |
+|---|---|---|---|---|---|
+| Teamcubation / Booster AI | https://teamcubation.com/blog/feed/ | 05/10/2026 | a prueba | Semanal | Blog en español sobre adopción de IA y automatización en equipos de negocio. Booster AI es su programa (https://teamcubation.com/servicios/booster-ai/), no un sitio aparte: boosterai.com no responde. Vigilar el tono comercial. |
+| Thinking With You | https://thinkingwithyou.com/feed/ | 04/08/2026 | a prueba | Mensual | Consultora de cambio organizacional, en español. Publica poco y mezcla noticias propias (eventos, cursos) con contenido: filtrar las noticias. |
+| Runroom | Sin RSS. Sitemap: https://www.runroom.com/sitemap.xml (sin `lastmod`) y categoría https://www.runroom.com/es/realworld/categoria/adopcion-de-la-ia | 19/11/2026 | a prueba | Semanal | Sección "Realworld": artículos y podcast, en español e inglés. Detectar URLs nuevas de `/realworld/` comparando el sitemap con la corrida anterior; la fecha real está en el `datePublished` del JSON-LD de cada página. Usar la versión en español. |
+| Abundly AI (empresa de Henrik Kniberg) | Sin RSS. Sitemap: https://www.abundly.ai/sitemap.xml y listado https://www.abundly.ai/blog | 06/11/2026 | confiable | Mensual | El `lastmod` del sitemap no es la fecha de publicación (se reescribe al editar): la fecha real está en el `datePublished` de cada página. El listado del blog viene ordenado del más nuevo al más viejo. `/blog/rss.xml` devuelve HTML, no un feed. |
 
 ## Otras fuentes ya presentes en el vault (semilla, a prueba)
 
-Se suman al relevamiento cuando Ari lo confirme: martinfowler.com, Anthropic, HumanLayer, Abundly, Sebastian Raschka, Age of Product (Stefan Wolpers), McKinsey.
+Se suman al relevamiento cuando Ari lo confirme: martinfowler.com, Anthropic, HumanLayer, Sebastian Raschka, Age of Product (Stefan Wolpers), McKinsey.
 
 ## Pendientes
 
