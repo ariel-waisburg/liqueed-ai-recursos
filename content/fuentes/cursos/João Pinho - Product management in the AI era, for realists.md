@@ -14,6 +14,10 @@ temas:
 tags:
   - formacion
   - roles-y-carrera
+perfil:
+  - producto
+  - cultura-organizacion
+madurez: explorando
 estado: resumido
 publish: false
 ---

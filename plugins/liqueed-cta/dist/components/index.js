@@ -7,6 +7,10 @@ import { jsx, jsxs } from "preact/jsx-runtime"
  * Newsletter: embed oficial de Kit (form 7bc27ec38d). El script de Kit reemplaza el
  * <script data-uid> por el form, en el mismo lugar. En la navegación SPA de Quartz los
  * <script> nuevos no se ejecutan, así que plugins/liqueed-site lo vuelve a inicializar.
+ *
+ * hideOn: slugs donde el bloque no se muestra. En /lecturas-rapidas y /recorridos-recomendados el lead es
+ * la opción A (CTA suave "Agendá una conversación" + "Compartir con mi equipo", sin caja de email), que
+ * arma plugins/liqueed-explorar.
  */
 export const LiqueedCta = (opts = {}) => {
   const o = {
@@ -24,13 +28,15 @@ export const LiqueedCta = (opts = {}) => {
     kitSrc: "https://liqueed.kit.com/7bc27ec38d/index.js",
     newsletterTitle: "Sumate al newsletter de liqueed",
     newsletterText: "Novedades, recursos y aprendizajes sobre organizaciones e IA aplicada.",
+    hideOn: [],
     ...opts,
   }
   const link = (id, href, label, cls) =>
     jsx("a", { class: `liqueed-btn ${cls}`, href, "data-cta": id, target: "_blank", rel: "noopener", children: label })
 
-  const C = ({ displayClass }) =>
-    jsxs("aside", {
+  const hidden = new Set((o.hideOn ?? []).map(String))
+  const C = ({ displayClass, fileData }) =>
+    hidden.has(String(fileData?.slug ?? "")) ? null : jsxs("aside", {
       class: `liqueed-cta ${displayClass ?? ""}`,
       "aria-labelledby": "liqueed-cta-title",
       children: [

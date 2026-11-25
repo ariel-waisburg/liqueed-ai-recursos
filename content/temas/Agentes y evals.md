@@ -27,6 +27,7 @@ Cómo se diseñan, evalúan y operan agentes.
 - [[Cloudflare - Code Mode]]: En vez de llamar herramientas MCP una por una, el agente escribe código contra una API tipada que corre en un sandbox.
 - [[Digital Applied - Agentic AI Maturity Model]]: Modelo de madurez de cinco etapas para la IA agéntica en empresas.
 - [[distort - Agent Engineering: las 9 capas alrededor del modelo]]: Mapa de las nueve capas que se construyen alrededor del modelo para que un agente trabaje bien sin supervisión.
+- [[IMDA - Model AI Governance Framework for Agentic AI]]: Marco de gobierno para agentes: acotar riesgos, responsabilidad humana, controles técnicos y formación de quien los usa.
 - [[John Suh - Agent platform of 2027]]: Visión de una plataforma de agentes como sistema operativo de la capa de aplicación: actores, filesystem compartido, inbox, listeners y apps que cada usuario modifica.
 - [[Kiran Prakash - Long-horizon agents and durable execution]]: Patrón de ejecución durable para agentes que trabajan días o semanas: recuperarse de una falla sin repetir pasos ni perder estado.
 - [[lauren - Automate Anything with Grok Bot]]: Cómo pensar una automatización con un bot (objetivo, proceso, criterio implícito, feedback y disparadores), contado para cualquier persona.
@@ -34,6 +35,7 @@ Cómo se diseñan, evalúan y operan agentes.
 - [[Matteo Vaccari - Tests as data]]: Si la IA escribe código y tests, el contrato tiene que estar en datos de test legibles, no en el código de test que el agente puede cambiar.
 - [[McKinsey - Transforming tech services for agentic AI]]: La IA agéntica amenaza el negocio de los proveedores de servicios tecnológicos pero también les abre una oportunidad mayor, si reinventan su propuesta.
 - [[OpenAI - A practical guide to building agents]]: Guía práctica de OpenAI para diseñar y desplegar agentes.
+- [[OWASP - Top 10 2025 de riesgos para LLMs y aplicaciones de IA generativa]]: Los diez riesgos de seguridad más importantes en aplicaciones con LLMs y cómo mitigarlos, en español.
 - [[Primo - Cómo evitamos que el AI slop arruine nuestros tests]]: Cómo un equipo argentino-mexicano les enseñó a sus agentes de código a escribir tests que valgan la pena.
 - [[roadmap.sh - AI Engineer Roadmap]]: Roadmap interactivo y comunitario para volverse AI engineer: LLMs, prompting, seguridad, embeddings, bases vectoriales, RAG, agentes, multimodal y MCP.
 - [[Santi - Cuándo usar un workflow y cuándo un agente]]: La diferencia entre un workflow y un agente está en quién decide el siguiente paso; autonomía solo cuando hace falta.

@@ -14,6 +14,11 @@ tags:
   - calidad-y-evals
   - context-engineering
   - workflows-con-agentes
+perfil:
+  - tecnico
+madurez: escalando
+minutos: 35
+minutos_origen: medido
 estado: resumido
 publish: false
 ---

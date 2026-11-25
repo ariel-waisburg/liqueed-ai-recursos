@@ -12,6 +12,12 @@ temas:
   - adopcion-ia
 tags:
   - priorizacion-y-casos-de-uso
+perfil:
+  - producto
+  - cultura-organizacion
+madurez: experimentando
+minutos: 35
+minutos_origen: estimado
 estado: resumido
 publish: false
 ---

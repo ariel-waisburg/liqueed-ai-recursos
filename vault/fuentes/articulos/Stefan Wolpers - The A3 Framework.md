@@ -12,6 +12,11 @@ temas:
   - agilidad-e-ia
 tags:
   - delegacion-y-supervision
+perfil:
+  - cultura-organizacion
+madurez: experimentando
+minutos: 6
+minutos_origen: estimado
 estado: resumido
 publish: false
 ---

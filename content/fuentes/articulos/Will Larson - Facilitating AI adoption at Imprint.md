@@ -12,6 +12,12 @@ temas:
   - agentes-y-evals
 tags:
   - context-engineering
+perfil:
+  - tecnico
+  - cultura-organizacion
+madurez: escalando
+minutos: 15
+minutos_origen: medido
 estado: resumido
 publish: false
 ---

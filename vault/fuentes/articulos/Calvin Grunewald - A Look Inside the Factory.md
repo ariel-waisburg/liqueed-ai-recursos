@@ -14,6 +14,11 @@ tags:
   - harness-engineering
   - delegacion-y-supervision
   - workflows-con-agentes
+perfil:
+  - tecnico
+madurez: escalando
+minutos: 17
+minutos_origen: medido
 estado: resumido
 publish: false
 ---

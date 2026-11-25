@@ -13,6 +13,12 @@ temas:
 tags:
   - roles-y-carrera
   - ai-champions
+perfil:
+  - tecnico
+  - cultura-organizacion
+madurez: experimentando
+minutos: 15
+minutos_origen: medido
 estado: resumido
 publish: false
 ---

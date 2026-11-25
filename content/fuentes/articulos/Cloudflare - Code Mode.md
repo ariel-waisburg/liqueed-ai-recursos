@@ -12,6 +12,11 @@ temas:
 tags:
   - agent-engineering
   - context-engineering
+perfil:
+  - tecnico
+madurez: escalando
+minutos: 14
+minutos_origen: medido
 estado: resumido
 publish: false
 ---

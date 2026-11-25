@@ -13,6 +13,11 @@ tags:
   - madurez-ia
   - ai-champions
   - cultura-y-cambio
+perfil:
+  - cultura-organizacion
+madurez: experimentando
+minutos: 12
+minutos_origen: estimado
 estado: resumido-parcial
 publish: false
 ---

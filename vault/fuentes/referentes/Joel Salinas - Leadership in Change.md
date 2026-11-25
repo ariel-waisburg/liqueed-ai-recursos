@@ -13,6 +13,9 @@ temas:
 tags:
   - delegacion-y-supervision
   - cultura-y-cambio
+perfil:
+  - cultura-organizacion
+madurez: experimentando
 estado: resumido
 publish: false
 ---

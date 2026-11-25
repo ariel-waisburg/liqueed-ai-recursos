@@ -12,6 +12,11 @@ temas:
 tags:
   - consultoria-ia
   - agent-engineering
+perfil:
+  - tecnico
+madurez: escalando
+minutos: 2
+minutos_origen: estimado
 estado: resumido-parcial
 publish: false
 ---

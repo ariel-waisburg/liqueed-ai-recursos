@@ -14,6 +14,11 @@ temas:
 tags:
   - delegacion-y-supervision
   - roles-y-carrera
+perfil:
+  - cultura-organizacion
+madurez: experimentando
+minutos: 11
+minutos_origen: medido
 estado: resumido-parcial
 publish: false
 ---

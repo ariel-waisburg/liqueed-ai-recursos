@@ -13,6 +13,12 @@ temas:
 tags:
   - cultura-y-cambio
   - errores-comunes
+perfil:
+  - producto
+  - cultura-organizacion
+madurez: experimentando
+minutos: 9
+minutos_origen: medido
 estado: resumido
 publish: false
 ---

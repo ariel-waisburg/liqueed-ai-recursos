@@ -15,6 +15,10 @@ temas:
   - producto-e-ia
 tags:
   - formacion
+perfil:
+  - tecnico
+  - producto
+madurez: explorando
 estado: resumido-parcial
 publish: false
 ---

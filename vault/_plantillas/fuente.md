@@ -9,6 +9,10 @@ publicado: ""
 guardado: {{date:YYYY-MM-DD}}
 temas: []
 tags: []
+perfil: []
+madurez: ""
+minutos: 
+minutos_origen: ""
 estado: pendiente-captura
 publish: false
 ---

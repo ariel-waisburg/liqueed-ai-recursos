@@ -11,6 +11,11 @@ temas:
   - producto-e-ia
 tags:
   - experimentacion-y-prototipado
+perfil:
+  - producto
+madurez: experimentando
+minutos: 8
+minutos_origen: medido
 estado: resumido
 publish: false
 ---

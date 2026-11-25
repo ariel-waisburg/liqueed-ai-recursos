@@ -21,6 +21,8 @@ perfil:
 madurez: experimentando
 valor: caso
 esfuerzo: 30-90min
+minutos: 82
+minutos_origen: medido
 estado: resumido
 publish: false
 ---

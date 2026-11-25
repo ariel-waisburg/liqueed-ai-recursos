@@ -12,6 +12,11 @@ temas:
 tags:
   - workflows-con-agentes
   - costos-ia
+perfil:
+  - tecnico
+madurez: escalando
+minutos: 8
+minutos_origen: estimado
 estado: resumido-parcial
 publish: false
 ---

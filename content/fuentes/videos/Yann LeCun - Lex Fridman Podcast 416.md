@@ -13,6 +13,12 @@ temas:
 tags:
   - fundamentos
   - liderazgo
+perfil:
+  - tecnico
+  - cultura-organizacion
+madurez: explorando
+minutos: 167
+minutos_origen: medido
 estado: resumido
 publish: false
 ---

@@ -21,8 +21,12 @@ Qué hace:
 - Genera mapa.md: la página "Mapa de conexiones" (/mapa, grafo global a pantalla completa).
 - Genera explorar.md: la página "Explorar fichas" (la lista y los filtros los pone
   plugins/liqueed-explorar en el build).
+- Genera lecturas-rapidas.md y recorridos-recomendados.md: las páginas "Lecturas rápidas" y
+  "Recorridos recomendados" (los paquetes y los pasos salen de curaduria/lecturas.yaml y los
+  pone plugins/liqueed-explorar en el build).
 - Revisa las facetas de las fuentes publicadas (tipo, idioma, temas, tags) y avisa si hay
   valores fuera del vocabulario, para que los filtros de /explorar no se fragmenten.
+  También revisa perfil, madurez, minutos y minutos_origen (rubrica.md, sección 4).
 """
 import os, re, shutil, sys
 
@@ -176,6 +180,26 @@ Todas las fichas del repositorio y cómo se conectan entre sí, con los temas y 
 """
 open(os.path.join(OUT, "mapa.md"), "w", encoding="utf-8").write(MAPA)
 
+# 4c. "Lecturas rápidas" y "Recorridos recomendados": el contenido lo arma plugins/liqueed-explorar
+# (dist/lecturas.js) desde curaduria/lecturas.yaml. Aparecen en el menú lateral y en la home.
+LECTURAS = """---
+title: "Lecturas rápidas"
+description: "Paquetes de lecturas sobre IA aplicada que entran en 10, 15, 20 o 30 minutos, elegidas por liqueed para producto, equipos técnicos y cultura y RR. HH."
+---
+
+¿Tenés 10, 15 o 30 minutos? Elegimos pocas lecturas que entran en ese tiempo y dicen algo importante. Cada lectura muestra cuánto lleva la ficha (nuestro resumen en español) y cuánto lleva la fuente original. Empezá por tu perfil y, si querés, filtrá por tema.
+"""
+open(os.path.join(OUT, "lecturas-rapidas.md"), "w", encoding="utf-8").write(LECTURAS)
+
+RECORRIDOS = """---
+title: "Recorridos recomendados"
+description: "Secuencias de lecturas sobre IA aplicada pensadas por perfil (producto, técnico y CTO, cultura y RR. HH.) y por etapa de adopción, armadas por liqueed."
+---
+
+Un recorrido es una secuencia corta de lecturas, en un orden que tiene sentido para tu rol y para la etapa en la que está tu organización. Elegí tu perfil, seguí los pasos y marcá lo que ya leíste: el avance queda guardado en este navegador.
+"""
+open(os.path.join(OUT, "recorridos-recomendados.md"), "w", encoding="utf-8").write(RECORRIDOS)
+
 # 5. Facetas: avisar valores fuera del vocabulario (no frena la publicación)
 TIPOS = {"articulo", "post", "articulo-x", "hilo", "video", "libro", "guia", "curso",
          "herramienta", "presentacion", "referente"}
@@ -201,6 +225,22 @@ for rel, f, t in notes:
     for tema in frontmatter_list(t, "temas"):
         if tema not in TEMAS:
             warnings.append(f"{f}: tema '{tema}' no existe en temas/")
+PERFILES = {"tecnico", "producto", "cultura-organizacion"}
+MADUREZ = {"explorando", "experimentando", "escalando"}
+for rel, f, t in notes:
+    if rel.split(os.sep)[0] != "fuentes":
+        continue
+    for p in frontmatter_list(t, "perfil"):
+        if p not in PERFILES:
+            warnings.append(f"{f}: perfil '{p}' no es tecnico, producto ni cultura-organizacion")
+    mad = frontmatter_field(t, "madurez")
+    if mad and mad not in MADUREZ:
+        warnings.append(f"{f}: madurez '{mad}' no es explorando, experimentando ni escalando")
+    mins, origen = frontmatter_field(t, "minutos"), frontmatter_field(t, "minutos_origen")
+    if mins and not mins.isdigit():
+        warnings.append(f"{f}: minutos '{mins}' no es un número entero")
+    if mins and origen not in {"medido", "estimado"}:
+        warnings.append(f"{f}: minutos_origen tiene que ser medido o estimado")
 for w in warnings:
     print(f"aviso de facetas: {w}")
 

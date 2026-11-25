@@ -18,6 +18,8 @@ perfil:
 madurez: experimentando
 valor: framework
 esfuerzo: 10-30min
+minutos: 8
+minutos_origen: estimado
 estado: resumido
 publish: false
 ---

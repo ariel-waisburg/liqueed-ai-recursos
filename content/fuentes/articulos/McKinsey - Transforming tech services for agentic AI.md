@@ -12,6 +12,12 @@ temas:
   - agentes-y-evals
 tags:
   - consultoria-ia
+perfil:
+  - tecnico
+  - cultura-organizacion
+madurez: experimentando
+minutos: 12
+minutos_origen: estimado
 estado: resumido-parcial
 publish: false
 ---

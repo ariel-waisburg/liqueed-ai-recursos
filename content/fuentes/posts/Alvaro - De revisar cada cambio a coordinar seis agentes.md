@@ -11,6 +11,11 @@ temas:
   - desarrollo-agentico
 tags:
   - workflows-con-agentes
+perfil:
+  - tecnico
+madurez: experimentando
+minutos: 8
+minutos_origen: estimado
 estado: resumido-parcial
 publish: false
 ---

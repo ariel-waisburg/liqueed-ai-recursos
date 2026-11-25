@@ -12,6 +12,12 @@ temas:
   - agentes-y-evals
 tags:
   - madurez-ia
+perfil:
+  - tecnico
+  - cultura-organizacion
+madurez: experimentando
+minutos: 18
+minutos_origen: medido
 estado: resumido
 publish: false
 ---

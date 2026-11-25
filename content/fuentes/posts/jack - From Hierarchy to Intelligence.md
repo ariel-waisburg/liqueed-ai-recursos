@@ -13,6 +13,12 @@ temas:
 tags:
   - roles-y-carrera
   - fundamentos
+perfil:
+  - producto
+  - cultura-organizacion
+madurez: explorando
+minutos: 8
+minutos_origen: estimado
 estado: resumido-parcial
 publish: false
 ---

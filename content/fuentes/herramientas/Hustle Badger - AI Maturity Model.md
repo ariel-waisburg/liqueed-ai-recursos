@@ -12,6 +12,12 @@ temas:
   - gobernanza-ia
 tags:
   - madurez-ia
+perfil:
+  - producto
+  - cultura-organizacion
+madurez: explorando
+minutos: 10
+minutos_origen: estimado
 estado: resumido
 publish: false
 ---

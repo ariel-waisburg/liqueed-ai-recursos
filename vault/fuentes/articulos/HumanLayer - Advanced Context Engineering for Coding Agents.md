@@ -11,6 +11,11 @@ temas:
   - desarrollo-agentico
 tags:
   - context-engineering
+perfil:
+  - tecnico
+madurez: escalando
+minutos: 17
+minutos_origen: medido
 estado: resumido
 publish: false
 ---

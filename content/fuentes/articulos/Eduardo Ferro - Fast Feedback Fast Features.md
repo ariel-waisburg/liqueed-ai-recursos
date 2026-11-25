@@ -12,6 +12,12 @@ temas:
 tags:
   - calidad-y-evals
   - experimentacion-y-prototipado
+perfil:
+  - tecnico
+  - producto
+madurez: escalando
+minutos: 13
+minutos_origen: medido
 estado: resumido
 publish: false
 ---

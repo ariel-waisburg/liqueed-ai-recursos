@@ -24,10 +24,12 @@ Cómo las organizaciones y las personas adoptan IA: champions, barreras, uso ace
 - [[Arjun Malhotra - Por qué los agentes todavía no se adoptan]]: Ocho razones por las que los agentes no se masificaron aunque la tecnología ya esté lista.
 - [[BCG - The AI Adoption Puzzle]]: Por qué crece el uso de IA pero no el impacto: cinco etapas de adopción, cinco perfiles de empleados y cuatro recomendaciones para líderes. _(resumido-parcial)_
 - [[Birgitta Böckeler - What AI augmentation means for technical leaders]]: Charla para líderes técnicos sobre qué cambia con la IA aumentada. _(pendiente-captura)_
+- [[Comisión Europea - Ley de IA]]: Página oficial del Reglamento europeo de IA: niveles de riesgo, obligaciones y calendario actualizado tras el AI Omnibus.
 - [[Daan van Rossum - People copy people]]: La adopción de IA se contagia entre pares: la gente copia lo que ve hacer a colegas de confianza.
 - [[Dan Shipper - We need to change how we measure AI]]: Con la misma encuesta y los mismos modelos, cada persona de un equipo encontró algo distinto: propone medir la IA por qué tan bien hace el trabajo de cada uno.
 - [[Digital Applied - Agentic AI Maturity Model]]: Modelo de madurez de cinco etapas para la IA agéntica en empresas.
 - [[Félix López - Nuestra estrategia para la adopción de IA]]: Cómo una organización de ingeniería de más de 100 personas, con restricciones fuertes de datos y seguridad, se organizó para ser "AI First".
+- [[GDS - AI Playbook for the UK Government]]: Diez principios y un modelo de responsabilidades para usar IA de forma segura en una gran organización. _(resumido-parcial)_
 - [[Gergely Orosz - Forward Deployed Engineers]]: Qué es el Forward Deployed Engineer, el ingeniero que trabaja dentro del cliente, y por qué las empresas de IA lo buscan para llevar sus modelos a casos reales. _(resumido-parcial)_
 - [[HBR - When Using AI Leads to Brain Fry]]: Usar y supervisar IA más allá de la capacidad cognitiva genera un agotamiento nuevo. _(resumido-parcial)_
 - [[Henrik Kniberg - Generative AI in a Nutshell]]: Video dibujado y para todo público de qué es la IA generativa, cómo funciona un LLM y cómo usarla con criterio.

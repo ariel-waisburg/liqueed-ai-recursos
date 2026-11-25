@@ -3,6 +3,8 @@ import { buildModel, fichaFacets, FACETAS, tipoLabel, idiomaLabel, relHref, sinT
 import { jsonLdFor, safeJson } from "../jsonld.js"
 import { EXPLORAR_JS } from "../cliente.js"
 import { MAPA_JS } from "../mapa.js"
+import { LecturasRapidas, Recorridos, LECTURAS_SLUG, RECORRIDOS_SLUG, fuenteLabel, minLabel } from "../lecturas.js"
+import { LECTURAS_JS } from "../lecturas-cliente.js"
 
 /**
  * LiqueedExplorar (debajo del contenido de cada página):
@@ -13,6 +15,9 @@ import { MAPA_JS } from "../mapa.js"
  * - En páginas de tema y de tag: link a Explorar con ese filtro ya puesto.
  * - En /mapa, fichas y temas: link "Ver … en el mapa de conexiones" (abre la Vista Gráfica global;
  *   sin JS lleva a /mapa). JS en dist/mapa.js.
+ * - En /lecturas-rapidas y /recorridos-recomendados: paquetes y recorridos de curaduria/lecturas.yaml
+ *   (dist/lecturas.js, JS en dist/lecturas-cliente.js).
+ * - En fichas: minutos de lectura de la ficha y de la fuente original.
  * Estilos en quartz/styles/custom.scss.
  */
 
@@ -21,6 +26,8 @@ const DEFAULTS = {
   // Mismo texto que plugins/liqueed-site (descripción del sitio para buscadores y agentes).
   summary:
     "Repositorio vivo y curado por liqueed con fuentes validadas sobre inteligencia artificial aplicada: adopción de IA en organizaciones, producto, desarrollo con agentes, evals, gobernanza y fundamentos. Cada ficha resume una fuente externa (autor, fecha, link original) con sus ideas clave, en español.",
+  // "Agendá una conversación" (mismo link que liqueed-cta y servicios.liqueed.org/ia).
+  agendaUrl: "https://calendar.app.google/CAiHee2GU6LagupaA",
   explorarDesc: "Todas las fichas del repositorio, filtrables por tipo de recurso, idioma, tema y concepto.",
 }
 
@@ -78,6 +85,7 @@ function FichaItem({ f, from, temaByKey }) {
             meta.join(" · "),
             // Fecha del recurso (no la de carga en el repo); sin fecha real, no se muestra.
             f.fecha ? [" · ", jsx("time", { class: "lx-fecha", dateTime: f.fecha.iso, children: f.fecha.label })] : null,
+            f.minutos ? ` · Fuente: ${f.minutos} min${f.minutosOrigen === "estimado" ? " (estimado)" : ""}` : null,
           ],
         }),
         f.linea ? jsx("p", { class: "lx-linea", children: f.linea }) : null,
@@ -177,6 +185,14 @@ const MAPA_ICON = jsx("svg", {
   children: jsx("path", { fill: "none", stroke: "currentColor", "stroke-width": 2, "stroke-linecap": "round", d: "M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" }),
 })
 
+/** Minutos de lectura en la página de una ficha. */
+function TiemposFicha({ slug, model }) {
+  const f = model.fichas.find((x) => x.slug === slug)
+  if (!f) return null
+  const parts = [f.minutosFicha ? `Leer esta ficha: ${minLabel(f.minutosFicha)}` : null, fuenteLabel(f)?.replace(/^Fuente:/, "Fuente original:")].filter(Boolean)
+  return parts.length ? jsx("p", { class: "lq-tiempos", children: parts.join(" · ") }) : null
+}
+
 /** Link que abre el mapa de conexiones (grafo global). */
 function MapaLink({ slug, origen, label, cls = "" }) {
   return jsxs("a", {
@@ -221,7 +237,13 @@ export const LiqueedExplorar = (opts = {}) => {
           ? jsx(Explorar, { model, slug })
           : slug === "mapa"
             ? jsx(Mapa, { slug, model })
-            : jsx(ExplorarLink, { slug, model }),
+            : slug === LECTURAS_SLUG
+              ? jsx(LecturasRapidas, { model, slug, cfg, o })
+              : slug === RECORRIDOS_SLUG
+                ? jsx(Recorridos, { model, slug, cfg, o })
+                : jsx(ExplorarLink, { slug, model }),
+        // Fichas: cuánto lleva leer la ficha y la fuente original.
+        slug.startsWith("fuentes/") && !slug.endsWith("index") ? jsx(TiemposFicha, { slug, model }) : null,
         // Fichas y temas: dónde encaja esta página en el mapa de conexiones.
         slug.startsWith("fuentes/") && !slug.endsWith("index")
           ? jsx("p", { class: "lq-mapa-en-pagina", children: jsx(MapaLink, { slug, origen: "ficha", label: "Ver esta ficha en el mapa de conexiones" }) })
@@ -231,6 +253,6 @@ export const LiqueedExplorar = (opts = {}) => {
       ],
     })
   }
-  C.afterDOMLoaded = EXPLORAR_JS + MAPA_JS
+  C.afterDOMLoaded = EXPLORAR_JS + MAPA_JS + LECTURAS_JS
   return C
 }

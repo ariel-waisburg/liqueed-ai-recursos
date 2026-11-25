@@ -5,6 +5,8 @@ Configuración de curaduría que leen las corridas automáticas de Faro (el bot 
 | Archivo | Qué tiene |
 |---|---|
 | [rubrica.md](rubrica.md) | Filtros de entrada, rúbrica con pesos y umbrales, señales de alerta, campos de etiquetado para el ICP y reglas del digest. |
+| [lecturas.yaml](lecturas.yaml) | Paquetes de **Lecturas rápidas** y **Recorridos recomendados**. Es la única excepción: el build lo lee para armar esas dos páginas, `llms.txt` y `recorridos.json`. |
+| [revision-perfil-madurez.md](revision-perfil-madurez.md) | Perfiles y madureces asignados en lote a fichas existentes, para que Ari los revise. |
 | [fuentes.md](fuentes.md) | Registro de fuentes: la lista de X "Tech" y los referentes con su feed verificado, estado y cadencia. |
 | `digests/` | Un archivo por digest semanal (`AAAA-MM-DD.md`), con las candidatas y lo que decidió Ari. |
 
@@ -23,6 +25,13 @@ Configuración de curaduría que leen las corridas automáticas de Faro (el bot 
 - Voz de las fichas: "nosotros" (liqueed). Una ficha se puede publicar sin "Por qué lo guardé".
 - Volumen: calidad antes que cantidad. Mínimo 3 por semana; pueden ser 10 a 15 si lo valen.
 - Posts sueltos de X: pendiente. Por ahora, solo lo que linkea a algo más profundo, más hasta 3 hilos "posibles".
+
+## Decisiones aprobadas por Ari (25/11/2026)
+
+- Lecturas rápidas y recorridos recomendados: se muestran los dos tiempos (ficha y fuente); el perfil es la entrada principal y el tema, un filtro.
+- Lead en esas páginas: **opción A**, CTA suave "Agendá una conversación" + "Compartir con mi equipo", **sin caja de email**.
+- Armado **híbrido**: Faro propone paquetes y recorridos en el digest del lunes y Ari aprueba antes de publicar.
+- **Gobernanza** es el tema prioritario para sumar fichas.
 
 ## Reglas de marca que aplican a todo lo que se escribe
 

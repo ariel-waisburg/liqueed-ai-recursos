@@ -12,6 +12,12 @@ temas:
 tags:
   - priorizacion-y-casos-de-uso
   - delegacion-y-supervision
+perfil:
+  - tecnico
+  - producto
+madurez: experimentando
+minutos: 5
+minutos_origen: estimado
 estado: resumido
 publish: false
 ---

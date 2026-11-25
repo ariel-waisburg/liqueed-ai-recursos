@@ -11,6 +11,11 @@ temas:
   - adopcion-ia
 tags:
   - ai-champions
+perfil:
+  - cultura-organizacion
+madurez: experimentando
+minutos: 5
+minutos_origen: medido
 estado: resumido
 publish: false
 ---

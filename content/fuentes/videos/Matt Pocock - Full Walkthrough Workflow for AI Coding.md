@@ -15,6 +15,11 @@ tags:
   - workflows-con-agentes
   - context-engineering
   - formacion
+perfil:
+  - tecnico
+madurez: explorando
+minutos: 97
+minutos_origen: medido
 estado: resumido
 publish: false
 ---

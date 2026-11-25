@@ -13,6 +13,12 @@ temas:
 tags:
   - agent-engineering
   - calidad-y-evals
+perfil:
+  - tecnico
+  - producto
+madurez: escalando
+minutos: 40
+minutos_origen: medido
 estado: resumido-parcial
 publish: false
 ---

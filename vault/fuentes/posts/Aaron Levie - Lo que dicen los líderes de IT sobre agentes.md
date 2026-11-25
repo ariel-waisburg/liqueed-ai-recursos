@@ -13,6 +13,12 @@ temas:
 tags:
   - cultura-y-cambio
   - costos-ia
+perfil:
+  - tecnico
+  - cultura-organizacion
+madurez: experimentando
+minutos: 2
+minutos_origen: estimado
 estado: resumido
 publish: false
 ---
