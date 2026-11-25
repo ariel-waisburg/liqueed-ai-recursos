@@ -1,11 +1,11 @@
 ---
 title: "Programa AI Champion en CABA"
-autor: "Liqueed"
+autor: "liqueed"
 tipo: curso
 plataforma: "servicios.liqueed.org"
 url: "https://servicios.liqueed.org/ai-champion"
 miniatura: "https://servicios.liqueed.org/ai-champion-og-v6.png"
-proveedor: "Liqueed"
+proveedor: "liqueed"
 idioma: "es"
 publicado: ""
 guardado: 2026-11-24
@@ -20,7 +20,7 @@ publish: false
 
 # Programa AI Champion en CABA
 
-**Liqueed** · curso · servicios.liqueed.org · [link](https://servicios.liqueed.org/ai-champion)
+**liqueed** · curso · servicios.liqueed.org · [link](https://servicios.liqueed.org/ai-champion)
 
 Temas: [[Adopción de IA en organizaciones]]
 

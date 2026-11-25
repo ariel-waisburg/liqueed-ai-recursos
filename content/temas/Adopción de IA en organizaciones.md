@@ -32,7 +32,7 @@ Cómo las organizaciones y las personas adoptan IA: champions, barreras, uso ace
 - [[Joel Salinas y Jurgen Appelo - The 5 Steps to Lean AI]]: Antes de automatizar algo con IA, preguntarse si tiene que existir: eliminar, simplificar, amplificar, automatizar y recién al final delegar.
 - [[John Cutler - TBM 420 The AI Playbook Puzzle]]: La IA amplifica las prácticas que ya existen: el trabajo es separar las que estaban rotas, las buenas y las que solo tenían sentido con restricciones viejas.
 - [[lauren - Automate Anything with Grok Bot]]: Cómo pensar una automatización con un bot (objetivo, proceso, criterio implícito, feedback y disparadores), contado para cualquier persona.
-- [[Liqueed - Programa AI Champion]]: Programa presencial de dos días para formar AI Champions que conviertan experimentos sueltos con IA en prácticas repetibles del equipo.
+- [[liqueed - Programa AI Champion]]: Programa presencial de dos días para formar AI Champions que conviertan experimentos sueltos con IA en prácticas repetibles del equipo.
 - [[Matías Frydman - Cinco pasos para adoptar IA en un área]]: Aprender primero, nombrar champions, elegir un proceso que duela, llevarlo al 95% y escalar lo que funciona.
 - [[McKinsey - Reconfigurar el trabajo con IA generativa]]: Adoptar IA generativa es fácil; convertirla en valor sostenido requiere gestionar el cambio.
 - [[McKinsey - Transforming tech services for agentic AI]]: La IA agéntica amenaza el negocio de los proveedores de servicios tecnológicos pero también les abre una oportunidad mayor, si reinventan su propuesta.

@@ -1,5 +1,5 @@
 ---
-title: "Recursos de IA · Liqueed"
+title: "Recursos de IA · liqueed"
 publish: false
 ---
 

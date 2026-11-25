@@ -17,11 +17,11 @@ export const LiqueedBrand = (opts = {}) => {
       href,
       "data-cta": "brand_logo",
       children: [
-        // Logo oficial (ojo de Liqueed) y su versión blanca para el modo oscuro.
+        // Logo oficial (ojo de liqueed) y su versión blanca para el modo oscuro.
         jsx("img", {
           class: "liqueed-logo-light",
           src: `${pathToRoot(fileData?.slug)}/static/liqueed-logo.svg`,
-          alt: opts.label ?? "Liqueed",
+          alt: opts.label ?? "liqueed",
           width: 57,
           height: 48,
         }),

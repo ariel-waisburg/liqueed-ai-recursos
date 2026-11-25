@@ -27,7 +27,10 @@ import os, re, shutil, sys
 
 VAULT = sys.argv[1] if len(sys.argv) > 1 else "vault"
 OUT = sys.argv[2] if len(sys.argv) > 2 else "content"
-TITLE = sys.argv[3] if len(sys.argv) > 3 else "Recursos de IA · Liqueed"
+TITLE = sys.argv[3] if len(sys.argv) > 3 else "Recursos de IA · liqueed"
+# Regla de marca: "liqueed" siempre en minúscula, aunque el título llegue por argumento
+# (p. ej. desde .github/workflows/deploy.yml) con mayúscula.
+TITLE = re.sub(r"\bliqueed\b", "liqueed", TITLE, flags=re.I)
 
 SKIP_DIRS = {"00-inbox", "_plantillas", ".obsidian", ".trash"}
 SKIP_FILES = {"CLAUDE.md", "README.md"}

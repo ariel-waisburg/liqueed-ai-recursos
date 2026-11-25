@@ -91,6 +91,49 @@ export function isoDate(v) {
   return m ? m[1] : null
 }
 
+// ---------- fecha del recurso (publicado) para mostrar ----------
+
+const MESES_CORTOS = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sept", "oct", "nov", "dic"]
+
+/**
+ * Fecha del recurso a partir de `publicado`. Devuelve null si no hay fecha real.
+ * - `date`: Date para Quartz (listados y fichas). Las fechas con solo mes o año llevan un milisegundo
+ *   "marca" (7 = mes, 8 = año) para que el CSS de liqueed-explorar muestre "sept 2025" o "2025"
+ *   en lugar de un día inventado.
+ * - `label`: texto en español ("22 mar 2026", "sept 2025", "2025").
+ */
+export function fechaRecurso(v) {
+  const raw = v instanceof Date ? v.toISOString().slice(0, 10) : String(v ?? "").trim()
+  let m = raw.match(/^(\d{4})-(\d{2})-(\d{2})(?!\d)/)
+  if (m) {
+    const [y, mo, d] = [+m[1], +m[2], +m[3]]
+    return { iso: m[0], precision: "dia", date: new Date(Date.UTC(y, mo - 1, d, 12)), label: `${String(d).padStart(2, "0")} ${MESES_CORTOS[mo - 1]} ${y}` }
+  }
+  m = raw.match(/^(\d{4})-(\d{2})(?![\d-])/)
+  if (m) {
+    const [y, mo] = [+m[1], +m[2]]
+    return { iso: m[0], precision: "mes", date: new Date(Date.UTC(y, mo - 1, 15, 12, 0, 0, 7)), label: `${MESES_CORTOS[mo - 1]} ${y}` }
+  }
+  m = raw.match(/^(\d{4})(?![\d-])/)
+  if (m) {
+    const y = +m[1]
+    return { iso: m[0], precision: "anio", date: new Date(Date.UTC(y, 6, 1, 12, 0, 0, 8)), label: String(y) }
+  }
+  return null
+}
+
+/** CSS que reescribe en pantalla las fechas de solo mes/año que Quartz formatea con día. */
+export function fechasParcialesCss(fichas) {
+  const seen = new Map()
+  for (const f of fichas) {
+    const fr = fechaRecurso(f.publicadoRaw ?? f.publicado)
+    if (fr && fr.precision !== "dia") seen.set(fr.date.toISOString(), fr.label)
+  }
+  return [...seen]
+    .map(([iso, label]) => `time[datetime="${iso}"]{font-size:0}time[datetime="${iso}"]::after{content:"${label}";font-size:var(--lq-date-size, 1rem)}`)
+    .join("")
+}
+
 export function sinTildes(s) {
   return String(s ?? "")
     .normalize("NFD")
@@ -195,6 +238,8 @@ export function fichaFromFile(f) {
     miniatura: /^https?:\/\//.test(oneLine(fm.miniatura)) ? oneLine(fm.miniatura) : null,
     proveedor: oneLine(fm.proveedor) || null,
     publicado: isoDate(fm.publicado),
+    publicadoRaw: fm.publicado ?? null,
+    fecha: fechaRecurso(fm.publicado),
     guardado: isoDate(fm.guardado),
     temas: list(fm.temas),
     tags: list(fm.tags),
@@ -212,7 +257,8 @@ export function buildModel(allFiles) {
   const fichas = files
     .filter(isFicha)
     .map(fichaFromFile)
-    .sort((a, b) => (b.guardado ?? "").localeCompare(a.guardado ?? "") || a.title.localeCompare(b.title, "es"))
+    // Fecha del recurso (publicado) descendente; las fichas sin fecha, al final y por título.
+    .sort((a, b) => (b.fecha?.date.getTime() ?? -Infinity) - (a.fecha?.date.getTime() ?? -Infinity) || a.title.localeCompare(b.title, "es"))
   const model = { fichas, temas, temaByKey, facetas: facetValues(fichas, temaByKey) }
   modelCache.set(files, model)
   return model

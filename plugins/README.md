@@ -1,4 +1,8 @@
-# Plugins locales de Liqueed
+# Plugins locales de liqueed
+
+> **Reglas de marca**
+> - La tipografía **Poppins no se usa en ningún lado del sitio** (títulos, botones, OG images, nada). Títulos en Public Sans 800, texto en Public Sans, etiquetas en IBM Plex Mono.
+> - **"liqueed" va siempre en minúscula** en todo texto visible y en metadatos (títulos, alt de imágenes, llms.txt, RSS, JSON-LD). Los nombres de componentes en código (`LiqueedCta`, etc.) no son texto visible.
 
 Plugins de Quartz propios del sitio. Son JavaScript plano (ESM, sin paso de build): se editan
 directo en `dist/` y Quartz los enlaza solo al compilar (`source: ./plugins/<nombre>` en
@@ -7,11 +11,11 @@ directo en `dist/` y Quartz los enlaza solo al compilar (`source: ./plugins/<nom
 
 | Plugin | Qué hace | Dónde aparece |
 |---|---|---|
-| `liqueed-brand` | Logo de Liqueed (ojo; versión blanca en modo oscuro) con link a liqueed.org. | Barra lateral, arriba del título. |
+| `liqueed-brand` | Logo de liqueed (ojo; versión blanca en modo oscuro) con link a liqueed.org. | Barra lateral, arriba del título. |
 | `liqueed-hero` | Hero de la home: propuesta de valor, números (fuentes, temas, última actualización, calculados en el build) y botones a los temas y a servicios de IA. | Solo en la home, arriba del contenido. |
 | `liqueed-cta` | Bloque "¿Querés aplicar esto en tu organización?": servicios de IA (servicios.liqueed.org/ia), agenda y newsletter (embed oficial de Kit). | Debajo del contenido de cada página. |
 | `liqueed-explorar` | Página **Explorar fichas** (`/explorar`): lista completa de fichas con filtros por tipo de recurso, idioma, tema y concepto (tag), búsqueda por texto y URL compartible (`?tipo=&idioma=&tema=&tag=&q=`). Atajo "Combiná … en Explorar" en las páginas de tema y de tag. Además, el **JSON-LD** (schema.org) de cada página. | `/explorar`, debajo del contenido de temas y tags, y `<script type="application/ld+json">` en todas las páginas. |
-| `liqueed-site` | Footer de Liqueed; `<link rel=canonical>` y `<link rel=alternate>` al RSS en cada página; pesos extra de Poppins; eventos de analytics de los CTAs; genera `llms.txt`, `llms-full.txt` e `index.xml` (RSS solo con fichas). | Footer, `<head>` y archivos en la raíz del sitio. |
+| `liqueed-site` | Footer de liqueed; `<link rel=canonical>` y `<link rel=alternate>` al RSS en cada página; peso 800 de Public Sans para títulos; eventos de analytics de los CTAs; genera `llms.txt`, `llms-full.txt` e `index.xml` (RSS solo con fichas). | Footer, `<head>` y archivos en la raíz del sitio. |
 
 ## Explorar y facetas
 
@@ -23,9 +27,9 @@ directo en `dist/` y Quartz los enlaza solo al compilar (`source: ./plugins/<nom
 
 ## JSON-LD (schema.org)
 
-Va en un `<script type="application/ld+json">` dentro del cuerpo (los componentes ven todas las páginas; el `<head>` no). Siempre incluye `Organization` (Liqueed, https://liqueed.org) y `WebSite` (con `SearchAction` a `/explorar?q=`).
+Va en un `<script type="application/ld+json">` dentro del cuerpo (los componentes ven todas las páginas; el `<head>` no). Siempre incluye `Organization` (liqueed, https://liqueed.org) y `WebSite` (con `SearchAction` a `/explorar?q=`).
 
-- **Ficha**: `WebPage` (resumen de Liqueed: `description` = "En una línea", `keywords` = tags, `dateCreated` = `guardado`, `isPartOf` = sitio y temas, `about`/`mainEntity`/`isBasedOn` = la fuente, `publisher` = Liqueed) + la fuente original con su tipo (`Article`, `SocialMediaPosting`, `VideoObject`, `Course`, …), `url`, `name`, `author` (texto: el frontmatter no dice si es persona u organización), `inLanguage` = `idioma` (cualquier código ISO 639-1) y `datePublished` = `publicado` cuando hay fecha. En videos y cursos, además: `thumbnailUrl` (video) o `image` (curso) desde `miniatura`, `uploadDate` (video) desde `publicado` y `provider` (curso, como `Organization`) desde `proveedor`.
+- **Ficha**: `WebPage` (resumen de liqueed: `description` = "En una línea", `keywords` = tags, `dateCreated` = `guardado`, `isPartOf` = sitio y temas, `about`/`mainEntity`/`isBasedOn` = la fuente, `publisher` = liqueed) + la fuente original con su tipo (`Article`, `SocialMediaPosting`, `VideoObject`, `Course`, …), `url`, `name`, `author` (texto: el frontmatter no dice si es persona u organización), `inLanguage` = `idioma` (cualquier código ISO 639-1) y `datePublished` = `publicado` cuando hay fecha. En videos y cursos, además: `thumbnailUrl` (video) o `image` (curso) desde `miniatura`, `uploadDate` (video) desde `publicado` y `provider` (curso, como `Organization`) desde `proveedor`.
 - **Tema, tag, carpeta y /explorar**: `CollectionPage` con un `ItemList` de sus fichas. La descripción de cada tag sale de `tags.md`.
 - **Home**: `WebSite` + `Organization`.
 

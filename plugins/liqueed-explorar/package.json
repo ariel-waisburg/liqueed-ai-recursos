@@ -13,11 +13,11 @@
   "peerDependencies": { "preact": "^10.0.0" },
   "quartz": {
     "name": "liqueed-explorar",
-    "displayName": "Liqueed: explorar y JSON-LD",
-    "category": "component",
+    "displayName": "liqueed: explorar y JSON-LD",
+    "category": ["transformer", "component"],
     "quartzVersion": ">=5.0.0",
     "components": {
-      "LiqueedExplorar": { "displayName": "Liqueed: explorar y JSON-LD", "defaultPosition": "afterBody", "defaultPriority": 10 }
+      "LiqueedExplorar": { "displayName": "liqueed: explorar y JSON-LD", "defaultPosition": "afterBody", "defaultPriority": 10 }
     }
   }
 }

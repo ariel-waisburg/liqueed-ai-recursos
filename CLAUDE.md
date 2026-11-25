@@ -1,4 +1,4 @@
-# Cerebro de Ari → Recursos de IA · Liqueed
+# Cerebro de Ari → Recursos de IA · liqueed
 
 Repositorio de fuentes sobre IA, producto y organizaciones. Hablá siempre en español rioplatense.
 
@@ -12,6 +12,8 @@ Cada vez que Ari pase links para agregar, pida completar pendientes o procesar e
 
 ## Reglas
 
+- **Marca:** "liqueed" siempre en minúscula en todo texto visible y metadatos. La tipografía **Poppins no se usa nunca** en el sitio (títulos en Public Sans 800).
+- **Fechas en el sitio:** se muestra `publicado` (fecha del recurso); `guardado` (fecha de carga) no se muestra en listados ni fichas.
 - El repo es **público**: todo lo que está en `vault/` se ve en GitHub. No guardes nada privado ni de clientes acá.
 - La sección "Texto original" de cada nota **nunca** se publica en el sitio (`publicar.py` la saca), pero sí queda visible en GitHub: no pegues ahí textos completos de terceros.
 - No edites "Por qué lo guardé" ni "Mis notas" sin que Ari lo pida: son suyos.

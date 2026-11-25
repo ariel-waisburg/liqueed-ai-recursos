@@ -1,11 +1,17 @@
 ---
 name: sumar-fuente
-description: Proceso para sumar una o más fuentes (links, PDFs, videos, posts) a la bóveda de Recursos de IA de Liqueed. Usalo cada vez que Ari pase links para agregar, pida completar fuentes pendientes o diga "sumá estas fuentes".
+description: Proceso para sumar una o más fuentes (links, PDFs, videos, posts) a la bóveda de Recursos de IA de liqueed. Usalo cada vez que Ari pase links para agregar, pida completar fuentes pendientes o diga "sumá estas fuentes".
 ---
 
 # Sumar fuentes
 
 Proceso único para cargar fuentes en `vault/`. Respondé siempre en español rioplatense. Seguí los pasos en orden, para cada link. Llevá una lista de lo que vas creando para el informe final (paso 11).
+
+## Reglas de marca (siempre)
+
+- **"liqueed" va siempre en minúscula** en todo texto que escribas: resúmenes, "En una línea", ideas clave, `autor`/`proveedor` cuando la fuente es propia, títulos de notas propias y nombres de archivo de notas propias (`liqueed - ….md`). En fuentes de terceros no cambies sus textos citados ni sus URLs; solo nuestras menciones a la marca.
+- **Fechas:** el sitio muestra `publicado` (la fecha del recurso), nunca `guardado` (la de carga en el repo). Por eso `publicado` importa: completalo con la fecha real (`YYYY-MM-DD`, o `YYYY-MM` / `YYYY` si la fuente solo da eso; podés agregar una aclaración, p. ej. `"2025-09 (primera versión)"`). Si no hay fecha real, `""`: la ficha se muestra sin fecha.
+- La tipografía Poppins no se usa en el sitio (regla de Ari; ver `quartz.config.yaml`).
 
 ## 0. Preparar
 

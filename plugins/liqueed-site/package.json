@@ -1,7 +1,7 @@
 {
   "name": "liqueed-site",
   "version": "1.0.0",
-  "description": "Footer de Liqueed, metadatos para buscadores y agentes, llms.txt y RSS de fichas",
+  "description": "Footer de liqueed, metadatos para buscadores y agentes, llms.txt y RSS de fichas",
   "type": "module",
   "private": true,
   "license": "MIT",
@@ -12,11 +12,11 @@
   "peerDependencies": { "preact": "^10.0.0" },
   "quartz": {
     "name": "liqueed-site",
-    "displayName": "Liqueed: sitio",
+    "displayName": "liqueed: sitio",
     "category": ["emitter", "component"],
     "quartzVersion": ">=5.0.0",
     "components": {
-      "LiqueedFooter": { "displayName": "Liqueed: footer", "defaultPosition": "footer", "defaultPriority": 50 }
+      "LiqueedFooter": { "displayName": "liqueed: footer", "defaultPosition": "footer", "defaultPriority": 50 }
     }
   }
 }

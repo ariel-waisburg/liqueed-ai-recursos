@@ -1,4 +1,4 @@
-# Recursos de IA · Liqueed
+# Recursos de IA · liqueed
 
 Fuentes y notas sobre IA, producto y organizaciones, organizadas por tema.
 
@@ -11,7 +11,7 @@ Fuentes y notas sobre IA, producto y organizaciones, organizadas por tema.
 - Cada push a `main` publica el sitio solo, con GitHub Actions (`.github/workflows/deploy.yml`).
 - Para verlo en tu compu antes de publicar: `npm ci` y después `python3 scripts/publicar.py && npx quartz build --serve` (queda en http://localhost:8080).
 
-## Qué agrega Liqueed sobre Quartz
+## Qué agrega liqueed sobre Quartz
 
 - `plugins/` tiene cuatro plugins locales (logo, hero de la home, bloque de CTA con newsletter de Kit, y footer/metadatos). Ver `plugins/README.md`.
 - La estética sigue la de AI Champion (servicios.liqueed.org/ai-champion): colores en `quartz.config.yaml` → `theme`, estilos en `quartz/styles/custom.scss`. El tema `@quartz-themes/core` está desactivado para que no pise la paleta.
