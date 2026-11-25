@@ -1,6 +1,8 @@
 import fs from "node:fs/promises"
 import path from "node:path"
 import { jsx, jsxs, Fragment } from "preact/jsx-runtime"
+// Facetas y etiquetas compartidas con /explorar (mismo modelo, mismos conteos).
+import { facetValues, isoDate, FACETAS } from "../../liqueed-explorar/dist/modelo.js"
 
 /**
  * liqueed-site: emisor + recursos globales del sitio.
@@ -73,9 +75,10 @@ function oneLine(s) {
 }
 
 function toDate(v) {
-  if (!v) return null
-  if (v instanceof Date) return isNaN(v) ? null : v
-  const d = new Date(String(v))
+  // Acepta Date y textos con aclaración, como "2026-10-13 (última entrada)".
+  const iso = isoDate(v)
+  if (!iso || iso.length !== 10) return null
+  const d = new Date(iso)
   return isNaN(d) ? null : d
 }
 
@@ -128,7 +131,40 @@ async function collect(ctx, content) {
       desc: oneLine(n.body.replace(/^# .*$/m, "").split(/\n## /)[0]),
     }))
 
-  return { notes, byName, fichas, temas }
+  const lc = (v) => String(v ?? "").trim().toLowerCase()
+  const temaByKey = new Map(temas.map((t) => [lc(t.key), { title: t.title, slug: t.slug }]))
+  const facetas = facetValues(
+    fichas.map((f) => ({ tipo: lc(f.fm.tipo), idioma: lc(f.fm.idioma), temas: f.temas.map(lc), tags: f.tags.map(lc) })),
+    temaByKey,
+  )
+
+  return { notes, byName, fichas, temas, facetas }
+}
+
+/** Sección de llms.txt con las facetas de /explorar y su URL con query string. */
+function facetasSection(cfg, data) {
+  const base = siteBase(cfg)
+  const out = [
+    "## Explorar por facetas",
+    "",
+    `Todas las fichas en una sola página, filtrables por faceta: ${base}/explorar. ` +
+      "Los filtros van en la query string y se combinan (por ejemplo " +
+      `${base}/explorar?tipo=articulo&tema=adopcion-ia&tag=ai-champions); ` +
+      "`q` busca texto en título, autor y resumen. El HTML de /explorar trae la lista completa y cada ítem tiene " +
+      "atributos data-tipo, data-idioma, data-tema y data-tag. Cada página tiene datos estructurados schema.org en JSON-LD.",
+    "",
+  ]
+  for (const { key, label } of FACETAS) {
+    const vals = data.facetas[key]
+    if (!vals?.length) continue
+    out.push(`### ${label} (\`${key}\`)`, "")
+    for (const v of vals) {
+      const page = v.slug ? ` · página: ${pageUrl(cfg, v.slug)}` : ""
+      out.push(`- ${v.label === v.value ? `\`${v.value}\`` : `${v.label} (\`${v.value}\`)`}: ${v.count} ficha${v.count === 1 ? "" : "s"} · ${base}/explorar?${key}=${encodeURIComponent(v.value)}${page}`)
+    }
+    out.push("")
+  }
+  return out
 }
 
 /** [[Nota]] / [[Nota|alias]] -> link markdown absoluto al sitio (o texto si no existe). */
@@ -172,6 +208,7 @@ function buildLlmsTxt(cfg, o, data) {
     for (const f of fs_) lines.push(`- [${fichaLabel(f)}](${f.url}): ${f.linea || "(sin resumen)"}`)
     lines.push("")
   }
+  lines.push(...facetasSection(cfg, data))
   lines.push("## Sobre Liqueed", "")
   for (const [label, href, desc] of o.links) lines.push(`- [${label}](${href}): ${desc}`)
   lines.push("")
@@ -181,16 +218,20 @@ function buildLlmsTxt(cfg, o, data) {
 function buildLlmsFull(cfg, o, data) {
   const temaTitle = new Map(data.temas.map((t) => [t.key, t.title]))
   const out = [`# ${o.siteTitle} (texto completo)`, "", `> ${o.summary}`, "", o.about, ""]
-  out.push(`Índice: ${siteBase(cfg)}/llms.txt`, "")
+  out.push(
+    `Índice: ${siteBase(cfg)}/llms.txt · Filtros por tipo, idioma, tema y concepto: ${siteBase(cfg)}/explorar ` +
+      "(query string ?tipo=&idioma=&tema=&tag=; los valores están listados en llms.txt).",
+    "",
+  )
   const sorted = [...data.fichas].sort((a, b) => fichaLabel(a).localeCompare(fichaLabel(b), "es"))
   for (const f of sorted) {
     const meta = [
       `- Autor: ${f.autor || "s/d"}`,
       `- Tipo: ${f.fm.tipo ?? "s/d"} · Plataforma: ${f.fm.plataforma ?? "s/d"} · Idioma original: ${f.fm.idioma ?? "s/d"}`,
-      `- Publicado: ${f.publicado ? f.publicado.toISOString().slice(0, 10) : "s/d"} · Curado: ${f.guardado ? f.guardado.toISOString().slice(0, 10) : "s/d"}`,
+      `- Publicado: ${isoDate(f.fm.publicado) ?? "s/d"} · Curado: ${f.guardado ? f.guardado.toISOString().slice(0, 10) : "s/d"}`,
       `- Fuente original: ${f.fm.url}`,
       `- Ficha: ${f.url}`,
-      `- Temas: ${f.temas.map((k) => temaTitle.get(k) ?? k).join(", ") || "s/d"}`,
+      `- Temas: ${f.temas.map((k) => (temaTitle.has(k) ? `${temaTitle.get(k)} (${k})` : k)).join(", ") || "s/d"}`,
       f.tags.length ? `- Conceptos: ${f.tags.join(", ")}` : null,
     ].filter(Boolean)
     // Saca la línea de encabezado (autor · tipo · …) y la de Temas: ya están en los metadatos.
@@ -279,6 +320,11 @@ const TRACKING_JS = `
 })();
 `
 
+// El explorador de Quartz, en la primera carga, hace scrollIntoView() del ítem activo del panel
+// izquierdo, y eso también baja la página entera (~400px) en fichas y temas. Si ya hay una posición
+// guardada del panel, el explorador la usa en lugar de scrollIntoView(): se la damos en 0.
+const NO_EXPLORER_JUMP_JS = `try { if (!sessionStorage.getItem("explorerScrollTop")) sessionStorage.setItem("explorerScrollTop", "0") } catch (e) {}`
+
 // Pesos extra de Poppins (títulos 800 y botones 600 como en AI Champion); Quartz carga 400 y 700.
 const EXTRA_FONTS = "https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap"
 
@@ -290,7 +336,10 @@ export default function LiqueedSite(userOpts = {}) {
       const cfg = ctx.cfg.configuration
       const rssUrl = `${siteBase(cfg)}/index.xml`
       return {
-        js: [{ loadTime: "afterDOMReady", contentType: "inline", script: TRACKING_JS }],
+        js: [
+          { loadTime: "beforeDOMReady", contentType: "inline", script: NO_EXPLORER_JUMP_JS },
+          { loadTime: "afterDOMReady", contentType: "inline", script: TRACKING_JS },
+        ],
         additionalHead: [
           (fileData) =>
             jsxs(Fragment, {
