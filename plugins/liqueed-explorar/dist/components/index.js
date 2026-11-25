@@ -1,5 +1,5 @@
 import { jsx, jsxs } from "preact/jsx-runtime"
-import { buildModel, fichaFacets, FACETAS, tipoLabel, idiomaLabel, relHref, sinTildes } from "../modelo.js"
+import { buildModel, fichaFacets, FACETAS, tipoLabel, idiomaLabel, relHref, sinTildes, fechasParcialesCss } from "../modelo.js"
 import { jsonLdFor, safeJson } from "../jsonld.js"
 import { EXPLORAR_JS } from "../cliente.js"
 
@@ -14,10 +14,10 @@ import { EXPLORAR_JS } from "../cliente.js"
  */
 
 const DEFAULTS = {
-  siteTitle: "Recursos de IA · Liqueed",
+  siteTitle: "Recursos de IA · liqueed",
   // Mismo texto que plugins/liqueed-site (descripción del sitio para buscadores y agentes).
   summary:
-    "Repositorio vivo y curado por Liqueed con fuentes validadas sobre inteligencia artificial aplicada: adopción de IA en organizaciones, producto, desarrollo con agentes, evals, gobernanza y fundamentos. Cada ficha resume una fuente externa (autor, fecha, link original) con sus ideas clave, en español.",
+    "Repositorio vivo y curado por liqueed con fuentes validadas sobre inteligencia artificial aplicada: adopción de IA en organizaciones, producto, desarrollo con agentes, evals, gobernanza y fundamentos. Cada ficha resume una fuente externa (autor, fecha, link original) con sus ideas clave, en español.",
   explorarDesc: "Todas las fichas del repositorio, filtrables por tipo de recurso, idioma, tema y concepto.",
 }
 
@@ -58,7 +58,7 @@ function FacetSelect({ facet, values, total }) {
 
 function FichaItem({ f, from, temaByKey }) {
   const facets = fichaFacets(f)
-  const meta = [f.autor, f.tipo ? tipoLabel(f.tipo) : null, f.idioma ? idiomaLabel(f.idioma) : null, f.publicado].filter(Boolean)
+  const meta = [f.autor, f.tipo ? tipoLabel(f.tipo) : null, f.idioma ? idiomaLabel(f.idioma) : null].filter(Boolean)
   return jsx("li", {
     class: "lx-item",
     "data-tipo": facets.tipo.join(" "),
@@ -69,7 +69,14 @@ function FichaItem({ f, from, temaByKey }) {
     children: jsxs("article", {
       children: [
         jsx("h3", { children: jsx("a", { class: "internal", href: relHref(from, f.slug), "data-slug": f.slug, children: f.title }) }),
-        jsx("p", { class: "lx-meta", children: meta.join(" · ") }),
+        jsxs("p", {
+          class: "lx-meta",
+          children: [
+            meta.join(" · "),
+            // Fecha del recurso (no la de carga en el repo); sin fecha real, no se muestra.
+            f.fecha ? [" · ", jsx("time", { class: "lx-fecha", dateTime: f.fecha.iso, children: f.fecha.label })] : null,
+          ],
+        }),
         f.linea ? jsx("p", { class: "lx-linea", children: f.linea }) : null,
         jsxs("ul", {
           class: "lx-chips",
@@ -166,9 +173,12 @@ export const LiqueedExplorar = (opts = {}) => {
     if (!slug || slug === "404") return null
     const model = buildModel(allFiles)
     const ld = jsonLdFor(cfg, o, fileData, model)
+    const partialCss = fechasParcialesCss(model.fichas)
     return jsxs("div", {
       class: `liqueed-explorar ${displayClass ?? ""}`,
       children: [
+        // Fechas de solo mes/año: Quartz las formatea con día; este CSS muestra "sept 2025".
+        partialCss ? jsx("style", { dangerouslySetInnerHTML: { __html: partialCss } }) : null,
         ld ? jsx("script", { type: "application/ld+json", dangerouslySetInnerHTML: { __html: safeJson(ld) } }) : null,
         slug === "explorar" ? jsx(Explorar, { model, slug }) : jsx(ExplorarLink, { slug, model }),
       ],

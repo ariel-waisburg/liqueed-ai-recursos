@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: Recursos de IA · Liqueed
+  pageTitle: Recursos de IA · liqueed
   pageTitleSuffix: ""
   enableSPA: true
   enablePopovers: true
@@ -20,8 +20,10 @@ configuration:
     fontOrigin: googleFonts
     cdnCaching: true
     typography:
-      # Estética AI Champion de Liqueed: Poppins en títulos, Public Sans en texto, IBM Plex Mono en etiquetas.
-      header: Poppins
+      # Estética AI Champion de liqueed: Public Sans en títulos (peso 800) y en texto, IBM Plex Mono en etiquetas.
+      # REGLA DE MARCA: Poppins NO se usa en ningún lado del sitio (pedido de Ari). No la vuelvas a poner
+      # en header/body/title ni la cargues desde CSS o plugins.
+      header: Public Sans
       body: Public Sans
       code: IBM Plex Mono
     colors:
@@ -113,7 +115,7 @@ plugins:
     order: 92
   - source: "@quartz-community/quartz-fonts"
     enabled: true
-  # Desactivado: su paleta (violeta/amarillo) pisaba los colores de Liqueed. Los estilos propios están en quartz/styles/custom.scss.
+  # Desactivado: su paleta (violeta/amarillo) pisaba los colores de liqueed. Los estilos propios están en quartz/styles/custom.scss.
   - source: "@quartz-themes/core"
     enabled: false
     options:
@@ -267,12 +269,12 @@ plugins:
       darkMode: auto
       exportPadding: 20
     order: 50
-  # --- Plugins locales de Liqueed (ver plugins/README.md) ---
+  # --- Plugins locales de liqueed (ver plugins/README.md) ---
   - source: ./plugins/liqueed-brand
     enabled: true
     options:
       href: https://liqueed.org
-      label: Liqueed
+      label: liqueed
     layout:
       position: left
       priority: 5
@@ -289,7 +291,7 @@ plugins:
       serviciosUrl: https://servicios.liqueed.org/ia
       # Link de "Agendar una conversación" de servicios.liqueed.org/ia
       agendaUrl: https://calendar.app.google/CAiHee2GU6LagupaA
-      # Embed oficial de Kit del newsletter de Liqueed.
+      # Embed oficial de Kit del newsletter de liqueed.
       kitUid: 7bc27ec38d
       kitSrc: https://liqueed.kit.com/7bc27ec38d/index.js
     layout:
@@ -297,15 +299,17 @@ plugins:
       priority: 80
   - source: ./plugins/liqueed-explorar
     enabled: true
+    # order 15: su transformer corre después de created-modified-date (10) y pone la fecha del recurso.
+    order: 15
     options:
-      siteTitle: Recursos de IA · Liqueed
+      siteTitle: Recursos de IA · liqueed
     layout:
       position: afterBody
       priority: 10
   - source: ./plugins/liqueed-site
     enabled: true
     options:
-      siteTitle: Recursos de IA · Liqueed
+      siteTitle: Recursos de IA · liqueed
       temaOrder:
         - Adopción de IA en organizaciones
         - Producto en la era de la IA

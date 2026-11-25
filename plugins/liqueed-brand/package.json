@@ -1,7 +1,7 @@
 {
   "name": "liqueed-brand",
   "version": "1.0.0",
-  "description": "Logo de Liqueed en la barra lateral",
+  "description": "Logo de liqueed en la barra lateral",
   "type": "module",
   "private": true,
   "license": "MIT",
@@ -12,12 +12,12 @@
   "peerDependencies": { "preact": "^10.0.0" },
   "quartz": {
     "name": "liqueed-brand",
-    "displayName": "Liqueed: logo",
+    "displayName": "liqueed: logo",
     "category": "component",
     "quartzVersion": ">=5.0.0",
-    "defaultOptions": { "href": "https://liqueed.org", "label": "Liqueed" },
+    "defaultOptions": { "href": "https://liqueed.org", "label": "liqueed" },
     "components": {
-      "LiqueedBrand": { "displayName": "Liqueed: logo", "defaultPosition": "left", "defaultPriority": 5 }
+      "LiqueedBrand": { "displayName": "liqueed: logo", "defaultPosition": "left", "defaultPriority": 5 }
     }
   }
 }

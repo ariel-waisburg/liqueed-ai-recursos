@@ -6,7 +6,7 @@ import { TIPO_SCHEMA, tipoLabel, pageUrl, siteBase, simplify, tagDefinitions, on
  */
 
 export const ORG = {
-  name: "Liqueed",
+  name: "liqueed",
   url: "https://liqueed.org",
   sameAs: ["https://www.linkedin.com/company/liqueed"],
 }

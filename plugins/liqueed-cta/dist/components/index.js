@@ -1,7 +1,7 @@
 import { jsx, jsxs } from "preact/jsx-runtime"
 
 /**
- * Bloque de CTA de Liqueed. Los estilos viven en quartz/styles/custom.scss (sin capa CSS,
+ * Bloque de CTA de liqueed. Los estilos viven en quartz/styles/custom.scss (sin capa CSS,
  * así el tema de Quartz no los pisa).
  *
  * Newsletter: embed oficial de Kit (form 7bc27ec38d). El script de Kit reemplaza el
@@ -15,14 +15,14 @@ export const LiqueedCta = (opts = {}) => {
     titleHighlight: "organización",
     titleEnd: "?",
     text:
-      "En Liqueed acompañamos a las organizaciones a convertir el potencial de la inteligencia artificial en experiencias, soluciones y capacidades concretas. Si algo de lo que leíste acá te resuena, conversemos.",
+      "En liqueed acompañamos a las organizaciones a convertir el potencial de la inteligencia artificial en experiencias, soluciones y capacidades concretas. Si algo de lo que leíste acá te resuena, conversemos.",
     serviciosUrl: "https://servicios.liqueed.org/ia",
     serviciosLabel: "Conocé nuestros servicios de IA",
     agendaUrl: "https://calendar.app.google/CAiHee2GU6LagupaA",
     agendaLabel: "Agendá una conversación",
     kitUid: "7bc27ec38d",
     kitSrc: "https://liqueed.kit.com/7bc27ec38d/index.js",
-    newsletterTitle: "Sumate al newsletter de Liqueed",
+    newsletterTitle: "Sumate al newsletter de liqueed",
     newsletterText: "Novedades, recursos y aprendizajes sobre organizaciones e IA aplicada.",
     ...opts,
   }

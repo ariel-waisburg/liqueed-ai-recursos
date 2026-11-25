@@ -14,15 +14,15 @@ import { facetValues, isoDate, FACETAS } from "../../liqueed-explorar/dist/model
  */
 
 const DEFAULTS = {
-  siteTitle: "Recursos de IA · Liqueed",
+  siteTitle: "Recursos de IA · liqueed",
   summary:
-    "Repositorio vivo y curado por Liqueed con fuentes validadas sobre inteligencia artificial aplicada: adopción de IA en organizaciones, producto, desarrollo con agentes, evals, gobernanza y fundamentos. Cada ficha resume una fuente externa (autor, fecha, link original) con sus ideas clave, en español.",
+    "Repositorio vivo y curado por liqueed con fuentes validadas sobre inteligencia artificial aplicada: adopción de IA en organizaciones, producto, desarrollo con agentes, evals, gobernanza y fundamentos. Cada ficha resume una fuente externa (autor, fecha, link original) con sus ideas clave, en español.",
   about:
-    "Liqueed (https://liqueed.org) es una consultora que acompaña a organizaciones a evolucionar su forma de trabajar. Sus servicios de transformación con IA (https://servicios.liqueed.org/ia) ayudan a activar equipos, implementar pilotos, desarrollar capacidades y gobernar iniciativas con impacto real.",
+    "liqueed (https://liqueed.org) es una consultora que acompaña a organizaciones a evolucionar su forma de trabajar. Sus servicios de transformación con IA (https://servicios.liqueed.org/ia) ayudan a activar equipos, implementar pilotos, desarrollar capacidades y gobernar iniciativas con impacto real.",
   temaOrder: [],
   rssLimit: 0,
   links: [
-    ["Transformación con IA: servicios de Liqueed", "https://servicios.liqueed.org/ia", "Acompañamos a las organizaciones a convertir el potencial de la IA en experiencias, soluciones y capacidades concretas: activar y experimentar, implementar pilotos, formar equipos y escalar con una adopción responsable."],
+    ["Transformación con IA: servicios de liqueed", "https://servicios.liqueed.org/ia", "Acompañamos a las organizaciones a convertir el potencial de la IA en experiencias, soluciones y capacidades concretas: activar y experimentar, implementar pilotos, formar equipos y escalar con una adopción responsable."],
     ["AI Champion", "https://servicios.liqueed.org/ai-champion", "Programa presencial de dos días para impulsar la adopción de IA en tu organización, con práctica, framework propio y un roadmap de 90 días."],
     ["Contacto", "https://liqueed.org/contacto", "Para conversar sobre un desafío concreto."],
   ],
@@ -209,7 +209,7 @@ function buildLlmsTxt(cfg, o, data) {
     lines.push("")
   }
   lines.push(...facetasSection(cfg, data))
-  lines.push("## Sobre Liqueed", "")
+  lines.push("## Sobre liqueed", "")
   for (const [label, href, desc] of o.links) lines.push(`- [${label}](${href}): ${desc}`)
   lines.push("")
   return lines.join("\n")
@@ -325,8 +325,9 @@ const TRACKING_JS = `
 // guardada del panel, el explorador la usa en lugar de scrollIntoView(): se la damos en 0.
 const NO_EXPLORER_JUMP_JS = `try { if (!sessionStorage.getItem("explorerScrollTop")) sessionStorage.setItem("explorerScrollTop", "0") } catch (e) {}`
 
-// Pesos extra de Poppins (títulos 800 y botones 600 como en AI Champion); Quartz carga 400 y 700.
-const EXTRA_FONTS = "https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap"
+// Peso extra de Public Sans para títulos (800); Quartz ya carga 400, 600 y 700.
+// Regla de marca: Poppins no se usa en el sitio (ver quartz.config.yaml).
+const EXTRA_FONTS = "https://fonts.googleapis.com/css2?family=Public+Sans:wght@800&display=swap"
 
 export default function LiqueedSite(userOpts = {}) {
   const o = { ...DEFAULTS, ...userOpts }
@@ -349,7 +350,7 @@ export default function LiqueedSite(userOpts = {}) {
                   : null,
                 jsx("link", { rel: "alternate", type: "application/rss+xml", title: o.siteTitle, href: rssUrl }),
                 jsx("link", { rel: "stylesheet", href: EXTRA_FONTS }),
-                // Favicon de Liqueed. Quartz ya pone static/icon.png (logo oscuro, para pestañas claras);
+                // Favicon de liqueed. Quartz ya pone static/icon.png (logo oscuro, para pestañas claras);
                 // este va después y lo reemplaza por la versión blanca cuando el navegador está en modo oscuro.
                 jsx("link", {
                   rel: "icon",

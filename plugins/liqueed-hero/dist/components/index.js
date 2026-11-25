@@ -14,12 +14,12 @@ function toDate(v) {
 
 export const LiqueedHero = (opts = {}) => {
   const o = {
-    eyebrow: "Recursos de IA · Liqueed",
+    eyebrow: "Recursos de IA · liqueed",
     titleStart: "IA aplicada, ",
     titleHighlight: "curada",
     titleEnd: " para tu organización",
     lead:
-      "Artículos, cursos, papers y herramientas que leímos, validamos y resumimos en Liqueed. Cada fuente tiene un resumen en español, por qué importa y a qué tema pertenece, para que tu equipo pase de la curiosidad a la práctica sin perderse en el ruido.",
+      "Artículos, cursos, papers y herramientas que leímos, validamos y resumimos en liqueed. Cada fuente tiene un resumen en español, por qué importa y a qué tema pertenece, para que tu equipo pase de la curiosidad a la práctica sin perderse en el ruido.",
     exploreLabel: "Explorar los temas",
     exploreHref: "#temas",
     filterLabel: "Filtrar todas las fichas",
@@ -50,7 +50,13 @@ export const LiqueedHero = (opts = {}) => {
       children: jsxs("div", {
         class: "liqueed-hero-inner",
         children: [
-          jsx("p", { class: "liqueed-eyebrow", children: o.eyebrow }),
+          // "liqueed" va siempre en minúscula, también dentro de etiquetas en mayúsculas (.liqueed-marca).
+          jsx("p", {
+            class: "liqueed-eyebrow",
+            children: String(o.eyebrow)
+              .split(/(liqueed)/)
+              .map((part) => (part === "liqueed" ? jsx("span", { class: "liqueed-marca", children: part }) : part)),
+          }),
           jsxs("h1", {
             id: "liqueed-hero-title",
             children: [o.titleStart, jsx("span", { class: "liqueed-hl", children: o.titleHighlight }), o.titleEnd],

@@ -1,11 +1,12 @@
 @use "./variables.scss" as *;
 
 // ---------------------------------------------------------------------------
-// Estética Liqueed · AI Champion (servicios.liqueed.org/ai-champion + brief del programa)
+// Estética liqueed · AI Champion (servicios.liqueed.org/ai-champion + brief del programa)
 // - Papel cálido (#f4f1eb) y tinta (#141e28); azul champion (#234d96 → #1f4489) en paneles;
 //   naranja (#ff9900) para eyebrows y palabras destacadas; amarillo (#fedc0f) en el botón principal
 //   y en los subrayados.
-// - Poppins 800 con tracking cerrado en títulos, Public Sans en texto, IBM Plex Mono en etiquetas.
+// - Public Sans 800 con tracking cerrado en títulos, Public Sans en texto, IBM Plex Mono en etiquetas.
+//   Regla de marca: Poppins NO se usa en ningún lado del sitio (pedido de Ari).
 // Este archivo no va dentro de una capa CSS, así que gana sobre los estilos de componentes.
 // ---------------------------------------------------------------------------
 
@@ -48,6 +49,11 @@ h1,
 }
 h2 {
   font-weight: 700;
+}
+
+// "liqueed" siempre en minúscula, aunque esté dentro de un texto en mayúsculas.
+.liqueed-marca {
+  text-transform: none !important;
 }
 
 .liqueed-mono,
@@ -770,4 +776,39 @@ ul.lx-chips {
 // Sin JS el contador no se actualiza: se oculta cuando hay un filtro elegido.
 .lx:not(.lx-js):has(select option:checked:not([value=""])) .lx-status {
   display: none;
+}
+
+// --- Fechas: se muestra la del recurso (`publicado`), nunca la de carga en el repo --------------
+// En la ficha, la fecha de content-meta es la de publicación del recurso: se aclara.
+body[data-slug^="fuentes/"] .content-meta:has(time)::before {
+  content: "Publicado ";
+  margin-right: 0.35em;
+}
+// Tamaño de las fechas de solo mes/año que reescribe el CSS de liqueed-explorar.
+.content-meta {
+  --lq-date-size: 0.78rem;
+}
+// Listados (carpetas y tags): columna de fecha de ancho fijo, así los títulos quedan alineados
+// aunque una ficha no tenga fecha del recurso.
+li.section-li > .section {
+  grid-template-columns: 6.5rem 3fr 1fr !important;
+  > .meta {
+    white-space: nowrap;
+    margin: 0.15rem 1em 0 0;
+    font-size: 0.85rem;
+  }
+}
+li.section-li .meta {
+  --lq-date-size: 0.85rem;
+}
+@media #{$mobile} {
+  li.section-li > .section {
+    grid-template-columns: 1fr !important;
+    > .meta {
+      margin: 0 0 0.1rem !important;
+      &:empty {
+        display: none;
+      }
+    }
+  }
 }

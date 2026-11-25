@@ -10,7 +10,7 @@ function pathToRoot(slug) {
 
 export const LiqueedFooter = (opts = {}) => {
   const links = opts.links ?? {
-    "Liqueed": "https://liqueed.org",
+    "liqueed": "https://liqueed.org",
     "Servicios de IA": "https://servicios.liqueed.org/ia",
     "AI Champion": "https://servicios.liqueed.org/ai-champion",
     "Contacto": "https://liqueed.org/contacto",
@@ -30,11 +30,11 @@ export const LiqueedFooter = (opts = {}) => {
               href: "https://liqueed.org",
               "data-cta": "footer_logo",
               children: [
-                jsx("img", { class: "liqueed-logo-light", src: `${root}/static/liqueed-logo.svg`, alt: "Liqueed", width: 57, height: 48 }),
+                jsx("img", { class: "liqueed-logo-light", src: `${root}/static/liqueed-logo.svg`, alt: "liqueed", width: 57, height: 48 }),
                 jsx("img", { class: "liqueed-logo-dark", src: `${root}/static/liqueed-logo-white.svg`, alt: "", "aria-hidden": "true", width: 57, height: 48 }),
               ],
             }),
-            jsx("p", { children: "Recursos de IA curados por Liqueed: fuentes validadas sobre IA aplicada en organizaciones, producto y desarrollo." }),
+            jsx("p", { children: "Recursos de IA curados por liqueed: fuentes validadas sobre IA aplicada en organizaciones, producto y desarrollo." }),
           ],
         }),
         jsx("ul", {
@@ -56,7 +56,7 @@ export const LiqueedFooter = (opts = {}) => {
         jsxs("p", {
           class: "liqueed-footer-credit",
           children: [
-            `© ${year} Liqueed · Sitio hecho con `,
+            `© ${year} liqueed · Sitio hecho con `,
             jsx("a", { href: "https://quartz.jzhao.xyz/", children: "Quartz" }),
             " (licencia MIT)",
           ],
