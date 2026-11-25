@@ -39,3 +39,4 @@ Cómo se diseñan, evalúan y operan agentes.
 - [[Vercel - Lead Processing Agent]]: Plantilla de referencia de un agente que califica leads entrantes, con aprobación humana.
 - [[Will Larson - Facilitating AI adoption at Imprint]]: Cómo una empresa encaró la adopción de IA como esfuerzo de toda la compañía, con líderes que construyen.
 - [[Writer - The AI Agent Owner]]: Los roles nuevos que aparecen cuando una empresa empieza a trabajar con agentes.
+- [[Yan et al. - What We Learned from a Year of Building with LLMs (Part I)]]: Lecciones tácticas de un año construyendo productos con LLM: prompting, RAG, flujos de trabajo y evaluación.
