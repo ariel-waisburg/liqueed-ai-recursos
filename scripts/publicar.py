@@ -18,6 +18,7 @@ Qué hace:
   instrucciones de trabajo ("Pasame…", "Bajalo…") se sacan siempre.
 - Inicio.md pasa a ser index.md, con el título del sitio, sin la lista de pendientes y con
   los conteos (total de fuentes y fuentes por tema) calculados sobre lo que se publica.
+- Genera mapa.md: la página "Mapa de conexiones" (/mapa, grafo global a pantalla completa).
 - Genera explorar.md: la página "Explorar fichas" (la lista y los filtros los pone
   plugins/liqueed-explorar en el build).
 - Revisa las facetas de las fuentes publicadas (tipo, idioma, temas, tags) y avisa si hay
@@ -163,6 +164,17 @@ description: "Filtrá las {published_sources} fichas por tipo de recurso, idioma
 Filtrá las {published_sources} fichas por tipo de recurso, idioma, tema y concepto. Los filtros se combinan entre sí y la dirección de la página se actualiza, así que podés compartir o guardar la búsqueda.
 """
 open(os.path.join(OUT, "explorar.md"), "w", encoding="utf-8").write(EXPLORAR)
+
+# 4b. Página "Mapa de conexiones" (/mapa): la Vista Gráfica global a pantalla completa
+# (el grafo lo abre plugins/liqueed-explorar/dist/mapa.js). Aparece en el menú lateral.
+MAPA = f"""---
+title: "Mapa de conexiones"
+description: "Mapa interactivo de las {published_sources} fichas del repositorio y cómo se conectan entre sí, con los temas y conceptos."
+---
+
+Todas las fichas del repositorio y cómo se conectan entre sí, con los temas y los conceptos. Cada punto es una página: arrastrá para moverte, hacé zoom y tocá un punto para abrirlo.
+"""
+open(os.path.join(OUT, "mapa.md"), "w", encoding="utf-8").write(MAPA)
 
 # 5. Facetas: avisar valores fuera del vocabulario (no frena la publicación)
 TIPOS = {"articulo", "post", "articulo-x", "hilo", "video", "libro", "guia", "curso",

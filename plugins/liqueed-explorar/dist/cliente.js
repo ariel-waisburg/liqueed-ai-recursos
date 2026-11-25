@@ -5,6 +5,8 @@
  * - Búsqueda por texto (título, autor, plataforma, "En una línea"), sin tildes.
  * - Conteos por opción según los demás filtros, contador "N de M fichas" (aria-live) y estado vacío.
  * - Actualiza la URL con history.replaceState para que se pueda compartir.
+ * - Valor elegido siempre legible: la opción elegida se muestra sin el conteo (el total está en
+ *   el contador) y debajo hay chips con cada filtro activo completo, que se quitan con un toque.
  * - GA4: evento `filter_use` (facet, value, results, page_path) en el dataLayer.
  * Funciona con el SPA de Quartz: se inicializa en cada evento "nav".
  */
@@ -78,9 +80,11 @@ export const EXPLORAR_JS = `
             if (!opt.value || (" " + (it.getAttribute("data-" + k) || "") + " ").indexOf(" " + opt.value + " ") !== -1) n++;
           });
           var label = opt.value ? opt.getAttribute("data-label") : "Todos";
-          opt.textContent = label + " (" + n + ")";
+          // La opción elegida va sin conteo para que entre completa en el campo.
+          opt.textContent = opt.value && opt.selected ? label : label + " (" + n + ")";
         });
       });
+      renderChips(st);
       var active = FACETS.some(function (k) { return st[k]; }) || !!st.q;
       status.textContent = active ? "Mostrando " + shown + " de " + total + " fichas" : total + " fichas en total";
       if (empty) empty.hidden = shown !== 0;
@@ -92,6 +96,46 @@ export const EXPLORAR_JS = `
       if (url !== location.pathname + location.search + location.hash) history.replaceState(history.state, "", url);
       return shown;
     }
+    var actions = form.querySelector(".lx-actions");
+    var chips = document.createElement("ul");
+    chips.className = "lx-activos";
+    chips.setAttribute("aria-label", "Filtros activos");
+    if (actions) actions.insertBefore(chips, actions.firstChild);
+    function renderChips(st) {
+      chips.innerHTML = "";
+      FACETS.forEach(function (k) {
+        var s = selects[k];
+        if (!s || !st[k]) return;
+        var opt = s.options[s.selectedIndex];
+        var lab = form.querySelector('label[for="' + s.id + '"]');
+        var facetName = lab ? lab.textContent : k;
+        var li = document.createElement("li");
+        var b = document.createElement("button");
+        b.type = "button";
+        b.setAttribute("data-quitar", k);
+        b.setAttribute("aria-label", "Quitar filtro " + facetName + ": " + opt.getAttribute("data-label"));
+        var strong = document.createElement("b");
+        strong.textContent = facetName.charAt(0) + facetName.slice(1).toLowerCase() + ":";
+        var x = document.createElement("span");
+        x.setAttribute("aria-hidden", "true");
+        x.textContent = "×";
+        b.appendChild(strong);
+        b.appendChild(document.createTextNode(" " + opt.getAttribute("data-label")));
+        b.appendChild(x);
+        li.appendChild(b);
+        chips.appendChild(li);
+      });
+      chips.hidden = !chips.firstChild;
+    }
+    chips.addEventListener("click", function (e) {
+      var b = e.target.closest && e.target.closest("button[data-quitar]");
+      if (!b) return;
+      var k = b.getAttribute("data-quitar");
+      selects[k].value = "";
+      var shown = apply();
+      gtagEvent("filter_use", { facet: k, value: "(todos)", results: shown, page_path: location.pathname });
+      selects[k].focus();
+    });
     var timer = null;
     function onChange(e) {
       var t = e.target;
