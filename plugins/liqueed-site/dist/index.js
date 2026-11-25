@@ -325,9 +325,9 @@ const TRACKING_JS = `
 // guardada del panel, el explorador la usa en lugar de scrollIntoView(): se la damos en 0.
 const NO_EXPLORER_JUMP_JS = `try { if (!sessionStorage.getItem("explorerScrollTop")) sessionStorage.setItem("explorerScrollTop", "0") } catch (e) {}`
 
-// Peso extra de Public Sans para títulos (800); Quartz ya carga 400, 600 y 700.
-// Regla de marca: Poppins no se usa en el sitio (ver quartz.config.yaml).
-const EXTRA_FONTS = "https://fonts.googleapis.com/css2?family=Public+Sans:wght@800&display=swap"
+// Pesos extra de Poppins (títulos 800 y botones 600 como en AI Champion); Quartz carga 400 y 700.
+// Regla de marca: IBM Plex Mono no se usa en el sitio (ver quartz.config.yaml).
+const EXTRA_FONTS = "https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap"
 
 export default function LiqueedSite(userOpts = {}) {
   const o = { ...DEFAULTS, ...userOpts }

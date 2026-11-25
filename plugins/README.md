@@ -1,7 +1,7 @@
 # Plugins locales de liqueed
 
 > **Reglas de marca**
-> - La tipografía **Poppins no se usa en ningún lado del sitio** (títulos, botones, OG images, nada). Títulos en Public Sans 800, texto en Public Sans, etiquetas en IBM Plex Mono.
+> - La tipografía **IBM Plex Mono no se usa en ningún lado del sitio** (ni se carga). Títulos en Poppins 800, texto en Public Sans, etiquetas en Public Sans (mayúsculas con tracking, semibold: `var(--lq-label-font)`, nunca `var(--codeFont)`). Los bloques de código usan la monoespaciada del sistema.
 > - **"liqueed" va siempre en minúscula** en todo texto visible y en metadatos (títulos, alt de imágenes, llms.txt, RSS, JSON-LD). Los nombres de componentes en código (`LiqueedCta`, etc.) no son texto visible.
 
 Plugins de Quartz propios del sitio. Son JavaScript plano (ESM, sin paso de build): se editan
@@ -15,7 +15,7 @@ directo en `dist/` y Quartz los enlaza solo al compilar (`source: ./plugins/<nom
 | `liqueed-hero` | Hero de la home: propuesta de valor, números (fuentes, temas, última actualización, calculados en el build) y botones a los temas, a Explorar, al mapa de conexiones y a servicios de IA. | Solo en la home, arriba del contenido. |
 | `liqueed-cta` | Bloque "¿Querés aplicar esto en tu organización?": servicios de IA (servicios.liqueed.org/ia), agenda y newsletter (embed oficial de Kit). | Debajo del contenido de cada página. |
 | `liqueed-explorar` | Página **Explorar fichas** (`/explorar`): lista completa de fichas con filtros por tipo de recurso, idioma, tema y concepto (tag), búsqueda por texto y URL compartible (`?tipo=&idioma=&tema=&tag=&q=`). Atajo "Combiná … en Explorar" en las páginas de tema y de tag. **Mapa de conexiones** (`/mapa` y la Vista Gráfica global): links "Ver … en el mapa de conexiones" que la abren en el lugar. Además, el **JSON-LD** (schema.org) de cada página. | `/explorar`, debajo del contenido de temas y tags, y `<script type="application/ld+json">` en todas las páginas. |
-| `liqueed-site` | Footer de liqueed; `<link rel=canonical>` y `<link rel=alternate>` al RSS en cada página; peso 800 de Public Sans para títulos; eventos de analytics de los CTAs; genera `llms.txt`, `llms-full.txt` e `index.xml` (RSS solo con fichas). | Footer, `<head>` y archivos en la raíz del sitio. |
+| `liqueed-site` | Footer de liqueed; `<link rel=canonical>` y `<link rel=alternate>` al RSS en cada página; pesos 600 y 800 de Poppins para botones y títulos; eventos de analytics de los CTAs; genera `llms.txt`, `llms-full.txt` e `index.xml` (RSS solo con fichas). | Footer, `<head>` y archivos en la raíz del sitio. |
 
 ## Mapa de conexiones (Vista Gráfica)
 

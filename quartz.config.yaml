@@ -20,12 +20,15 @@ configuration:
     fontOrigin: googleFonts
     cdnCaching: true
     typography:
-      # Estética AI Champion de liqueed: Public Sans en títulos (peso 800) y en texto, IBM Plex Mono en etiquetas.
-      # REGLA DE MARCA: Poppins NO se usa en ningún lado del sitio (pedido de Ari). No la vuelvas a poner
-      # en header/body/title ni la cargues desde CSS o plugins.
-      header: Public Sans
+      # Estética AI Champion de liqueed: Poppins en títulos, Public Sans en texto y en etiquetas
+      # (mayúsculas con tracking, semibold).
+      # REGLA DE MARCA: IBM Plex Mono NO se usa en ningún lado del sitio (pedido de Ari). No la vuelvas a
+      # poner acá ni la cargues desde CSS o plugins. `code` es Public Sans solo para que no se descargue
+      # ninguna monoespaciada (Quartz y quartz-fonts usan IBM Plex Mono si `code` falta); los bloques de
+      # código usan la monoespaciada del sistema (override de --codeFont en quartz/styles/custom.scss).
+      header: Poppins
       body: Public Sans
-      code: IBM Plex Mono
+      code: Public Sans
     colors:
       lightMode:
         # champion-paper, champion-ink, champion-blue, champion-orange, champion-yellow
