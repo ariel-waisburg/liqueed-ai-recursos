@@ -13,6 +13,11 @@ temas:
 tags:
   - costos-ia
   - context-engineering
+perfil:
+  - tecnico
+madurez: escalando
+minutos: 16
+minutos_origen: medido
 estado: resumido
 publish: false
 ---

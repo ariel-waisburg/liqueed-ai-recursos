@@ -11,6 +11,11 @@ temas:
   - agentes-y-evals
 tags:
   - agent-engineering
+perfil:
+  - tecnico
+madurez: escalando
+minutos: 11
+minutos_origen: medido
 estado: resumido
 publish: false
 ---

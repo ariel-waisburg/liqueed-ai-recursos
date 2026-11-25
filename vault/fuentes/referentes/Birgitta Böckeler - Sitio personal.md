@@ -11,6 +11,9 @@ temas:
   - desarrollo-agentico
 tags:
   - harness-engineering
+perfil:
+  - tecnico
+madurez: escalando
 estado: resumido
 publish: false
 ---

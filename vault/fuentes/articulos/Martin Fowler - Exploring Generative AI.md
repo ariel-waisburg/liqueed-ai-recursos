@@ -13,6 +13,11 @@ tags:
   - harness-engineering
   - context-engineering
   - workflows-con-agentes
+perfil:
+  - tecnico
+madurez: explorando
+minutos: 7
+minutos_origen: medido
 estado: resumido
 publish: false
 ---

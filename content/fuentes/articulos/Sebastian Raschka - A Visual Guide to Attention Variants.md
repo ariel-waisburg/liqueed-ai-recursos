@@ -11,6 +11,11 @@ temas:
   - fundamentos-ia
 tags:
   - fundamentos
+perfil:
+  - tecnico
+madurez: explorando
+minutos: 24
+minutos_origen: medido
 estado: resumido
 publish: false
 ---

@@ -13,6 +13,12 @@ temas:
 tags:
   - fundamentos
   - agent-engineering
+perfil:
+  - tecnico
+  - producto
+madurez: explorando
+minutos: 2
+minutos_origen: estimado
 estado: resumido
 publish: false
 ---

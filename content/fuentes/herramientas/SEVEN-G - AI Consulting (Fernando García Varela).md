@@ -13,6 +13,12 @@ temas:
 tags:
   - madurez-ia
   - priorizacion-y-casos-de-uso
+perfil:
+  - cultura-organizacion
+  - producto
+madurez: experimentando
+minutos: 10
+minutos_origen: estimado
 estado: resumido
 publish: false
 ---

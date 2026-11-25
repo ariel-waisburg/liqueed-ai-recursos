@@ -19,6 +19,8 @@ perfil:
 madurez: explorando
 valor: concepto
 esfuerzo: "<10min"
+minutos: 7
+minutos_origen: medido
 estado: resumido
 publish: false
 ---

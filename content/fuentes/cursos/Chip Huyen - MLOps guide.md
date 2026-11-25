@@ -14,6 +14,10 @@ temas:
 tags:
   - mlops
   - roles-y-carrera
+perfil:
+  - tecnico
+  - cultura-organizacion
+madurez: explorando
 estado: resumido
 publish: false
 ---

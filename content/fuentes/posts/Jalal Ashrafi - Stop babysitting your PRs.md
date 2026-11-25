@@ -12,6 +12,11 @@ temas:
 tags:
   - workflows-con-agentes
   - delegacion-y-supervision
+perfil:
+  - tecnico
+madurez: experimentando
+minutos: 8
+minutos_origen: estimado
 estado: resumido-parcial
 publish: false
 ---

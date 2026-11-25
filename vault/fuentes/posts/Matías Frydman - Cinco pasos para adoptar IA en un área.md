@@ -12,6 +12,12 @@ temas:
 tags:
   - ai-champions
   - priorizacion-y-casos-de-uso
+perfil:
+  - cultura-organizacion
+  - producto
+madurez: explorando
+minutos: 2
+minutos_origen: estimado
 estado: resumido
 publish: false
 ---

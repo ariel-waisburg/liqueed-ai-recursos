@@ -12,6 +12,11 @@ temas:
   - desarrollo-agentico
 tags:
   - experimentacion-y-prototipado
+perfil:
+  - producto
+madurez: experimentando
+minutos: 2
+minutos_origen: medido
 estado: resumido
 publish: false
 ---

@@ -12,6 +12,13 @@ temas:
   - producto-e-ia
 tags:
   - cultura-y-cambio
+perfil:
+  - tecnico
+  - producto
+  - cultura-organizacion
+madurez: experimentando
+minutos: 14
+minutos_origen: medido
 estado: resumido
 publish: false
 ---

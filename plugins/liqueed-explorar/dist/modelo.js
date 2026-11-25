@@ -244,7 +244,36 @@ export function fichaFromFile(f) {
     temas: list(fm.temas),
     tags: list(fm.tags),
     linea: oneLine(section(raw, "En una línea")),
+    // Nombre del archivo (sin .md): así se referencia la ficha en curaduria/lecturas.yaml, igual que un [[link]].
+    name: path.basename(String(f.filePath ?? f.slug), ".md"),
+    // Campos de curaduría (rubrica.md, sección 4). Los minutos de la fuente vienen del frontmatter;
+    // los de la ficha se calculan sobre lo que se publica.
+    perfil: list(fm.perfil),
+    madurez: norm(fm.madurez) || null,
+    minutos: minutosFuente(fm.minutos),
+    minutosOrigen: norm(fm.minutos_origen) === "medido" ? "medido" : norm(fm.minutos_origen) === "estimado" ? "estimado" : null,
+    minutosFicha: minutosLectura(raw),
   }
+}
+
+// Orden de los botones de perfil en /lecturas-rapidas y /recorridos-recomendados.
+export const PERFIL_LABEL = { producto: "Producto", tecnico: "Técnico y CTO", "cultura-organizacion": "Cultura y RR. HH." }
+export const MADUREZ_LABEL = { explorando: "Explorando", experimentando: "Experimentando", escalando: "Escalando" }
+export const PERFILES = Object.keys(PERFIL_LABEL)
+
+function minutosFuente(v) {
+  const n = Number.parseInt(String(v ?? ""), 10)
+  return Number.isFinite(n) && n > 0 ? n : null
+}
+
+/** Minutos de lectura de una ficha publicada: palabras / 200, redondeado para arriba, mínimo 1. */
+export function minutosLectura(md) {
+  const body = String(md ?? "")
+    .replace(/^---\n[\s\S]*?\n---\n?/, "")
+    .replace(/\[([^\]]*)\]\([^)]*\)/g, "$1")
+    .replace(/\[\[([^\]|]*\|)?([^\]]*)\]\]/g, "$2")
+  const words = (body.match(/[\p{L}\p{N}][\p{L}\p{N}'’.-]*/gu) ?? []).length
+  return words ? Math.max(1, Math.ceil(words / 200)) : null
 }
 
 /** Fichas, temas y facetas (valores con conteo) del sitio, memorizado por array de allFiles. */

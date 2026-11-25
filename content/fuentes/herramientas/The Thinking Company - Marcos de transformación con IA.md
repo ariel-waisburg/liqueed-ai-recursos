@@ -13,6 +13,11 @@ temas:
 tags:
   - madurez-ia
   - cultura-y-cambio
+perfil:
+  - cultura-organizacion
+madurez: experimentando
+minutos: 15
+minutos_origen: estimado
 estado: resumido-parcial
 publish: false
 ---

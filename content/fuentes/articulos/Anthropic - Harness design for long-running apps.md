@@ -13,6 +13,11 @@ temas:
 tags:
   - harness-engineering
   - agent-engineering
+perfil:
+  - tecnico
+madurez: escalando
+minutos: 24
+minutos_origen: medido
 estado: resumido
 publish: false
 ---

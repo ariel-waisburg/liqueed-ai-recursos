@@ -13,6 +13,12 @@ temas:
 tags:
   - delegacion-y-supervision
   - priorizacion-y-casos-de-uso
+perfil:
+  - producto
+  - cultura-organizacion
+madurez: experimentando
+minutos: 8
+minutos_origen: medido
 estado: resumido
 publish: false
 ---

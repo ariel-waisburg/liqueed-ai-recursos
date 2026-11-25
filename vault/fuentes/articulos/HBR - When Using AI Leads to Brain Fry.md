@@ -12,6 +12,11 @@ temas:
   - pensamiento-critico
 tags:
   - bienestar
+perfil:
+  - cultura-organizacion
+madurez: experimentando
+minutos: 5
+minutos_origen: estimado
 estado: resumido-parcial
 publish: false
 ---

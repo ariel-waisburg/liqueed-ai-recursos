@@ -12,6 +12,13 @@ temas:
   - adopcion-ia
 tags:
   - fundamentos
+perfil:
+  - producto
+  - cultura-organizacion
+  - tecnico
+madurez: explorando
+minutos: 18
+minutos_origen: medido
 estado: resumido
 publish: false
 ---

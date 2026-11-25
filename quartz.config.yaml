@@ -298,6 +298,10 @@ plugins:
       # Embed oficial de Kit del newsletter de liqueed.
       kitUid: 7bc27ec38d
       kitSrc: https://liqueed.kit.com/7bc27ec38d/index.js
+      # Opción A de lead (Ari, 25/11/2026): en estas páginas no va la caja de email; el CTA lo pone liqueed-explorar.
+      hideOn:
+        - lecturas-rapidas
+        - recorridos-recomendados
     layout:
       position: afterBody
       priority: 80
@@ -307,6 +311,7 @@ plugins:
     order: 15
     options:
       siteTitle: Recursos de IA · liqueed
+      agendaUrl: https://calendar.app.google/CAiHee2GU6LagupaA
     layout:
       position: afterBody
       priority: 10

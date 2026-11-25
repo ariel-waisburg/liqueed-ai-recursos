@@ -12,6 +12,12 @@ temas:
   - agentes-y-evals
 tags:
   - errores-comunes
+perfil:
+  - tecnico
+  - cultura-organizacion
+madurez: experimentando
+minutos: 3
+minutos_origen: estimado
 estado: resumido
 publish: false
 ---

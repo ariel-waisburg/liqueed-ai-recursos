@@ -24,6 +24,10 @@ export const LiqueedHero = (opts = {}) => {
     exploreHref: "#temas",
     filterLabel: "Filtrar todas las fichas",
     filterHref: "./explorar",
+    lecturasLabel: "Lecturas rápidas",
+    lecturasHref: "./lecturas-rapidas",
+    recorridosLabel: "Recorridos recomendados",
+    recorridosHref: "./recorridos-recomendados",
     mapaLabel: "Ver el mapa de conexiones",
     mapaHref: "./mapa",
     serviciosUrl: "https://servicios.liqueed.org/ia",
@@ -70,6 +74,16 @@ export const LiqueedHero = (opts = {}) => {
               stat(String(fuentes.length), "fuentes curadas"),
               stat(String(temas.length), "temas"),
               lastLabel ? stat(lastLabel, "última actualización") : null,
+            ],
+          }),
+          // Entradas por tiempo y por perfil (curaduria/lecturas.yaml, páginas de plugins/liqueed-explorar).
+          jsxs("p", {
+            class: "liqueed-hero-rutas",
+            children: [
+              jsx("span", { children: "¿Por dónde empiezo? " }),
+              jsx("a", { class: "internal", href: o.lecturasHref, "data-lq-hero": "lecturas", children: o.lecturasLabel }),
+              jsx("span", { "aria-hidden": "true", children: " · " }),
+              jsx("a", { class: "internal", href: o.recorridosHref, "data-lq-hero": "recorridos", children: o.recorridosLabel }),
             ],
           }),
           jsxs("div", {

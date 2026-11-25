@@ -20,6 +20,8 @@ perfil:
 madurez: experimentando
 valor: concepto
 esfuerzo: 10-30min
+minutos: 10
+minutos_origen: medido
 estado: resumido
 publish: false
 ---

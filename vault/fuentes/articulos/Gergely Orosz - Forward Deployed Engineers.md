@@ -12,6 +12,12 @@ temas:
   - producto-e-ia
 tags:
   - roles-y-carrera
+perfil:
+  - producto
+  - cultura-organizacion
+madurez: experimentando
+minutos: 29
+minutos_origen: medido
 estado: resumido-parcial
 publish: false
 ---

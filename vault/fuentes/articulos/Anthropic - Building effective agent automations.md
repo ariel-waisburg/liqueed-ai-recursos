@@ -17,6 +17,8 @@ perfil:
 madurez: escalando
 valor: aplicado
 esfuerzo: 10-30min
+minutos: 12
+minutos_origen: medido
 estado: resumido
 publish: false
 ---

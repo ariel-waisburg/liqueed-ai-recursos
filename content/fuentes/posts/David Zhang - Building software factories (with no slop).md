@@ -12,6 +12,12 @@ temas:
   - pensamiento-critico
 tags:
   - calidad-y-evals
+perfil:
+  - tecnico
+  - cultura-organizacion
+madurez: escalando
+minutos: 8
+minutos_origen: estimado
 estado: resumido-parcial
 publish: false
 ---

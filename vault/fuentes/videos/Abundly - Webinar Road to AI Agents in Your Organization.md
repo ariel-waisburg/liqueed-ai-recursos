@@ -15,6 +15,13 @@ tags:
   - priorizacion-y-casos-de-uso
   - ai-champions
   - madurez-ia
+perfil:
+  - tecnico
+  - producto
+  - cultura-organizacion
+madurez: experimentando
+minutos: 60
+minutos_origen: estimado
 estado: resumido-parcial
 publish: false
 ---

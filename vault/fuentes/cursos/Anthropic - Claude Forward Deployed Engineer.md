@@ -16,6 +16,10 @@ tags:
   - roles-y-carrera
   - formacion
   - consultoria-ia
+perfil:
+  - tecnico
+  - cultura-organizacion
+madurez: explorando
 estado: resumido-parcial
 publish: false
 ---

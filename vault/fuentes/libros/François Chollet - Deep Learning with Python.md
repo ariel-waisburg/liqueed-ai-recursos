@@ -12,6 +12,9 @@ temas:
 tags:
   - fundamentos
   - formacion
+perfil:
+  - tecnico
+madurez: explorando
 estado: resumido-parcial
 publish: false
 ---

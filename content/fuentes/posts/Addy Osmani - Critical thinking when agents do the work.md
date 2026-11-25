@@ -12,6 +12,12 @@ temas:
   - desarrollo-agentico
 tags:
   - delegacion-y-supervision
+perfil:
+  - tecnico
+  - cultura-organizacion
+madurez: experimentando
+minutos: 8
+minutos_origen: estimado
 estado: resumido-parcial
 publish: false
 ---

@@ -100,6 +100,8 @@ Además de `tipo`, `temas` y `tags` (ver el skill `sumar-fuente` y `tags.md`), c
 | `madurez` | `explorando`, `experimentando`, `escalando` | Que cada quien vea lo que puede usar en su etapa. |
 | `valor` | `aplicado`, `caso`, `framework`, `concepto`, `herramienta` | Medir y sostener el foco en lo aplicado. |
 | `esfuerzo` | `<10min`, `10-30min`, `30-90min`, `>90min` | Elegir según el tiempo disponible. |
+| `minutos` | Número entero: minutos que lleva la fuente original | "Fuente: N min" en Lecturas rápidas, Recorridos, `/explorar` y cada ficha. Vacío en libros, cursos y referentes ("a tu ritmo"). |
+| `minutos_origen` | `medido` o `estimado` | `medido`: palabras de la fuente / 200, o duración real del video o podcast. `estimado`: no se pudo medir (paywall, PDF enorme, post de X) y se estimó por tipo; el sitio lo muestra como "(estimado)". |
 
 Definiciones de madurez:
 
@@ -107,18 +109,28 @@ Definiciones de madurez:
 - **experimentando**: hay pilotos o equipos usando IA, sin escala ni gobernanza formal.
 - **escalando**: la IA ya está en procesos productivos y el desafío es operarla, medirla y gobernarla.
 
-Estos campos todavía no existen en el frontmatter de las fichas ni en `/explorar`. Por ahora se usan en el digest; sumarlos al sitio es un paso posterior.
+Desde el 25/11/2026 `perfil`, `madurez`, `minutos` y `minutos_origen` están en el frontmatter de todas las fichas publicadas (van antes de `estado:`); `valor` y `esfuerzo` siguen siendo del digest. Los minutos de la ficha (nuestro resumen) no se cargan: los calcula el build. `publicar.py` avisa si algún valor está fuera del vocabulario. Los perfiles y madureces que se asignaron en lote están en [revision-perfil-madurez.md](revision-perfil-madurez.md) para que Ari los revise.
+
+### Lecturas rápidas y recorridos recomendados
+
+Las páginas `/lecturas-rapidas` y `/recorridos-recomendados` salen de [lecturas.yaml](lecturas.yaml). Armado híbrido (aprobado por Ari el 25/11/2026): Faro propone, Ari aprueba por número y recién ahí se edita el archivo.
+
+- **Lecturas rápidas:** de 3 a 5 paquetes en la página (máximo 5 opciones), cada uno de 3 a 5 fichas. La suma de minutos de las fuentes no puede pasar el tiempo que promete el paquete (el build avisa).
+- **Recorridos recomendados:** uno por perfil (`producto`, `tecnico`, `cultura-organizacion`) y uno de gobernanza, de 4 a 5 pasos en orden, con una madurez declarada y "Al terminar vas a saber". "Para profundizar" es opcional (hasta 2 fichas largas).
+- **Qué conviene proponer:** una ficha nueva que mejora un paquete o un paso (más corta, en español, más aplicada o más reciente), pasos con link roto o desactualizados, paquetes que se pasan del tiempo y huecos de perfil o de tema (hoy, gobernanza tiene prioridad).
+- Cada propuesta dice qué cambia (alta, baja o reemplazo), en qué paquete o recorrido y por qué, con los minutos de la ficha nueva.
 
 ## 5. Digest semanal
 
 - **Cuándo:** lunes 9:00, hora de Buenos Aires.
 - **Qué:** todas las candidatas que superan 3,5, ordenadas por puntaje y numeradas, para que Ari apruebe por número. Calidad antes que cantidad: sin número fijo, con un mínimo de 3 por semana, pero pueden ser 10 a 15 si lo valen. Si no hay 3 que superen el umbral, se dice así, no se baja la vara.
-- **Cada candidata lleva:** título, autor o fuente, URL verificada, fecha de publicación del recurso, tipo, idioma, perfil, madurez, valor, esfuerzo, puntaje total y por dimensión, y de 1 a 2 frases en español sobre por qué le sirve a alguien de una corporación.
+- **Cada candidata lleva:** título, autor o fuente, URL verificada, fecha de publicación del recurso, tipo, idioma, perfil, madurez, valor, esfuerzo, minutos (medido o estimado), puntaje total y por dimensión, y de 1 a 2 frases en español sobre por qué le sirve a alguien de una corporación.
 - **Posts de X:** por ahora se toma de X solo lo que linkea a algo más profundo (y se evalúa el recurso linkeado). Aparte, al final del digest, se listan hasta 3 hilos buenos sin link como "posibles" (regla pendiente de Ari).
 - **Decisión de Ari:** por cada número responde entra, no entra o más tarde, y puede sumar una nota (por texto o audio). Su nota va a `Por qué lo guardé` o `Mis notas`, ordenada pero sin desvirtuarla.
 - **Publicación:** lo que Ari aprueba se publica directo (ficha con el skill `sumar-fuente`, PR y merge), sin otro paso de confirmación.
 - **Voz de las fichas:** "nosotros" (liqueed), no la primera persona de Ari.
 - **"Por qué lo guardé":** es opcional. Una ficha se puede publicar sin esa sección si Ari no suma nota.
+- **Lecturas rápidas y recorridos:** al final del digest, cambios numerados a `curaduria/lecturas.yaml` (ver sección 4). Lo que Ari aprueba se aplica en el mismo PR de las fichas.
 - **Registro:** cada digest se guarda en `curaduria/digests/AAAA-MM-DD.md`, con las decisiones de Ari. Si Ari rechaza puntajes altos o rescata bajos, se recalibra la rúbrica.
 
 ## Preguntas abiertas (pendientes de Ari)

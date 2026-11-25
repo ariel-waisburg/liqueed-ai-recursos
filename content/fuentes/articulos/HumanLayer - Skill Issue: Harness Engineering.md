@@ -11,6 +11,11 @@ temas:
   - desarrollo-agentico
 tags:
   - harness-engineering
+perfil:
+  - tecnico
+madurez: escalando
+minutos: 20
+minutos_origen: medido
 estado: resumido
 publish: false
 ---

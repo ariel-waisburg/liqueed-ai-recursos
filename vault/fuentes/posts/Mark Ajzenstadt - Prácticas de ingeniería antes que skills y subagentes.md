@@ -13,6 +13,11 @@ tags:
   - calidad-y-evals
   - errores-comunes
   - agent-engineering
+perfil:
+  - tecnico
+madurez: escalando
+minutos: 2
+minutos_origen: estimado
 estado: resumido
 publish: false
 ---

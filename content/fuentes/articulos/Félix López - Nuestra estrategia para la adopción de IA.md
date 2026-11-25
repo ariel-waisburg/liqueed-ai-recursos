@@ -14,6 +14,12 @@ tags:
   - experimentacion-y-prototipado
   - ai-champions
   - cultura-y-cambio
+perfil:
+  - tecnico
+  - cultura-organizacion
+madurez: experimentando
+minutos: 7
+minutos_origen: medido
 estado: resumido
 publish: false
 ---

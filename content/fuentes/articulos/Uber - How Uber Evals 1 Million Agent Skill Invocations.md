@@ -14,6 +14,11 @@ temas:
 tags:
   - agent-engineering
   - costos-ia
+perfil:
+  - tecnico
+madurez: escalando
+minutos: 19
+minutos_origen: medido
 estado: resumido
 publish: false
 ---

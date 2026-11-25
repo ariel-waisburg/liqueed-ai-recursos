@@ -16,6 +16,10 @@ tags:
   - formacion
   - roles-y-carrera
   - mlops
+perfil:
+  - tecnico
+  - cultura-organizacion
+madurez: explorando
 estado: resumido-parcial
 publish: false
 ---

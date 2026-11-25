@@ -13,6 +13,12 @@ temas:
   - pensamiento-critico
 tags:
   - workflows-con-agentes
+perfil:
+  - tecnico
+  - cultura-organizacion
+madurez: experimentando
+minutos: 11
+minutos_origen: medido
 estado: resumido
 publish: false
 ---

@@ -13,6 +13,12 @@ temas:
 tags:
   - formacion
   - errores-comunes
+perfil:
+  - tecnico
+  - cultura-organizacion
+madurez: explorando
+minutos: 2
+minutos_origen: estimado
 estado: resumido
 publish: false
 ---

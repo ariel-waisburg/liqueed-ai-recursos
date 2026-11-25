@@ -12,6 +12,11 @@ temas:
 tags:
   - roles-y-carrera
   - cultura-y-cambio
+perfil:
+  - cultura-organizacion
+madurez: experimentando
+minutos: 12
+minutos_origen: medido
 estado: resumido
 publish: false
 ---

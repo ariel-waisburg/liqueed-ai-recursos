@@ -11,6 +11,11 @@ temas:
   - producto-e-ia
 tags:
   - priorizacion-y-casos-de-uso
+perfil:
+  - producto
+madurez: experimentando
+minutos: 8
+minutos_origen: estimado
 estado: resumido-parcial
 publish: false
 ---

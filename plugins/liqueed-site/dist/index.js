@@ -2,7 +2,9 @@ import fs from "node:fs/promises"
 import path from "node:path"
 import { jsx, jsxs, Fragment } from "preact/jsx-runtime"
 // Facetas y etiquetas compartidas con /explorar (mismo modelo, mismos conteos).
-import { facetValues, isoDate, FACETAS } from "../../liqueed-explorar/dist/modelo.js"
+import { facetValues, isoDate, FACETAS, buildModel, PERFIL_LABEL, MADUREZ_LABEL } from "../../liqueed-explorar/dist/modelo.js"
+// Lecturas rápidas y recorridos recomendados (curaduria/lecturas.yaml), mismos datos que las páginas.
+import { lecturasParaAgentes } from "../../liqueed-explorar/dist/lecturas.js"
 
 /**
  * liqueed-site: emisor + recursos globales del sitio.
@@ -10,6 +12,7 @@ import { facetValues, isoDate, FACETAS } from "../../liqueed-explorar/dist/model
  * - <head>: rel=canonical y rel=alternate (RSS) en cada página.
  * - Estilos de marca y eventos de analytics de los CTAs (dataLayer, GA4/GTM).
  * - Archivos para agentes y feeds: llms.txt, llms-full.txt e index.xml (RSS solo con fichas).
+ * - recorridos.json: lecturas rápidas y recorridos recomendados con sus fichas y minutos.
  *   El RSS propio reemplaza al de Quartz (configuration.contentIndex.enableRSS: false).
  */
 
@@ -138,7 +141,42 @@ async function collect(ctx, content) {
     temaByKey,
   )
 
-  return { notes, byName, fichas, temas, facetas }
+  const lecturas = lecturasParaAgentes(buildModel([...content].map(([, file]) => file.data ?? {})), cfg)
+  return { notes, byName, fichas, temas, facetas, lecturas }
+}
+
+/** Sección de llms.txt con las lecturas rápidas y los recorridos recomendados. */
+function lecturasSection(cfg, data) {
+  const base = siteBase(cfg)
+  const L = data.lecturas
+  if (!L || (!L.lecturas_rapidas.length && !L.recorridos.length)) return []
+  const mins = (it) =>
+    [it.minutos_ficha ? `ficha ${it.minutos_ficha} min` : null, it.minutos_fuente ? `fuente ${it.minutos_fuente} min${it.minutos_fuente_origen === "estimado" ? " (estimado)" : ""}` : null]
+      .filter(Boolean)
+      .join(", ")
+  const line = (it, i) => `${i + 1}. [${it.autor ? `${it.autor}: ` : ""}${it.titulo}](${it.ficha})${mins(it) ? ` (${mins(it)})` : ""}${it.por_que ? `: ${it.por_que}` : ""}`
+  const perfiles = (ps) => ps.map((p) => PERFIL_LABEL[p] ?? p).join(", ")
+  const out = [
+    "## Lecturas rápidas y recorridos recomendados",
+    "",
+    `Selecciones armadas por liqueed para empezar por tiempo o por perfil. Datos en JSON: ${base}/recorridos.json` +
+      (L.revisado ? ` (revisado ${L.revisado}).` : "."),
+    "",
+    `### Lecturas rápidas (${base}/lecturas-rapidas)`,
+    "",
+  ]
+  for (const p of L.lecturas_rapidas) {
+    out.push(`- **${p.titulo}** (${p.url}) · perfiles: ${perfiles(p.perfil)} · ${p.descripcion}`)
+    p.lecturas.forEach((it, i) => out.push(`  ${line(it, i)}`))
+  }
+  out.push("", `### Recorridos recomendados (${base}/recorridos-recomendados)`, "")
+  for (const r of L.recorridos) {
+    out.push(`- **${r.titulo}** (${r.url}) · perfil: ${perfiles(r.perfil)} · madurez: ${MADUREZ_LABEL[r.madurez] ?? r.madurez ?? "s/d"} · ${r.descripcion}`)
+    r.pasos.forEach((it, i) => out.push(`  ${line(it, i)}`))
+    for (const it of r.para_profundizar) out.push(`  - Para profundizar: ${line(it, 0).replace(/^1\. /, "")}`)
+  }
+  out.push("")
+  return out
 }
 
 /** Sección de llms.txt con las facetas de /explorar y su URL con query string. */
@@ -198,6 +236,7 @@ function buildLlmsTxt(cfg, o, data) {
       `Versión completa en un solo archivo: ${base}/llms-full.txt · RSS: ${base}/index.xml · Sitemap: ${base}/sitemap.xml`,
     "",
   )
+  lines.push(...lecturasSection(cfg, data))
   for (const t of orderedTemas(data.temas, o.temaOrder)) {
     const fs_ = data.fichas
       .filter((f) => f.temas.includes(t.key))
@@ -371,6 +410,7 @@ export default function LiqueedSite(userOpts = {}) {
         await write(ctx, "llms.txt", buildLlmsTxt(cfg, o, data)),
         await write(ctx, "llms-full.txt", buildLlmsFull(cfg, o, data)),
         await write(ctx, "index.xml", buildRss(cfg, o, data)),
+        await write(ctx, "recorridos.json", JSON.stringify(data.lecturas, null, 2)),
       ]
     },
   }

@@ -12,6 +12,11 @@ temas:
 tags:
   - workflows-con-agentes
   - calidad-y-evals
+perfil:
+  - tecnico
+madurez: escalando
+minutos: 2
+minutos_origen: estimado
 estado: resumido
 publish: false
 ---

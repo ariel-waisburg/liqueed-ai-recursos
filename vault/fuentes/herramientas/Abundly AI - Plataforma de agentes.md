@@ -13,6 +13,12 @@ temas:
 tags:
   - calidad-y-evals
   - roles-y-carrera
+perfil:
+  - tecnico
+  - cultura-organizacion
+madurez: escalando
+minutos: 5
+minutos_origen: estimado
 estado: resumido
 publish: false
 ---

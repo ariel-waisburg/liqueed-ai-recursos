@@ -14,6 +14,9 @@ temas:
 tags:
   - ai-champions
   - formacion
+perfil:
+  - cultura-organizacion
+madurez: experimentando
 estado: resumido
 publish: false
 ---

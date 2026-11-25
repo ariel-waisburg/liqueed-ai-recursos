@@ -12,6 +12,11 @@ temas:
 tags:
   - costos-ia
   - calidad-y-evals
+perfil:
+  - tecnico
+madurez: escalando
+minutos: 58
+minutos_origen: medido
 estado: resumido-parcial
 publish: false
 ---

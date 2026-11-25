@@ -13,6 +13,13 @@ temas:
 tags:
   - experimentacion-y-prototipado
   - roles-y-carrera
+perfil:
+  - tecnico
+  - producto
+  - cultura-organizacion
+madurez: experimentando
+minutos: 15
+minutos_origen: estimado
 estado: resumido
 publish: false
 ---

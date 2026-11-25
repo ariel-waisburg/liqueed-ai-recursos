@@ -11,6 +11,11 @@ temas:
   - agentes-y-evals
 tags:
   - calidad-y-evals
+perfil:
+  - tecnico
+madurez: escalando
+minutos: 21
+minutos_origen: medido
 estado: resumido
 publish: false
 ---

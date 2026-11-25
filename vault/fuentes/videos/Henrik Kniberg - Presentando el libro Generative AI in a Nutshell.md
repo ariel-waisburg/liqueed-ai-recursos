@@ -13,6 +13,11 @@ temas:
 tags:
   - fundamentos
   - formacion
+perfil:
+  - tecnico
+madurez: explorando
+minutos: 11
+minutos_origen: medido
 estado: resumido-parcial
 publish: false
 ---

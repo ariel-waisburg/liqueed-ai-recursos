@@ -12,6 +12,11 @@ temas:
 tags:
   - agent-engineering
   - workflows-con-agentes
+perfil:
+  - tecnico
+madurez: escalando
+minutos: 7
+minutos_origen: medido
 estado: resumido
 publish: false
 ---

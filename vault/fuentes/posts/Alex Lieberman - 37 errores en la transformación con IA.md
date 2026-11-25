@@ -11,6 +11,11 @@ temas:
   - adopcion-ia
 tags:
   - errores-comunes
+perfil:
+  - cultura-organizacion
+madurez: experimentando
+minutos: 3
+minutos_origen: estimado
 estado: resumido-parcial
 publish: false
 ---

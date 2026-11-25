@@ -11,6 +11,11 @@ temas:
   - adopcion-ia
 tags:
   - cultura-y-cambio
+perfil:
+  - cultura-organizacion
+madurez: experimentando
+minutos: 8
+minutos_origen: estimado
 estado: resumido-parcial
 publish: false
 ---

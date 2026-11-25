@@ -11,6 +11,11 @@ temas:
   - producto-e-ia
 tags:
   - roles-y-carrera
+perfil:
+  - producto
+madurez: explorando
+minutos: 2
+minutos_origen: estimado
 estado: resumido
 publish: false
 ---

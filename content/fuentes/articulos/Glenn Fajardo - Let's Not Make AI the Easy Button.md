@@ -12,6 +12,12 @@ temas:
 tags:
   - delegacion-y-supervision
   - experimentacion-y-prototipado
+perfil:
+  - producto
+  - cultura-organizacion
+madurez: experimentando
+minutos: 8
+minutos_origen: estimado
 estado: resumido
 publish: false
 ---
