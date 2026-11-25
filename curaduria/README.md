@@ -16,6 +16,13 @@ Configuración de curaduría que leen las corridas automáticas de Faro (el bot 
 - Rúbrica aprobada con dos cambios: relevancia enterprise al 20% y calidad de consumo al 10%. Umbrales 4,0 / 3,5 sin cambios.
 - La lista privada de X "Tech" es fuente. Se lee **solo en modo lectura**: nunca publicar, seguir, ni modificar listas.
 - Email de Faro para newsletters: pendiente de que Ari lo active. Hasta entonces, no suscribirse a nada.
+- Consultoras competidoras: entran si son el mejor recurso del tema.
+- Vendors (Anthropic, OpenAI, Vercel, etc.): entran si enseñan algo útil; el tono de infomercial se penaliza.
+- Sin piso de aplicado vs. conceptual.
+- Ante dos recursos equivalentes, se prioriza el que está en español.
+- Voz de las fichas: "nosotros" (liqueed). Una ficha se puede publicar sin "Por qué lo guardé".
+- Volumen: calidad antes que cantidad. Mínimo 3 por semana; pueden ser 10 a 15 si lo valen.
+- Posts sueltos de X: pendiente. Por ahora, solo lo que linkea a algo más profundo, más hasta 3 hilos "posibles".
 
 ## Reglas de marca que aplican a todo lo que se escribe
 
