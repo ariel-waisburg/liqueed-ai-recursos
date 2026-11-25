@@ -64,6 +64,15 @@ function fichaNodes(cfg, f, temaByKey) {
     datePublished: f.publicado,
     genre: f.tipo ? tipoLabel(f.tipo) : null,
   })
+  const schemaType = source["@type"]
+  if (f.miniatura) {
+    // VideoObject usa thumbnailUrl; el resto, image.
+    if (schemaType === "VideoObject") source.thumbnailUrl = f.miniatura
+    else source.image = f.miniatura
+  }
+  // uploadDate del video = fecha de publicación del frontmatter (solo si es una fecha completa).
+  if (schemaType === "VideoObject" && f.publicado && f.publicado.length === 10) source.uploadDate = f.publicado
+  if (f.proveedor) source.provider = { "@type": "Organization", name: f.proveedor }
   const temas = f.temas
     .map((k) => temaByKey.get(k))
     .filter(Boolean)

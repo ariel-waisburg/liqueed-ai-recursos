@@ -16,7 +16,7 @@ directo en `dist/` y Quartz los enlaza solo al compilar (`source: ./plugins/<nom
 ## Explorar y facetas
 
 - La página la genera `scripts/publicar.py` (`content/explorar.md`, solo título e intro); la lista y los filtros los pone `liqueed-explorar` en el build, con los datos del frontmatter de las fichas publicadas.
-- Facetas: `tipo`, `idioma`, `temas` (por el `slug` de cada tema) y `tags`. Las etiquetas en español de tipos e idiomas están en `liqueed-explorar/dist/modelo.js` (`TIPO_LABEL`, `IDIOMA_LABEL`); si se suma un tipo nuevo, agregalo ahí (y en `TIPO_SCHEMA` para el JSON-LD).
+- Facetas: `tipo`, `idioma`, `temas` (por el `slug` de cada tema) y `tags`. Las etiquetas en español de los tipos están en `liqueed-explorar/dist/modelo.js` (`TIPO_LABEL`; si se suma un tipo nuevo, agregalo ahí y en `TIPO_SCHEMA` para el JSON-LD). Los idiomas aceptan cualquier código ISO 639-1: el nombre en español sale de `.claude/skills/sumar-fuente/idiomas.md`, la misma tabla con la que valida `publicar.py`.
 - Sin JS: el HTML trae todas las fichas y los `<select>` filtran solos con CSS (`:has`). Con JS (`dist/cliente.js`) se suman la búsqueda, los conteos por opción, la URL con query string y el evento de analytics. Se reinicializa en cada navegación SPA (evento `nav`).
 - `publicar.py` avisa ("aviso de facetas: …") si una fuente tiene un tipo, idioma, tema o tag fuera del vocabulario.
 - `llms.txt` lista las facetas con sus valores, conteos y URLs; `llms-full.txt` las menciona. Comparten el modelo con `liqueed-site` (que importa `../../liqueed-explorar/dist/modelo.js`).
@@ -25,7 +25,7 @@ directo en `dist/` y Quartz los enlaza solo al compilar (`source: ./plugins/<nom
 
 Va en un `<script type="application/ld+json">` dentro del cuerpo (los componentes ven todas las páginas; el `<head>` no). Siempre incluye `Organization` (Liqueed, https://liqueed.org) y `WebSite` (con `SearchAction` a `/explorar?q=`).
 
-- **Ficha**: `WebPage` (resumen de Liqueed: `description` = "En una línea", `keywords` = tags, `dateCreated` = `guardado`, `isPartOf` = sitio y temas, `about`/`mainEntity`/`isBasedOn` = la fuente, `publisher` = Liqueed) + la fuente original con su tipo (`Article`, `SocialMediaPosting`, `VideoObject`, `Course`, …), `url`, `name`, `author` (texto: el frontmatter no dice si es persona u organización), `inLanguage` = `idioma` y `datePublished` = `publicado` cuando hay fecha.
+- **Ficha**: `WebPage` (resumen de Liqueed: `description` = "En una línea", `keywords` = tags, `dateCreated` = `guardado`, `isPartOf` = sitio y temas, `about`/`mainEntity`/`isBasedOn` = la fuente, `publisher` = Liqueed) + la fuente original con su tipo (`Article`, `SocialMediaPosting`, `VideoObject`, `Course`, …), `url`, `name`, `author` (texto: el frontmatter no dice si es persona u organización), `inLanguage` = `idioma` (cualquier código ISO 639-1) y `datePublished` = `publicado` cuando hay fecha. En videos y cursos, además: `thumbnailUrl` (video) o `image` (curso) desde `miniatura`, `uploadDate` (video) desde `publicado` y `provider` (curso, como `Organization`) desde `proveedor`.
 - **Tema, tag, carpeta y /explorar**: `CollectionPage` con un `ItemList` de sus fichas. La descripción de cada tag sale de `tags.md`.
 - **Home**: `WebSite` + `Organization`.
 
