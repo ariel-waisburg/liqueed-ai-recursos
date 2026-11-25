@@ -4,6 +4,7 @@ autor: "BettaTech"
 tipo: video
 plataforma: "YouTube"
 url: "https://www.youtube.com/watch?v=MgtM_Ktuc5A"
+miniatura: "https://i.ytimg.com/vi/MgtM_Ktuc5A/hqdefault.jpg"
 idioma: "es"
 publicado: "2026-04 (aprox.)"
 guardado: 2026-11-18

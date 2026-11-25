@@ -4,6 +4,7 @@ autor: "Nils Janse (Abundly AI)"
 tipo: video
 plataforma: "abundly.ai"
 url: "https://www.abundly.ai/events/2026-03-20/road-to-ai-agents"
+miniatura: ""
 idioma: "en"
 publicado: "2026-03-20"
 guardado: 2026-11-24
