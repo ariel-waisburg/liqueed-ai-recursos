@@ -37,8 +37,9 @@ directo en `dist/` y Quartz los enlaza solo al compilar (`source: ./plugins/<nom
 - Datos: `curaduria/lecturas.yaml` (reglas en `curaduria/rubrica.md`, sección 4). Cada ítem apunta a una ficha por el nombre del archivo, sin `.md`. Las páginas las genera `publicar.py` (solo título e intro) y el contenido lo pone `liqueed-explorar/dist/lecturas.js`.
 - Minutos: los de la fuente salen de `minutos` y `minutos_origen` del frontmatter ("(estimado)" cuando corresponde); los de la ficha se calculan sobre lo publicado (palabras / 200, mínimo 1, `modelo.js` `minutosLectura`).
 - El build avisa (`[liqueed-explorar] curaduria/lecturas.yaml: …`) si una ficha no existe o no se publica, si un paquete se pasa de su tiempo, si hay más de 5 lecturas rápidas o un paquete fuera de 3 a 5 lecturas.
-- Sin JS: todo está en el HTML y los filtros de perfil (radios) y tema (`<select>`) funcionan con CSS (`:has`). Con JS (`dist/lecturas-cliente.js`): URL compartible `?perfil=&tema=`, estado vacío, avance de cada recorrido en `localStorage` (`lq-recorrido:<id>`) y "Compartir con mi equipo" (`navigator.share`; si no hay, copia el link; sin JS es un `mailto:`). El link compartido lleva `utm_source=recursos-ai&utm_medium=compartir`.
-- Lead (opción A): "Agendá una conversación" + "Compartir con mi equipo", sin caja de email.
+- Sin JS: todo está en el HTML y los filtros de perfil y tema (dos `<select>` con el mismo estilo) funcionan con CSS (`:has`). Con JS (`dist/lecturas-cliente.js`): URL compartible `?perfil=&tema=`, estado vacío, avance de cada recorrido en `localStorage` (`lq-recorrido:<id>`) y "Compartir con mi equipo" (`navigator.share`; si no hay, copia el link; sin JS es un `mailto:`). El link compartido lleva `utm_source=recursos-ai&utm_medium=compartir`.
+- Lead (opción A): cierre liviano "Para equipos" con "Agendá una conversación" + "Compartir con mi equipo", sin caja de email; cada paquete y recorrido tiene un link "Compartir con mi equipo".
+- Estilo minimalista (pedido de Ari, 25/11/2026): sin tarjetas con borde, separadores finos, radios suaves. Textos cortos y verificables (reglas en `curaduria/rubrica.md`).
 
 ## JSON-LD (schema.org)
 
@@ -62,7 +63,7 @@ En `/lecturas-rapidas` y `/recorridos-recomendados` (`liqueed-explorar/dist/lect
 - `profile_select` con `perfil` (o `(todos)`) y `page_type` (`lecturas` o `recorridos`); `topic_filter` con `tema` y `page_type`.
 - `pack_open` con `pack_id`: primer clic en una lectura de ese paquete en la visita. `pack_item_click` con `pack_id`, `item` (nombre de la ficha), `position` y `link_type` (`ficha` o `fuente`): cada clic.
 - `route_step` con `route_id`, `step`, `item` y `action` (`open` o `open_extra` al abrir un paso o un "para profundizar", con `link_type`; `done` o `undone` al marcarlo como leído). `route_complete` con `route_id` y `steps` al marcar el último.
-- `cta_agendar_click` con `origen` (`pagina` o `recorrido`), `id` y `link_url` (además del `cta_click` general, con `cta_id` `agenda_pagina` o `agenda_recorrido`).
+- `cta_agendar_click` con `origen` (`pagina`), `id` y `link_url` (además del `cta_click` general, con `cta_id` `agenda_pagina`).
 - `share_team_click` con `origen` (`pagina`, `paquete` o `recorrido`), `id` y `method` (`native`, `clipboard` o `email`).
 
 El embed de Kit se reinicializa solo cuando se navega sin recargar (SPA de Quartz).

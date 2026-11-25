@@ -116,7 +116,8 @@ Desde el 25/11/2026 `perfil`, `madurez`, `minutos` y `minutos_origen` están en 
 Las páginas `/lecturas-rapidas` y `/recorridos-recomendados` salen de [lecturas.yaml](lecturas.yaml). Armado híbrido (aprobado por Ari el 25/11/2026): Faro propone, Ari aprueba por número y recién ahí se edita el archivo.
 
 - **Lecturas rápidas:** de 3 a 5 paquetes en la página (máximo 5 opciones), cada uno de 3 a 5 fichas. La suma de minutos de las fuentes no puede pasar el tiempo que promete el paquete (el build avisa).
-- **Recorridos recomendados:** uno por perfil (`producto`, `tecnico`, `cultura-organizacion`) y uno de gobernanza, de 4 a 5 pasos en orden, con una madurez declarada y "Al terminar vas a saber". "Para profundizar" es opcional (hasta 2 fichas largas).
+- **Recorridos recomendados:** uno por perfil (`producto`, `tecnico`, `cultura-organizacion`) y uno de gobernanza, de 4 a 5 pasos en orden. "Para profundizar" es opcional (hasta 2 fichas largas). La madurez queda en el archivo, no se muestra.
+- **Textos:** cortos, sobrios y verificables (pedido de Ari, 25/11/2026). Títulos sin minutos ni slogans; descripción de una línea con lo que cubre; `por_que` de una línea con un hecho del recurso. Nada que suponga la etapa de la organización de quien lee ni prometa resultados.
 - **Qué conviene proponer:** una ficha nueva que mejora un paquete o un paso (más corta, en español, más aplicada o más reciente), pasos con link roto o desactualizados, paquetes que se pasan del tiempo y huecos de perfil o de tema (hoy, gobernanza tiene prioridad).
 - Cada propuesta dice qué cambia (alta, baja o reemplazo), en qué paquete o recorrido y por qué, con los minutos de la ficha nueva.
 

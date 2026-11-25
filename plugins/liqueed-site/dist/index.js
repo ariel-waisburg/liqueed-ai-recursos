@@ -159,7 +159,7 @@ function lecturasSection(cfg, data) {
   const out = [
     "## Lecturas rápidas y recorridos recomendados",
     "",
-    `Selecciones armadas por liqueed para empezar por tiempo o por perfil. Datos en JSON: ${base}/recorridos.json` +
+    `Lecturas cortas por tiempo disponible y recorridos sugeridos por perfil, elegidos por liqueed. Datos en JSON: ${base}/recorridos.json` +
       (L.revisado ? ` (revisado ${L.revisado}).` : "."),
     "",
     `### Lecturas rápidas (${base}/lecturas-rapidas)`,

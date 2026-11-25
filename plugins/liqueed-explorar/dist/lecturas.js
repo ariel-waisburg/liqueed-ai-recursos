@@ -108,54 +108,48 @@ export function fuenteLabel(f) {
   if (!f.minutos) return f.tipo === "curso" || f.tipo === "libro" || f.tipo === "referente" ? "Fuente: a tu ritmo" : null
   return `Fuente: ${minLabel(f.minutos)}${f.minutosOrigen === "estimado" ? " (estimado)" : ""}`
 }
+/** "5 pasos · fichas 8 min · fuentes 49 min" (sin adornos: los estimados se marcan en cada lectura). */
 function totalesLabel(t, n, unidad) {
   const parts = [`${n} ${unidad}${n === 1 ? "" : "s"}`]
-  if (t.ficha) parts.push(`Fichas: ${minLabel(t.ficha)}`)
-  if (t.fuente) parts.push(`Fuentes: ${t.estimado ? "unos " : ""}${minLabel(t.fuente)}${t.sinMinutos ? " + lecturas a tu ritmo" : ""}`)
+  if (t.ficha) parts.push(`fichas ${minLabel(t.ficha)}`)
+  if (t.fuente) parts.push(`fuentes ${minLabel(t.fuente)}`)
   return parts.join(" · ")
 }
-const perfilesLabel = (ps) => (ps.length === PERFILES.length ? "Todos los perfiles" : ps.map((p) => PERFIL_LABEL[p]).join(" · "))
+const perfilesLabel = (ps) => (ps.length === PERFILES.length ? "Todos los perfiles" : ps.map((p) => PERFIL_LABEL[p]).join(", "))
 
 // ---------- componentes ----------
 
 const cssStr = (s) => String(s).replace(/["\\]/g, "\\$&")
 
+/** Filtro sin JS: con un valor elegido en el <select>, se ocultan las tarjetas que no lo tienen. */
 function filtrosCss(temas) {
-  const rules = PERFILES.map((p) => `.lq-lr:has(input[name="perfil"][value="${p}"]:checked) .lq-lr-card:not([data-perfil~="${p}"])`)
-  for (const t of temas) rules.push(`.lq-lr:has(select[name="tema"] option[value="${cssStr(t.value)}"]:checked) .lq-lr-card:not([data-tema~="${cssStr(t.value)}"])`)
+  const rule = (name, v) => `.lq-lr:has(select[name="${name}"] option[value="${cssStr(v)}"]:checked) .lq-lr-card:not([data-${name}~="${cssStr(v)}"])`
+  const rules = [...PERFILES.map((p) => rule("perfil", p)), ...temas.map((t) => rule("tema", t.value))]
   return `${rules.join(",\n")}{display:none}`
 }
 
+/** Perfil y tema con el mismo componente: dos <select> iguales, perfil primero. */
 function Filtros({ temas, tipo }) {
+  const campo = (name, label, todos, opciones) =>
+    jsxs("div", {
+      class: "lq-lr-campo",
+      children: [
+        jsx("label", { for: `lq-lr-${name}-${tipo}`, children: label }),
+        jsxs("select", {
+          id: `lq-lr-${name}-${tipo}`,
+          name,
+          children: [jsx("option", { value: "", children: todos }), ...opciones.map(([v, l]) => jsx("option", { value: v, children: l }))],
+        }),
+      ],
+    })
   return jsxs("form", {
     class: "lq-lr-filtros",
-    "aria-label": tipo === "recorridos" ? "Filtrar recorridos" : "Filtrar lecturas rápidas",
+    "aria-label": tipo === "recorridos" ? "Filtrar recorridos" : "Filtrar lecturas",
     action: "",
     method: "get",
     children: [
-      jsxs("fieldset", {
-        class: "lq-lr-perfiles",
-        children: [
-          jsx("legend", { children: "Tu perfil" }),
-          ...[["", "Todos"], ...PERFILES.map((p) => [p, PERFIL_LABEL[p]])].map(([v, label]) =>
-            jsxs("label", {
-              class: "lq-lr-chip",
-              children: [jsx("input", { type: "radio", name: "perfil", value: v, checked: v === "" ? true : undefined }), jsx("span", { children: label })],
-            }),
-          ),
-        ],
-      }),
-      jsxs("div", {
-        class: "lq-lr-tema",
-        children: [
-          jsx("label", { for: `lq-lr-tema-${tipo}`, children: "Tema" }),
-          jsxs("select", {
-            id: `lq-lr-tema-${tipo}`,
-            name: "tema",
-            children: [jsx("option", { value: "", children: "Todos los temas" }), ...temas.map((t) => jsx("option", { value: t.value, children: t.label }))],
-          }),
-        ],
-      }),
+      campo("perfil", "Perfil", "Todos", PERFILES.map((p) => [p, PERFIL_LABEL[p]])),
+      campo("tema", "Tema", "Todos", temas.map((t) => [t.value, t.label])),
     ],
   })
 }
@@ -164,6 +158,7 @@ function Item({ it, from, idx, ruta }) {
   const f = it.f
   const meta = [f.autor, f.tipo ? tipoLabel(f.tipo) : null, f.idioma ? idiomaLabel(f.idioma) : null].filter(Boolean).join(" · ")
   const fuente = fuenteLabel(f)
+  const tiempos = [f.minutosFicha ? `Ficha: ${minLabel(f.minutosFicha)}` : null, fuente].filter(Boolean).join(" · ")
   return jsxs("li", {
     class: "lq-lr-item",
     "data-item": f.name,
@@ -188,8 +183,7 @@ function Item({ it, from, idx, ruta }) {
           jsxs("p", {
             class: "lq-lr-times",
             children: [
-              f.minutosFicha ? jsx("span", { class: "lq-t", children: `Ficha: ${minLabel(f.minutosFicha)}` }) : null,
-              fuente ? jsx("span", { class: "lq-t", children: fuente }) : null,
+              tiempos ? jsx("span", { children: tiempos }) : null,
               jsx("a", { class: "external", href: f.url, target: "_blank", rel: "noopener", "data-lq-link": "fuente", children: "Fuente original ↗" }),
             ],
           }),
@@ -200,7 +194,7 @@ function Item({ it, from, idx, ruta }) {
 }
 
 function shareHref(url, titulo) {
-  const body = `Te comparto esta selección de lecturas sobre IA de liqueed: ${titulo}\n${url}`
+  const body = `${titulo}, en Recursos de IA de liqueed:\n${url}`
   return `mailto:?subject=${encodeURIComponent(titulo)}&body=${encodeURIComponent(body)}`
 }
 
@@ -208,22 +202,23 @@ function shareUrl(cfg, slug, hash) {
   return `${siteBase(cfg)}/${slug}?utm_source=recursos-ai&utm_medium=compartir&utm_campaign=${slug}${hash ? `#${hash}` : ""}`
 }
 
-function ShareButton({ cfg, slug, hash, titulo, origen, id, cls = "ghost" }) {
+/** "Compartir con mi equipo": botón en el cierre de la página; link de texto en cada paquete o recorrido. */
+function ShareButton({ cfg, slug, hash, titulo, origen, id, cls = "liqueed-btn ghost", label = "Compartir con mi equipo" }) {
   const url = shareUrl(cfg, slug, hash)
   return jsx("a", {
-    class: `liqueed-btn ${cls} lq-share`,
+    class: `${cls} lq-share`,
     href: shareHref(url, titulo),
     "data-lq-share": origen,
     "data-lq-id": id,
     "data-share-url": url,
     "data-share-title": titulo,
-    children: "Compartir con mi equipo",
+    children: label,
   })
 }
 
-function AgendaButton({ o, origen, id, cls = "primary" }) {
+function AgendaButton({ o, origen, id, cls = "liqueed-btn primary" }) {
   return jsx("a", {
-    class: `liqueed-btn ${cls}`,
+    class: cls,
     href: o.agendaUrl,
     target: "_blank",
     rel: "noopener",
@@ -234,19 +229,16 @@ function AgendaButton({ o, origen, id, cls = "primary" }) {
   })
 }
 
+/** Cierre (opción A de lead): sin caja de email, sin promesas. */
 function CtaPagina({ o, cfg, slug, titulo }) {
   return jsxs("aside", {
-    class: "liqueed-cta lq-lr-cta",
+    class: "lq-lr-cta",
     "aria-labelledby": "lq-lr-cta-title",
     children: [
-      jsx("p", { class: "liqueed-eyebrow", children: "Para tu equipo" }),
-      jsxs("h2", { id: "lq-lr-cta-title", children: ["¿Querés un recorrido armado para ", jsx("span", { class: "liqueed-hl", children: "tu equipo" }), "?"] }),
-      jsx("p", {
-        children:
-          "Lo diseñamos con ustedes: elegimos las lecturas según los roles y la etapa de adopción de tu organización, y las llevamos a ejercicios sobre sus propios casos.",
-      }),
+      jsx("h2", { id: "lq-lr-cta-title", children: "Para equipos" }),
+      jsx("p", { children: "Si querés armar un recorrido para tu equipo, conversemos." }),
       jsxs("div", {
-        class: "liqueed-cta-actions",
+        class: "lq-lr-cta-actions",
         children: [jsx(AgendaButton, { o, origen: "pagina", id: slug }), jsx(ShareButton, { cfg, slug, titulo, origen: "pagina", id: slug })],
       }),
       jsx("p", { class: "lq-share-status", role: "status", "aria-live": "polite" }),
@@ -261,7 +253,11 @@ function temasOpciones(cards, model) {
 }
 
 function Vacio() {
-  return jsx("p", { class: "lq-lr-empty", hidden: true, children: "No hay nada para esa combinación todavía. Probá con otro tema o con todos los perfiles." })
+  return jsx("p", { class: "lq-lr-empty", hidden: true, children: "No hay resultados con esos filtros." })
+}
+
+function ShareLink({ cfg, slug, hash, titulo, origen, id }) {
+  return jsx(ShareButton, { cfg, slug, hash, titulo, origen, id, cls: "lq-share-link", label: "Compartir con mi equipo" })
 }
 
 export function LecturasRapidas({ model, slug, cfg, o }) {
@@ -274,37 +270,39 @@ export function LecturasRapidas({ model, slug, cfg, o }) {
       jsx("style", { dangerouslySetInnerHTML: { __html: filtrosCss(temas) } }),
       jsx(Filtros, { temas, tipo: "lecturas" }),
       jsx(Vacio, {}),
-      jsx("div", {
-        class: "lq-lr-grid",
-        children: data.paquetes.map((p) =>
-          jsxs("article", {
-            class: "lq-lr-card lq-pack",
-            id: p.id,
-            "data-pack": p.id,
-            "data-perfil": p.perfil.join(" "),
-            "data-tema": p.temas.join(" "),
-            "aria-labelledby": `${p.id}-t`,
-            children: [
-              jsx("p", { class: "lq-lr-eyebrow", children: [p.minutos ? `${p.minutos} minutos` : null, perfilesLabel(p.perfil)].filter(Boolean).join(" · ") }),
-              jsx("h2", { id: `${p.id}-t`, children: p.titulo }),
-              p.descripcion ? jsx("p", { class: "lq-lr-desc", children: p.descripcion }) : null,
-              jsx("p", { class: "lq-lr-totals", children: totalesLabel(p.totales, p.items.length, "lectura") }),
-              jsx("ol", { class: "lq-lr-items", children: p.items.map((it, i) => jsx(Item, { it, from: slug, idx: i })) }),
-              jsx("div", { class: "lq-lr-card-actions", children: jsx(ShareButton, { cfg, slug, hash: p.id, titulo: p.titulo, origen: "paquete", id: p.id, cls: "ghost small" }) }),
-            ],
-          }),
-        ),
-      }),
+      ...data.paquetes.map((p) =>
+        jsxs("article", {
+          class: "lq-lr-card lq-pack",
+          id: p.id,
+          "data-pack": p.id,
+          "data-perfil": p.perfil.join(" "),
+          "data-tema": p.temas.join(" "),
+          "aria-labelledby": `${p.id}-t`,
+          children: [
+            jsxs("header", {
+              class: "lq-lr-head",
+              children: [
+                jsx("h2", { id: `${p.id}-t`, children: p.titulo }),
+                p.minutos ? jsx("span", { class: "lq-lr-min", children: `${p.minutos} min` }) : null,
+              ],
+            }),
+            p.descripcion ? jsx("p", { class: "lq-lr-desc", children: p.descripcion }) : null,
+            jsx("p", { class: "lq-lr-totals", children: [perfilesLabel(p.perfil), totalesLabel(p.totales, p.items.length, "lectura")].join(" · ") }),
+            jsx("ol", { class: "lq-lr-items", children: p.items.map((it, i) => jsx(Item, { it, from: slug, idx: i })) }),
+            jsx("p", { class: "lq-lr-card-actions", children: jsx(ShareLink, { cfg, slug, hash: p.id, titulo: p.titulo, origen: "paquete", id: p.id }) }),
+          ],
+        }),
+      ),
       jsxs("p", {
         class: "lq-lr-nota",
         children: [
-          "¿Querés ir más a fondo? Mirá los ",
+          "También hay ",
           jsx("a", { class: "internal", href: relHref(slug, RECORRIDOS_SLUG), "data-slug": RECORRIDOS_SLUG, children: "recorridos recomendados" }),
-          " por perfil. Los minutos de la fuente son medidos o estimados (lo indicamos); los de la ficha, de nuestro resumen.",
-          data.revisado ? ` Selección revisada el ${fechaCorta(data.revisado)}.` : "",
+          " por perfil.",
+          data.revisado ? ` Revisado el ${fechaCorta(data.revisado)}.` : "",
         ],
       }),
-      jsx(CtaPagina, { o, cfg, slug, titulo: "Lecturas rápidas sobre IA aplicada (liqueed)" }),
+      jsx(CtaPagina, { o, cfg, slug, titulo: "Lecturas rápidas sobre IA aplicada" }),
     ],
   })
 }
@@ -329,21 +327,16 @@ export function Recorridos({ model, slug, cfg, o }) {
           "data-tema": r.temas.join(" "),
           "aria-labelledby": `${r.id}-t`,
           children: [
-            jsx("p", {
-              class: "lq-lr-eyebrow",
-              children: ["Recorrido recomendado", perfilesLabel(r.perfil), r.madurez ? MADUREZ_LABEL[r.madurez] ?? r.madurez : null].filter(Boolean).join(" · "),
-            }),
-            jsx("h2", { id: `${r.id}-t`, children: r.titulo }),
+            jsx("header", { class: "lq-lr-head", children: jsx("h2", { id: `${r.id}-t`, children: r.titulo }) }),
             r.descripcion ? jsx("p", { class: "lq-lr-desc", children: r.descripcion }) : null,
-            jsx("p", { class: "lq-lr-totals", children: totalesLabel(r.totales, r.pasos.length, "paso") }),
-            r.saleSabiendo ? jsxs("p", { class: "lq-lr-outcome", children: [jsx("strong", { children: "Al terminar vas a saber: " }), r.saleSabiendo] }) : null,
+            jsx("p", { class: "lq-lr-totals", children: [perfilesLabel(r.perfil), totalesLabel(r.totales, r.pasos.length, "paso")].join(" · ") }),
             jsxs("div", {
               class: "lq-route-progress",
               hidden: true,
               children: [
                 jsx("div", { class: "lq-route-bar", "aria-hidden": "true", children: jsx("span", {}) }),
                 jsx("p", { class: "lq-route-count", role: "status", "aria-live": "polite", children: `0 de ${r.pasos.length} leídos` }),
-                jsx("button", { type: "button", class: "lq-route-reset", hidden: true, children: "Empezar de nuevo" }),
+                jsx("button", { type: "button", class: "lq-route-reset", hidden: true, children: "Reiniciar" }),
               ],
             }),
             jsx("ol", { class: "lq-lr-items", children: r.pasos.map((it, i) => jsx(Item, { it, from: slug, idx: i, ruta: true })) }),
@@ -356,32 +349,20 @@ export function Recorridos({ model, slug, cfg, o }) {
                   ],
                 })
               : null,
-            jsxs("div", {
-              class: "lq-route-cta",
-              children: [
-                r.cta ? jsx("p", { children: r.cta }) : null,
-                jsxs("div", {
-                  class: "liqueed-cta-actions",
-                  children: [
-                    jsx(AgendaButton, { o, origen: "recorrido", id: r.id, cls: "primary small" }),
-                    jsx(ShareButton, { cfg, slug, hash: r.id, titulo: r.titulo, origen: "recorrido", id: r.id, cls: "ghost small" }),
-                  ],
-                }),
-              ],
-            }),
+            jsx("p", { class: "lq-lr-card-actions", children: jsx(ShareLink, { cfg, slug, hash: r.id, titulo: r.titulo, origen: "recorrido", id: r.id }) }),
           ],
         }),
       ),
       jsxs("p", {
         class: "lq-lr-nota",
         children: [
-          "¿Poco tiempo? Empezá por las ",
+          "Para algo más corto, mirá las ",
           jsx("a", { class: "internal", href: relHref(slug, LECTURAS_SLUG), "data-slug": LECTURAS_SLUG, children: "lecturas rápidas" }),
-          ". El avance de cada recorrido se guarda solo en este navegador.",
-          data.revisado ? ` Recorridos revisados el ${fechaCorta(data.revisado)}.` : "",
+          ".",
+          data.revisado ? ` Revisado el ${fechaCorta(data.revisado)}.` : "",
         ],
       }),
-      jsx(CtaPagina, { o, cfg, slug, titulo: "Recorridos recomendados sobre IA aplicada (liqueed)" }),
+      jsx(CtaPagina, { o, cfg, slug, titulo: "Recorridos recomendados sobre IA aplicada" }),
     ],
   })
 }
@@ -424,7 +405,6 @@ export function lecturasParaAgentes(model, cfg) {
       perfil: r.perfil,
       madurez: r.madurez,
       descripcion: r.descripcion,
-      al_terminar: r.saleSabiendo || null,
       pasos: r.pasos.map(item),
       para_profundizar: r.extra.map(item),
     })),
