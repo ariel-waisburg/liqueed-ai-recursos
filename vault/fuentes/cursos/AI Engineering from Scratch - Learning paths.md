@@ -4,6 +4,8 @@ autor: "AI Engineering from Scratch (repo de rohitg00)"
 tipo: curso
 plataforma: "aiengineeringfromscratch.com"
 url: "https://aiengineeringfromscratch.com/learning-paths"
+miniatura: "https://aiengineeringfromscratch.com/og/page/learning-paths.png?v=98d94e28e627"
+proveedor: "AI Engineering from Scratch"
 idioma: "en"
 publicado: ""
 guardado: 2026-11-18

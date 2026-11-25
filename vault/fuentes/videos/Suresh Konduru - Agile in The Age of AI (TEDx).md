@@ -4,8 +4,9 @@ autor: "Suresh Konduru"
 tipo: video
 plataforma: "youtube.com (TEDx)"
 url: "https://www.youtube.com/watch?v=aliKlkJlK5o"
+miniatura: "https://i.ytimg.com/vi/aliKlkJlK5o/hqdefault.jpg"
 idioma: "en"
-publicado: ""
+publicado: "2026-02-17"
 guardado: 2026-11-24
 temas:
   - agilidad-e-ia
@@ -19,7 +20,7 @@ publish: false
 
 # Agile in The Age of AI | TEDxThaltej Salon
 
-**Suresh Konduru** · video · youtube.com (TEDx) · [link](https://www.youtube.com/watch?v=aliKlkJlK5o)
+**Suresh Konduru** · video · youtube.com (TEDx) · 2026-02-17 · [link](https://www.youtube.com/watch?v=aliKlkJlK5o)
 
 Temas: [[Agilidad e IA]] · [[Pensamiento crítico y delegación]]
 

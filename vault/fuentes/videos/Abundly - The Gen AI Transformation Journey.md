@@ -4,8 +4,9 @@ autor: "Abundly AI"
 tipo: video
 plataforma: "youtube.com"
 url: "https://www.youtube.com/watch?v=CKXVok7Vsck"
+miniatura: "https://i.ytimg.com/vi/CKXVok7Vsck/hqdefault.jpg"
 idioma: "en"
-publicado: ""
+publicado: "2025-05-27"
 guardado: 2026-11-24
 temas:
   - adopcion-ia
@@ -18,7 +19,7 @@ publish: false
 
 # The Gen AI Transformation Journey with Abundly AI
 
-**Abundly AI** · video · youtube.com · [link](https://www.youtube.com/watch?v=CKXVok7Vsck)
+**Abundly AI** · video · youtube.com · 2025-05-27 · [link](https://www.youtube.com/watch?v=CKXVok7Vsck)
 
 Temas: [[Adopción de IA en organizaciones]]
 

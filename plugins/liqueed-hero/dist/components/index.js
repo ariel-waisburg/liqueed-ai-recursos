@@ -22,6 +22,8 @@ export const LiqueedHero = (opts = {}) => {
       "Artículos, cursos, papers y herramientas que leímos, validamos y resumimos en Liqueed. Cada fuente tiene un resumen en español, por qué importa y a qué tema pertenece, para que tu equipo pase de la curiosidad a la práctica sin perderse en el ruido.",
     exploreLabel: "Explorar los temas",
     exploreHref: "#temas",
+    filterLabel: "Filtrar todas las fichas",
+    filterHref: "./explorar",
     serviciosUrl: "https://servicios.liqueed.org/ia",
     serviciosLabel: "Conocé nuestros servicios de IA",
     ...opts,
@@ -66,6 +68,7 @@ export const LiqueedHero = (opts = {}) => {
             class: "liqueed-hero-actions",
             children: [
               jsx("a", { class: "liqueed-btn primary", href: o.exploreHref, children: o.exploreLabel }),
+              jsx("a", { class: "liqueed-btn ghost", href: o.filterHref, children: o.filterLabel }),
               jsx("a", {
                 class: "liqueed-btn ghost",
                 href: o.serviciosUrl,

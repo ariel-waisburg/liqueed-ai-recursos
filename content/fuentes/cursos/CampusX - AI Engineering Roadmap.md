@@ -4,6 +4,8 @@ autor: "CampusX (compartido por K2S, @k2sbhai)"
 tipo: curso
 plataforma: "become-ai-engineer-2026.vercel.app"
 url: "https://become-ai-engineer-2026.vercel.app/"
+miniatura: "https://become-ai-engineer-2026.vercel.app/og/default.png"
+proveedor: "CampusX"
 idioma: "en"
 publicado: ""
 guardado: 2026-11-24

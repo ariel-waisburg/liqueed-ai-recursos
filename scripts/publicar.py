@@ -18,6 +18,10 @@ Qué hace:
   instrucciones de trabajo ("Pasame…", "Bajalo…") se sacan siempre.
 - Inicio.md pasa a ser index.md, con el título del sitio, sin la lista de pendientes y con
   los conteos (total de fuentes y fuentes por tema) calculados sobre lo que se publica.
+- Genera explorar.md: la página "Explorar fichas" (la lista y los filtros los pone
+  plugins/liqueed-explorar en el build).
+- Revisa las facetas de las fuentes publicadas (tipo, idioma, temas, tags) y avisa si hay
+  valores fuera del vocabulario, para que los filtros de /explorar no se fragmenten.
 """
 import os, re, shutil, sys
 
@@ -38,6 +42,15 @@ WIKILINK = re.compile(r"\[\[([^\]|#]+)(#[^\]|]*)?(\|[^\]]*)?\]\]")
 def frontmatter_field(text, key):
     m = re.search(rf"^{key}:\s*(.*)$", text, re.M)
     return m.group(1).strip().strip('"') if m else None
+
+
+def frontmatter_list(text, key):
+    """Valores de una lista YAML simple del frontmatter (`key:` seguido de `  - valor`)."""
+    m = re.search(rf"^{key}:\s*\n((?:\s+- .*\n?)*)", text, re.M)
+    if not m:
+        v = frontmatter_field(text, key)
+        return [] if not v or v == "[]" else [v]
+    return [x.strip().strip('"') for x in re.findall(r"^\s+- (.*)$", m.group(1), re.M)]
 
 
 def drop_links_to(text, skipped):
@@ -137,6 +150,44 @@ if index_note is not None:
     t = re.sub(r"^(- \[\[([^\]]+)\]\]) \(\d+\): (.*)$", tema_line, t, flags=re.M)
     t = drop_links_to(t, skipped)
     open(os.path.join(OUT, "index.md"), "w", encoding="utf-8").write(clean(t))
+
+# 4. Página "Explorar fichas" (contenido real lo arma plugins/liqueed-explorar)
+EXPLORAR = f"""---
+title: "Explorar fichas"
+description: "Filtrá las {published_sources} fichas por tipo de recurso, idioma, tema y concepto. La dirección se actualiza con los filtros, así que podés compartir la búsqueda."
+---
+
+Filtrá las {published_sources} fichas por tipo de recurso, idioma, tema y concepto. Los filtros se combinan entre sí y la dirección de la página se actualiza, así que podés compartir o guardar la búsqueda.
+"""
+open(os.path.join(OUT, "explorar.md"), "w", encoding="utf-8").write(EXPLORAR)
+
+# 5. Facetas: avisar valores fuera del vocabulario (no frena la publicación)
+TIPOS = {"articulo", "post", "articulo-x", "hilo", "video", "libro", "guia", "curso",
+         "herramienta", "presentacion", "referente"}
+SKILL_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".claude", "skills", "sumar-fuente")
+idiomas_md = os.path.join(SKILL_DIR, "idiomas.md")
+# Cualquier código ISO 639-1 (tabla completa en idiomas.md).
+IDIOMAS = set(re.findall(r"^\| ([a-z]{2}) \|", open(idiomas_md, encoding="utf-8").read(), re.M)) if os.path.exists(idiomas_md) else set()
+tags_md = os.path.join(SKILL_DIR, "tags.md")
+TAGS = set(re.findall(r"^\| ([a-z0-9-]+) \|", open(tags_md, encoding="utf-8").read(), re.M)) if os.path.exists(tags_md) else set()
+TEMAS = {frontmatter_field(t, "slug") for rel, f, t in notes if rel.split(os.sep)[0] == "temas"}
+warnings = []
+for rel, f, t in notes:
+    if rel.split(os.sep)[0] != "fuentes":
+        continue
+    tipo, idioma = frontmatter_field(t, "tipo"), frontmatter_field(t, "idioma")
+    if tipo not in TIPOS:
+        warnings.append(f"{f}: tipo '{tipo}' no está en la tabla de tipos")
+    if IDIOMAS and idioma not in IDIOMAS:
+        warnings.append(f"{f}: idioma '{idioma}' no es un código ISO 639-1 en minúscula (ver idiomas.md)")
+    for tag in frontmatter_list(t, "tags"):
+        if TAGS and tag not in TAGS:
+            warnings.append(f"{f}: tag '{tag}' no está en tags.md")
+    for tema in frontmatter_list(t, "temas"):
+        if tema not in TEMAS:
+            warnings.append(f"{f}: tema '{tema}' no existe en temas/")
+for w in warnings:
+    print(f"aviso de facetas: {w}")
 
 print(f"notas publicadas: {len(notes)} ({published_sources} fuentes) · "
       f"pendientes sin publicar: {len(skipped)}")

@@ -4,6 +4,8 @@ autor: "Anthropic (academia para partners)"
 tipo: curso
 plataforma: "anthropic-partners.skilljar.com"
 url: "https://anthropic-partners.skilljar.com/path/claude-fde"
+miniatura: "https://cc.sj-cdn.net/instructor/4hdejjwplbrm-anthropic/path/27vymqh42flzz/promo-image.1794533436.png"
+proveedor: "Anthropic"
 idioma: "en"
 publicado: ""
 guardado: 2026-11-24

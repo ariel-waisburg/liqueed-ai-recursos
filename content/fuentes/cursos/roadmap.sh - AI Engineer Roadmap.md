@@ -4,6 +4,8 @@ autor: "roadmap.sh"
 tipo: curso
 plataforma: "roadmap.sh"
 url: "https://roadmap.sh/ai-engineer"
+miniatura: "https://roadmap.sh/og/roadmap/ai-engineer"
+proveedor: "roadmap.sh"
 idioma: "en"
 publicado: ""
 guardado: 2026-11-24
