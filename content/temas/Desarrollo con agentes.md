@@ -24,6 +24,7 @@ Cómo se trabaja con agentes de código: workflows, calidad, tests, CI, slop.
 - [[Daniel Lockyer - Todo el CI en un solo archivo]]: Recomendación breve: tener todo el CI en un solo archivo para no repetir el build en cada workflow.
 - [[David Zhang - Building software factories (with no slop)]]: El slop no es un problema de calidad del modelo: aparece cuando la generación no tiene límite y la verificación depende de que una persona lea el código.
 - [[distort - Agent Engineering: las 9 capas alrededor del modelo]]: Mapa de las nueve capas que se construyen alrededor del modelo para que un agente trabaje bien sin supervisión.
+- [[Eduardo Ferro - Fast Feedback Fast Features]]: Un manager midió 424 commits en 11 semanas de desarrollo asistido por IA y encontró que la velocidad sostenible salió de invertir en tests, documentación y simplificación, no de escribir features más rápido.
 - [[Felipe Polo - No AI Slop Manifesto]]: Un manifiesto contra el 'AI slop', inspirado en el Manifiesto Ágil, surgido en el AI Engineer Code Summit 2026.
 - [[Franco Petruccelli - El CI está hecho para humanos]]: Cuando hay agentes abriendo PRs todo el día, el cuello de botella deja de ser escribir código y pasa a ser confirmar que lo que hicieron funciona.
 - [[Félix López - ProtoAIpos]]: Prototipos hechos con IA que parecen terminados pero no tienen lo que hace falta para producción, y cómo organizar el trabajo para convivir con ellos.
@@ -51,3 +52,4 @@ Cómo se trabaja con agentes de código: workflows, calidad, tests, CI, slop.
 - [[Uber - How Uber Evals 1 Million Agent Skill Invocations]]: Cómo Uber distribuye, evalúa y mejora más de 5.000 skills de agentes en toda la empresa.
 - [[Uber - Running a Software Factory Efficiently]]: Cómo Uber controla el costo de su fábrica de software con agentes sin frenar la adopción.
 - [[Vincent Koc - Making OpenClaw CI faster and 95% cheaper]]: Cómo el proyecto OpenClaw bajó un 95% el costo estimado de CI cuando los agentes multiplicaron tests, jobs y reintentos.
+- [[Yan et al. - What We Learned from a Year of Building with LLMs (Part I)]]: Lecciones tácticas de un año construyendo productos con LLM: prompting, RAG, flujos de trabajo y evaluación.

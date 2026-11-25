@@ -13,6 +13,7 @@ Qué delegar, qué no, y cómo no perder el criterio propio cuando la IA hace el
 - [[Addy Osmani - Critical thinking when agents do the work]]: Cómo sostener el pensamiento crítico cuando casi todo el trabajo pasa por agentes, sin dejar de usarlos.
 - [[David Zhang - Building software factories (with no slop)]]: El slop no es un problema de calidad del modelo: aparece cuando la generación no tiene límite y la verificación depende de que una persona lea el código.
 - [[Felipe Polo - No AI Slop Manifesto]]: Un manifiesto contra el 'AI slop', inspirado en el Manifiesto Ágil, surgido en el AI Engineer Code Summit 2026.
+- [[Glenn Fajardo - Let's Not Make AI the Easy Button]]: Desde d.school, un argumento contra usar la IA como "botón fácil": el valor está en el desafío, la agencia humana y la reflexión de antes y después de generar.
 - [[HBR - When Using AI Leads to Brain Fry]]: Usar y supervisar IA más allá de la capacidad cognitiva genera un agotamiento nuevo.
 - [[Joel Salinas - Leadership in Change]]: Newsletter semanal para líderes de pymes, ONGs y quienes trabajan solos que adoptan IA sin delegarle su criterio.
 - [[Joel Salinas y Jurgen Appelo - The 5 Steps to Lean AI]]: Antes de automatizar algo con IA, preguntarse si tiene que existir: eliminar, simplificar, amplificar, automatizar y recién al final delegar.

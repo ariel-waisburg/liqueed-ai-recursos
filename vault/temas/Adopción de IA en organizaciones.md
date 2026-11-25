@@ -13,7 +13,7 @@ Cómo las organizaciones y las personas adoptan IA: champions, barreras, uso ace
 ## Fuentes
 
 - [[Aaron Levie - Lo que dicen los líderes de IT sobre agentes]]: Lo que el CEO de Box escuchó de líderes de IT de grandes empresas: de la era del chat a los agentes, gestión del cambio, presupuestos de tokens y sistemas legados.
-- [[Abundly - The Gen AI Transformation Journey]]: El camino de adopción de IA generativa en una empresa: niveles para los equipos (del chatbot a los agentes) y pilares a nivel organización. _(resumido-parcial)_
+- [[Abundly - The Gen AI Transformation Journey]]: Nils Janse (Abundly, ex McKinsey) describe el camino de adopción: niveles para los equipos (del chatbot a los agentes) y pilares a nivel organización. _(resumido-parcial)_
 - [[Abundly - The Power of Anointing Gen AI Champions]]: Nombrar formalmente a 'Gen AI Champions' tiene un efecto desproporcionado en cómo una organización adopta IA.
 - [[Abundly - Webinar Road to AI Agents in Your Organization]]: Webinar sobre cómo pasar del chat con IA a agentes que generan valor: dónde buscar casos de uso, el problema de la caja negra y de piloto a portfolio. _(resumido-parcial)_
 - [[Abundly AI - Plataforma de agentes]]: Plataforma europea donde los equipos de negocio construyen sus propios agentes en lenguaje natural y IT pone los controles.
@@ -25,10 +25,10 @@ Cómo las organizaciones y las personas adoptan IA: champions, barreras, uso ace
 - [[Birgitta Böckeler - What AI augmentation means for technical leaders]]: Charla para líderes técnicos sobre qué cambia con la IA aumentada. _(pendiente-captura)_
 - [[Daan van Rossum - People copy people]]: La adopción de IA se contagia entre pares: la gente copia lo que ve hacer a colegas de confianza.
 - [[Digital Applied - Agentic AI Maturity Model]]: Modelo de madurez de cinco etapas para la IA agéntica en empresas.
-- [[Félix López - Nuestra estrategia para la adopción de IA]]: Cómo una organización de ingeniería de más de 100 personas, con restricciones fuertes de datos y seguridad, se volvió 'AI First'. _(resumido-parcial)_
+- [[Félix López - Nuestra estrategia para la adopción de IA]]: Cómo una organización de ingeniería de más de 100 personas, con restricciones fuertes de datos y seguridad, se organizó para ser "AI First".
 - [[Gergely Orosz - Forward Deployed Engineers]]: Qué es el Forward Deployed Engineer, el ingeniero que trabaja dentro del cliente, y por qué las empresas de IA lo buscan para llevar sus modelos a casos reales. _(resumido-parcial)_
 - [[HBR - When Using AI Leads to Brain Fry]]: Usar y supervisar IA más allá de la capacidad cognitiva genera un agotamiento nuevo. _(resumido-parcial)_
-- [[Henrik Kniberg - Generative AI in a Nutshell]]: Explicación dibujada y para todo público de qué es la IA generativa y cómo aprovecharla. _(resumido-parcial)_
+- [[Henrik Kniberg - Generative AI in a Nutshell]]: Video dibujado y para todo público de qué es la IA generativa, cómo funciona un LLM y cómo usarla con criterio.
 - [[Hustle Badger - AI Maturity Model]]: Herramienta para medir qué tan preparada está una organización para usar IA.
 - [[jack - From Hierarchy to Intelligence]]: Block quiere reemplazar lo que hace la jerarquía con IA: un modelo de la empresa y de cada cliente, y una capa que arma soluciones sin que nadie las planifique. _(resumido-parcial)_
 - [[Joel Salinas - Leadership in Change]]: Newsletter semanal para líderes de pymes, ONGs y quienes trabajan solos que adoptan IA sin delegarle su criterio.
