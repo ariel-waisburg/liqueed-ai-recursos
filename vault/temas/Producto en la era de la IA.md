@@ -28,6 +28,8 @@ Qué cambia en el rol de producto, qué vale la pena construir y cómo decidir c
 - [[João Pinho - Product management in the AI era, for realists]]: Curso gratuito y autoguiado para PMs que sienten que van atrasados con la IA y no saben qué aprender primero.
 - [[Maggie Appleton - One Developer, Two Dozen Agents, Zero Alignment]]: Los agentes de código están pensados para una persona sola, y el problema ahora es alinearse en equipo.
 - [[Marty Cagan - AI and the Future of the Product Role]]: El modelo operativo de cada empresa define qué significa 'product manager', y la IA está haciendo explotar esa ambigüedad.
+- [[Roman Pichler - Why Product Management is Still Hard]]: Aunque la IA da herramientas nuevas, producto sigue fallando por brechas de conocimiento y por falta de apoyo de la organización.
+- [[Sherif Mansour - First principles PM in the AI era]]: Caso de Atlassian: squads de 'AI builders' sin PM ni diseño volvieron a sus roles en un mes, porque el problema era la dirección, no el throughput.
 - [[Teresa Torres - Product Discovery Basics]]: Qué es el descubrimiento de producto y cómo hacerlo de forma continua.
 
 ## Ideas propias

@@ -21,6 +21,7 @@ Cómo funcionan por dentro los modelos y los sistemas de ML en producción.
 - [[roadmap.sh - AI Engineer Roadmap]]: Roadmap interactivo y comunitario para volverse AI engineer: LLMs, prompting, seguridad, embeddings, bases vectoriales, RAG, agentes, multimodal y MCP. _(resumido-parcial)_
 - [[Sebastian Raschka - A Visual Guide to Attention Variants]]: Guía visual de las variantes de atención que usan los LLM actuales.
 - [[Sebastian Raschka - Components of a Coding Agent]]: Qué piezas, además del modelo, hacen funcionar a un agente de código.
+- [[Simon Willison - Three LLM inflection points in twelve months]]: Tres saltos de capacidad de los agentes de código en doce meses, para recalibrar qué es posible hoy.
 - [[Yann LeCun - Lex Fridman Podcast 416]]: Conversación larga con Lex Fridman sobre los límites de los LLM, JEPA, open source y por qué no ve a los modelos autorregresivos como el camino a una inteligencia de nivel humano.
 - [[Yann LeCun - Objective-Driven AI]]: Charla en Harvard: escalar LLM autorregresivos no alcanza; propone una arquitectura "objective-driven" con modelos del mundo, memoria y planificación. _(resumido-parcial)_
 

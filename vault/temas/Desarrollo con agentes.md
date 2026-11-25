@@ -46,14 +46,19 @@ Cómo se trabaja con agentes de código: workflows, calidad, tests, CI, slop.
 - [[Martin Fowler - Exploring Generative AI]]: Serie viva de notas sobre cómo la IA generativa cambia el desarrollo de software.
 - [[Matt Gapp - Por qué el CI se vuelve lento al shippear rápido]]: Por qué el CI se vuelve exponencialmente más lento cuando los agentes multiplican los PRs, y once pasos para acelerarlo. _(resumido-parcial)_
 - [[Matt Pocock - Full Walkthrough Workflow for AI Coding]]: Workshop de Matt Pocock con un flujo completo para programar con agentes, de una idea ambigua a un PRD, issues en vertical slices e implementación con TDD.
+- [[Matteo Vaccari - Tests as data]]: Si la IA escribe código y tests, el contrato tiene que estar en datos de test legibles, no en el código de test que el agente puede cambiar.
 - [[Mitchell Hashimoto - My AI Adoption Journey]]: Seis pasos con los que un ingeniero escéptico llegó a sacarle valor real a los agentes de código, contados sin hype.
+- [[Neil Kakkar - How software engineering is changing]]: De 8-20 PRs por mes a más de 200 en una startup nativa de IA: qué restricciones desaparecieron y cuáles aparecieron. Caso de startup, no de corporación.
 - [[OpenAI - Harness engineering]]: Un equipo de OpenAI construyó un producto interno sin escribir código a mano.
 - [[Primo - Cómo evitamos que el AI slop arruine nuestros tests]]: Cómo un equipo argentino-mexicano les enseñó a sus agentes de código a escribir tests que valgan la pena.
+- [[Rachel Laycock - Why are good developers so wary of agentic development]]: Por qué los buenos developers frenan con los agentes: que algo esté construido no significa que funcione en producción.
 - [[Runroom - AI Dojo y antipatrones de Augmented Coding Patterns]]: Una práctica grupal (randori) para construir con Claude y después revisar la sesión contra antipatrones conocidos.
+- [[Santi - Cuándo usar un workflow y cuándo un agente]]: La diferencia entre un workflow y un agente está en quién decide el siguiente paso; autonomía solo cuando hace falta.
 - [[Santi - Flujo para construir software con agentes]]: Un flujo de seis pasos para delegar trabajo de software cada vez más complejo a varios agentes.
 - [[Santi - Harness Engineering explicado desde cero]]: Introducción desde cero al harness engineering: las piezas del sistema que rodea al modelo y por qué hay que medirlo y mejorarlo. _(resumido-parcial)_
 - [[Seba Campanario - Post de X sin capturar]]: Post de la notebook de transformación con IA, todavía sin capturar. _(pendiente-captura)_
 - [[Sebastian Raschka - Components of a Coding Agent]]: Qué piezas, además del modelo, hacen funcionar a un agente de código.
+- [[Simon Willison - Three LLM inflection points in twelve months]]: Tres saltos de capacidad de los agentes de código en doce meses, para recalibrar qué es posible hoy.
 - [[Uber - How Uber Evals 1 Million Agent Skill Invocations]]: Cómo Uber distribuye, evalúa y mejora más de 5.000 skills de agentes en toda la empresa.
 - [[Uber - Running a Software Factory Efficiently]]: Cómo Uber controla el costo de su fábrica de software con agentes sin frenar la adopción.
 - [[Vincent Koc - Making OpenClaw CI faster and 95% cheaper]]: Cómo el proyecto OpenClaw bajó un 95% el costo estimado de CI cuando los agentes multiplicaron tests, jobs y reintentos. _(resumido-parcial)_

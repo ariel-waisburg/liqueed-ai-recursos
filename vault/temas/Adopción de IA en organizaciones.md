@@ -12,6 +12,7 @@ Cómo las organizaciones y las personas adoptan IA: champions, barreras, uso ace
 
 ## Fuentes
 
+- [[Aaron Levie - La mayoría de los flujos enterprise todavía no tiene agentes]]: El CEO de Box sostiene que la mayoría de los flujos enterprise todavía no tiene agentes de verdad, y que el salto viene de rediseñar procesos, no de prompts individuales.
 - [[Aaron Levie - Lo que dicen los líderes de IT sobre agentes]]: Lo que el CEO de Box escuchó de líderes de IT de grandes empresas: de la era del chat a los agentes, gestión del cambio, presupuestos de tokens y sistemas legados.
 - [[Abundly - The Gen AI Transformation Journey]]: Nils Janse (Abundly, ex McKinsey) describe el camino de adopción: niveles para los equipos (del chatbot a los agentes) y pilares a nivel organización. _(resumido-parcial)_
 - [[Abundly - The Power of Anointing Gen AI Champions]]: Nombrar formalmente a 'Gen AI Champions' tiene un efecto desproporcionado en cómo una organización adopta IA.
@@ -24,6 +25,7 @@ Cómo las organizaciones y las personas adoptan IA: champions, barreras, uso ace
 - [[BCG - The AI Adoption Puzzle]]: Por qué crece el uso de IA pero no el impacto: cinco etapas de adopción, cinco perfiles de empleados y cuatro recomendaciones para líderes. _(resumido-parcial)_
 - [[Birgitta Böckeler - What AI augmentation means for technical leaders]]: Charla para líderes técnicos sobre qué cambia con la IA aumentada. _(pendiente-captura)_
 - [[Daan van Rossum - People copy people]]: La adopción de IA se contagia entre pares: la gente copia lo que ve hacer a colegas de confianza.
+- [[Dan Shipper - We need to change how we measure AI]]: Con la misma encuesta y los mismos modelos, cada persona de un equipo encontró algo distinto: propone medir la IA por qué tan bien hace el trabajo de cada uno.
 - [[Digital Applied - Agentic AI Maturity Model]]: Modelo de madurez de cinco etapas para la IA agéntica en empresas.
 - [[Félix López - Nuestra estrategia para la adopción de IA]]: Cómo una organización de ingeniería de más de 100 personas, con restricciones fuertes de datos y seguridad, se organizó para ser "AI First".
 - [[Gergely Orosz - Forward Deployed Engineers]]: Qué es el Forward Deployed Engineer, el ingeniero que trabaja dentro del cliente, y por qué las empresas de IA lo buscan para llevar sus modelos a casos reales. _(resumido-parcial)_
@@ -41,8 +43,10 @@ Cómo las organizaciones y las personas adoptan IA: champions, barreras, uso ace
 - [[McKinsey - Reconfigurar el trabajo con IA generativa]]: Adoptar IA generativa es fácil; convertirla en valor sostenido requiere gestionar el cambio.
 - [[McKinsey - Transforming tech services for agentic AI]]: La IA agéntica amenaza el negocio de los proveedores de servicios tecnológicos pero también les abre una oportunidad mayor, si reinventan su propuesta. _(resumido-parcial)_
 - [[Mitchell Hashimoto - My AI Adoption Journey]]: Seis pasos con los que un ingeniero escéptico llegó a sacarle valor real a los agentes de código, contados sin hype.
+- [[Rachel Laycock - Why are good developers so wary of agentic development]]: Por qué los buenos developers frenan con los agentes: que algo esté construido no significa que funcione en producción.
 - [[Runroom - AI Dojo y antipatrones de Augmented Coding Patterns]]: Una práctica grupal (randori) para construir con Claude y después revisar la sesión contra antipatrones conocidos.
 - [[SEVEN-G - AI Consulting (Fernando García Varela)]]: Portal con metodologías abiertas para decidir dónde invertir en IA, gobernar cada caso de uso y medir el valor real.
+- [[Sherif Mansour - First principles PM in the AI era]]: Caso de Atlassian: squads de 'AI builders' sin PM ni diseño volvieron a sus roles en un mes, porque el problema era la dirección, no el throughput.
 - [[Shieldbase - AI Champions]]: Qué son los AI champions y cómo cultivarlos dentro de una organización.
 - [[Stanton, Shriber y Rudat - What Top Performers Do Differently with AI]]: La IA no nivela automáticamente el desempeño: gana más quien arma sistemas alrededor de sus fortalezas y usa bien el tiempo que libera. _(resumido-parcial)_
 - [[Stefan Wolpers - Agile's AI-Driven Paradigm Shift]]: La IA cambia el trabajo ágil, pero el desafío principal es cultural, no técnico.
