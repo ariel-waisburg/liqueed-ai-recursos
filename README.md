@@ -2,7 +2,9 @@
 
 Fuentes y notas sobre IA, producto y organizaciones, organizadas por tema.
 
-**Sitio:** https://ariel-waisburg.github.io/liqueed-ai-recursos
+**Sitio:** https://recursos-ai.liqueed.org
+
+La dirección anterior (`https://ariel-waisburg.github.io/liqueed-ai-recursos`) redirige a esta cuando el dominio personalizado está activo en GitHub Pages.
 
 ## Cómo se actualiza
 

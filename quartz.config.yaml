@@ -6,13 +6,13 @@ configuration:
   enablePopovers: true
   locale: es-ES
   # GA4 de liqueed.org (G-1EWL68QK9C, visible en el HTML público del sitio).
-  # Mide en la propiedad "web liqueed" (514773822); en los reportes se separa por hostName = ariel-waisburg.github.io.
+  # Mide en la propiedad "web liqueed" (514773822); en los reportes se separa por hostName = recursos-ai.liqueed.org.
   # No mide en localhost/127.0.0.1 (ver quartz/plugins/emitters/componentResources.ts).
   # Para apagar analytics: `analytics: null`.
   analytics:
     provider: google
     tagId: G-1EWL68QK9C
-  baseUrl: ariel-waisburg.github.io/liqueed-ai-recursos
+  baseUrl: recursos-ai.liqueed.org
   ignorePatterns:
     - private
     - templates
