@@ -4,7 +4,7 @@ Repositorio de fuentes sobre IA, producto y organizaciones. Hablá siempre en es
 
 - **`vault/`** es la bóveda de Obsidian y la **fuente de verdad**. Ari la abre en Obsidian ("Abrir carpeta como bóveda").
 - **`content/`** se genera solo desde `vault/` con `scripts/publicar.py`. **No lo edites a mano**: regeneralo con el script y commitealo junto con `vault/` (igual el deploy lo vuelve a generar).
-- El sitio (Quartz) se publica en https://ariel-waisburg.github.io/liqueed-ai-recursos con cada push a `main` (`.github/workflows/deploy.yml` corre `publicar.py` y después `quartz build`).
+- El sitio (Quartz) se publica en https://recursos-ai.liqueed.org con cada push a `main` (`.github/workflows/deploy.yml` corre `publicar.py` y después `quartz build`).
 
 ## Sumar fuentes
 
