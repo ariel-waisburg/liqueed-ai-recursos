@@ -44,6 +44,7 @@ Cómo se trabaja con agentes de código: workflows, calidad, tests, CI, slop.
 - [[Mark Ajzenstadt - Prácticas de ingeniería antes que skills y subagentes]]: Lo que hace funcionar a los agentes que escriben código son prácticas de ingeniería de siempre, no más skills y subagentes.
 - [[Martin Fowler - Exploring Generative AI]]: Serie viva de notas sobre cómo la IA generativa cambia el desarrollo de software.
 - [[Matt Gapp - Por qué el CI se vuelve lento al shippear rápido]]: Por qué el CI se vuelve exponencialmente más lento cuando los agentes multiplican los PRs, y once pasos para acelerarlo. _(resumido-parcial)_
+- [[Matt Pocock - Full Walkthrough Workflow for AI Coding]]: Workshop de Matt Pocock con un flujo completo para programar con agentes, de una idea ambigua a un PRD, issues en vertical slices e implementación con TDD.
 - [[Mitchell Hashimoto - My AI Adoption Journey]]: Seis pasos con los que un ingeniero escéptico llegó a sacarle valor real a los agentes de código, contados sin hype.
 - [[OpenAI - Harness engineering]]: Un equipo de OpenAI construyó un producto interno sin escribir código a mano.
 - [[Primo - Cómo evitamos que el AI slop arruine nuestros tests]]: Cómo un equipo argentino-mexicano les enseñó a sus agentes de código a escribir tests que valgan la pena.
