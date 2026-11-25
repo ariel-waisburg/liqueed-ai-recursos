@@ -12,16 +12,23 @@ directo en `dist/` y Quartz los enlaza solo al compilar (`source: ./plugins/<nom
 | Plugin | Qué hace | Dónde aparece |
 |---|---|---|
 | `liqueed-brand` | Logo de liqueed (ojo; versión blanca en modo oscuro) con link a liqueed.org. | Barra lateral, arriba del título. |
-| `liqueed-hero` | Hero de la home: propuesta de valor, números (fuentes, temas, última actualización, calculados en el build) y botones a los temas y a servicios de IA. | Solo en la home, arriba del contenido. |
+| `liqueed-hero` | Hero de la home: propuesta de valor, números (fuentes, temas, última actualización, calculados en el build) y botones a los temas, a Explorar, al mapa de conexiones y a servicios de IA. | Solo en la home, arriba del contenido. |
 | `liqueed-cta` | Bloque "¿Querés aplicar esto en tu organización?": servicios de IA (servicios.liqueed.org/ia), agenda y newsletter (embed oficial de Kit). | Debajo del contenido de cada página. |
-| `liqueed-explorar` | Página **Explorar fichas** (`/explorar`): lista completa de fichas con filtros por tipo de recurso, idioma, tema y concepto (tag), búsqueda por texto y URL compartible (`?tipo=&idioma=&tema=&tag=&q=`). Atajo "Combiná … en Explorar" en las páginas de tema y de tag. Además, el **JSON-LD** (schema.org) de cada página. | `/explorar`, debajo del contenido de temas y tags, y `<script type="application/ld+json">` en todas las páginas. |
+| `liqueed-explorar` | Página **Explorar fichas** (`/explorar`): lista completa de fichas con filtros por tipo de recurso, idioma, tema y concepto (tag), búsqueda por texto y URL compartible (`?tipo=&idioma=&tema=&tag=&q=`). Atajo "Combiná … en Explorar" en las páginas de tema y de tag. **Mapa de conexiones** (`/mapa` y la Vista Gráfica global): links "Ver … en el mapa de conexiones" que la abren en el lugar. Además, el **JSON-LD** (schema.org) de cada página. | `/explorar`, debajo del contenido de temas y tags, y `<script type="application/ld+json">` en todas las páginas. |
 | `liqueed-site` | Footer de liqueed; `<link rel=canonical>` y `<link rel=alternate>` al RSS en cada página; peso 800 de Public Sans para títulos; eventos de analytics de los CTAs; genera `llms.txt`, `llms-full.txt` e `index.xml` (RSS solo con fichas). | Footer, `<head>` y archivos en la raíz del sitio. |
+
+## Mapa de conexiones (Vista Gráfica)
+
+- Es la Vista Gráfica global de `@quartz-community/graph`. `liqueed-explorar/dist/mapa.js` la hace visible: botón "Ver mapa de conexiones" debajo del mini-grafo, botón en el hero de la home, link "Ver esta ficha / este tema en el mapa de conexiones" en fichas y temas, y la página `/mapa` (la genera `publicar.py`; aparece en el menú lateral) que lo abre sola a pantalla completa. Sin JS, los links llevan a `/mapa`.
+- Abierto: barra con título, ayuda y botón Cerrar (también Esc o tocar afuera), foco al botón y de vuelta al link. Va por encima de todo y bloquea el scroll de fondo (`quartz/styles/custom.scss`, sección "Mapa de conexiones"): el plugin le pone `z-index: 1` a su barra lateral y eso lo dejaba debajo de la barra de filtros.
+- GA4: evento `graph_open` con `origen` (`home`, `ficha`, `tema`, `mini-grafo`, `pagina-mapa`, `icono`, `atajo`) y `page_path`.
 
 ## Explorar y facetas
 
 - La página la genera `scripts/publicar.py` (`content/explorar.md`, solo título e intro); la lista y los filtros los pone `liqueed-explorar` en el build, con los datos del frontmatter de las fichas publicadas.
 - Facetas: `tipo`, `idioma`, `temas` (por el `slug` de cada tema) y `tags`. Las etiquetas en español de los tipos están en `liqueed-explorar/dist/modelo.js` (`TIPO_LABEL`; si se suma un tipo nuevo, agregalo ahí y en `TIPO_SCHEMA` para el JSON-LD). Los idiomas aceptan cualquier código ISO 639-1: el nombre en español sale de `.claude/skills/sumar-fuente/idiomas.md`, la misma tabla con la que valida `publicar.py`.
 - Sin JS: el HTML trae todas las fichas y los `<select>` filtran solos con CSS (`:has`). Con JS (`dist/cliente.js`) se suman la búsqueda, los conteos por opción, la URL con query string y el evento de analytics. Se reinicializa en cada navegación SPA (evento `nav`).
+- Barra de filtros: los campos crecen y bajan de fila según el valor más largo de cada faceta (`flex-basis: auto`), así el valor elegido nunca queda recortado. La opción elegida se muestra sin conteo y debajo van chips con los filtros activos (se quitan con un toque). La barra no es sticky: con varias filas taparía media pantalla.
 - `publicar.py` avisa ("aviso de facetas: …") si una fuente tiene un tipo, idioma, tema o tag fuera del vocabulario.
 - `llms.txt` lista las facetas con sus valores, conteos y URLs; `llms-full.txt` las menciona. Comparten el modelo con `liqueed-site` (que importa `../../liqueed-explorar/dist/modelo.js`).
 

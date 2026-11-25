@@ -24,6 +24,8 @@ export const LiqueedHero = (opts = {}) => {
     exploreHref: "#temas",
     filterLabel: "Filtrar todas las fichas",
     filterHref: "./explorar",
+    mapaLabel: "Ver el mapa de conexiones",
+    mapaHref: "./mapa",
     serviciosUrl: "https://servicios.liqueed.org/ia",
     serviciosLabel: "Conocé nuestros servicios de IA",
     ...opts,
@@ -75,6 +77,8 @@ export const LiqueedHero = (opts = {}) => {
             children: [
               jsx("a", { class: "liqueed-btn primary", href: o.exploreHref, children: o.exploreLabel }),
               jsx("a", { class: "liqueed-btn ghost", href: o.filterHref, children: o.filterLabel }),
+              // Abre la Vista Gráfica global en el lugar (JS en liqueed-explorar/dist/mapa.js); sin JS va a /mapa.
+              jsx("a", { class: "liqueed-btn ghost liqueed-btn-mapa", href: o.mapaHref, "data-lq-mapa": "home", children: o.mapaLabel }),
               jsx("a", {
                 class: "liqueed-btn ghost",
                 href: o.serviciosUrl,

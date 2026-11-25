@@ -2,6 +2,7 @@ import { jsx, jsxs } from "preact/jsx-runtime"
 import { buildModel, fichaFacets, FACETAS, tipoLabel, idiomaLabel, relHref, sinTildes, fechasParcialesCss } from "../modelo.js"
 import { jsonLdFor, safeJson } from "../jsonld.js"
 import { EXPLORAR_JS } from "../cliente.js"
+import { MAPA_JS } from "../mapa.js"
 
 /**
  * LiqueedExplorar (debajo del contenido de cada página):
@@ -10,6 +11,8 @@ import { EXPLORAR_JS } from "../cliente.js"
  *   Sin JS: la lista completa está en el HTML y los <select> filtran solos con CSS (:has).
  *   Con JS (dist/cliente.js): búsqueda por texto, conteos, URL compartible y evento filter_use.
  * - En páginas de tema y de tag: link a Explorar con ese filtro ya puesto.
+ * - En /mapa, fichas y temas: link "Ver … en el mapa de conexiones" (abre la Vista Gráfica global;
+ *   sin JS lleva a /mapa). JS en dist/mapa.js.
  * Estilos en quartz/styles/custom.scss.
  */
 
@@ -166,6 +169,40 @@ function ExplorarLink({ slug, model }) {
   })
 }
 
+const MAPA_ICON = jsx("svg", {
+  "aria-hidden": "true",
+  viewBox: "0 0 24 24",
+  width: 18,
+  height: 18,
+  children: jsx("path", { fill: "none", stroke: "currentColor", "stroke-width": 2, "stroke-linecap": "round", d: "M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" }),
+})
+
+/** Link que abre el mapa de conexiones (grafo global). */
+function MapaLink({ slug, origen, label, cls = "" }) {
+  return jsxs("a", {
+    class: `lq-mapa-link ${cls}`,
+    href: relHref(slug, "mapa"),
+    "data-lq-mapa": origen,
+    children: [MAPA_ICON, jsx("span", { children: label })],
+  })
+}
+
+/** Contenido de /mapa: el grafo se abre solo a pantalla completa; esto queda debajo al cerrarlo. */
+function Mapa({ slug, model }) {
+  return jsxs("section", {
+    class: "lq-mapa-pagina",
+    children: [
+      jsx("p", {
+        children: jsx(MapaLink, { slug, origen: "pagina-mapa", label: "Abrir el mapa a pantalla completa", cls: "lq-mapa-cta" }),
+      }),
+      jsx("p", {
+        class: "lq-mapa-nota",
+        children: `${model.fichas.length} fichas y ${model.temas.length} temas conectados. Tip: en cualquier página podés abrirlo con Ctrl+G (⌘+G en Mac).`,
+      }),
+    ],
+  })
+}
+
 export const LiqueedExplorar = (opts = {}) => {
   const o = { ...DEFAULTS, ...opts }
   const C = ({ fileData, allFiles, cfg, displayClass }) => {
@@ -180,10 +217,20 @@ export const LiqueedExplorar = (opts = {}) => {
         // Fechas de solo mes/año: Quartz las formatea con día; este CSS muestra "sept 2025".
         partialCss ? jsx("style", { dangerouslySetInnerHTML: { __html: partialCss } }) : null,
         ld ? jsx("script", { type: "application/ld+json", dangerouslySetInnerHTML: { __html: safeJson(ld) } }) : null,
-        slug === "explorar" ? jsx(Explorar, { model, slug }) : jsx(ExplorarLink, { slug, model }),
+        slug === "explorar"
+          ? jsx(Explorar, { model, slug })
+          : slug === "mapa"
+            ? jsx(Mapa, { slug, model })
+            : jsx(ExplorarLink, { slug, model }),
+        // Fichas y temas: dónde encaja esta página en el mapa de conexiones.
+        slug.startsWith("fuentes/") && !slug.endsWith("index")
+          ? jsx("p", { class: "lq-mapa-en-pagina", children: jsx(MapaLink, { slug, origen: "ficha", label: "Ver esta ficha en el mapa de conexiones" }) })
+          : slug.startsWith("temas/") && !slug.endsWith("index")
+            ? jsx("p", { class: "lq-mapa-en-pagina", children: jsx(MapaLink, { slug, origen: "tema", label: "Ver este tema en el mapa de conexiones" }) })
+            : null,
       ],
     })
   }
-  C.afterDOMLoaded = EXPLORAR_JS
+  C.afterDOMLoaded = EXPLORAR_JS + MAPA_JS
   return C
 }
