@@ -295,6 +295,13 @@ plugins:
     layout:
       position: afterBody
       priority: 80
+  - source: ./plugins/liqueed-explorar
+    enabled: true
+    options:
+      siteTitle: Recursos de IA · Liqueed
+    layout:
+      position: afterBody
+      priority: 10
   - source: ./plugins/liqueed-site
     enabled: true
     options:
