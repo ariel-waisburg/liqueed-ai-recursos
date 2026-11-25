@@ -45,7 +45,7 @@ Si una nota queda en `pendiente-captura`, poné una nota de captura que empiece 
 | `presentacion` | `presentaciones` |
 | `referente` | `referentes` |
 
-**Tipo nuevo:** si no encaja en ninguno (por ejemplo un podcast o un paper), creá la carpeta, agregá la fila a esta tabla y a la lista de `vault/CLAUDE.md`, y avisá en el informe.
+**Tipo nuevo:** si no encaja en ninguno (por ejemplo un podcast o un paper), creá la carpeta, agregá la fila a esta tabla y a la lista de `vault/CLAUDE.md`, sumalo a `TIPOS` en `scripts/publicar.py` y a `TIPO_LABEL` y `TIPO_SCHEMA` en `plugins/liqueed-explorar/dist/modelo.js` (filtros de /explorar y JSON-LD), y avisá en el informe.
 
 ## 4. Crear la nota
 
