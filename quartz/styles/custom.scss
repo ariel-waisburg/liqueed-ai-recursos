@@ -5,8 +5,10 @@
 // - Papel cálido (#f4f1eb) y tinta (#141e28); azul champion (#234d96 → #1f4489) en paneles;
 //   naranja (#ff9900) para eyebrows y palabras destacadas; amarillo (#fedc0f) en el botón principal
 //   y en los subrayados.
-// - Public Sans 800 con tracking cerrado en títulos, Public Sans en texto, IBM Plex Mono en etiquetas.
-//   Regla de marca: Poppins NO se usa en ningún lado del sitio (pedido de Ari).
+// - Poppins 800 con tracking cerrado en títulos, Public Sans en texto y en etiquetas (--lq-label-font:
+//   mayúsculas con tracking, semibold).
+//   Regla de marca: IBM Plex Mono NO se usa en ningún lado del sitio (pedido de Ari). Las etiquetas usan
+//   var(--lq-label-font), nunca var(--codeFont); el código usa la monoespaciada del sistema.
 // Este archivo no va dentro de una capa CSS, así que gana sobre los estilos de componentes.
 // ---------------------------------------------------------------------------
 
@@ -56,9 +58,17 @@ h2 {
   text-transform: none !important;
 }
 
+// Etiquetas (eyebrows, "TRABAJEMOS JUNTOS", labels de filtros, contadores, fechas): Public Sans.
+// Código (`code`, `pre`): monoespaciada del sistema; no se descarga ninguna mono (regla: nunca IBM Plex Mono).
+:root:root {
+  --lq-label-font: var(--bodyFont);
+  --codeFont: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  --font-monospace: var(--codeFont);
+}
+
 .liqueed-mono,
 .liqueed-eyebrow {
-  font-family: var(--codeFont);
+  font-family: var(--lq-label-font);
   text-transform: uppercase;
   letter-spacing: 0.12em;
   font-size: 0.72rem;
@@ -353,7 +363,7 @@ body[data-slug="index"] {
       &::before {
         content: counter(tema, decimal-leading-zero);
         display: block;
-        font-family: var(--codeFont);
+        font-family: var(--lq-label-font);
         font-weight: 600;
         font-size: 0.78rem;
         letter-spacing: 0.1em;
@@ -371,7 +381,8 @@ body[data-slug="index"] {
         display: block;
         margin: 0 0 0.45rem;
         font-style: normal;
-        font-family: var(--codeFont);
+        font-family: var(--lq-label-font);
+        font-weight: 600;
         font-size: 0.75rem;
         letter-spacing: 0.06em;
         text-transform: uppercase;
@@ -525,8 +536,8 @@ footer.liqueed-footer {
       margin-right: 0.35rem;
     }
     a {
-      font-family: var(--codeFont);
-      font-weight: 500;
+      font-family: var(--lq-label-font);
+      font-weight: 600;
     }
   }
   .liqueed-footer-credit {
@@ -546,7 +557,8 @@ article blockquote,
   border-radius: var(--lq-radius);
 }
 .content-meta {
-  font-family: var(--codeFont);
+  font-family: var(--lq-label-font);
+  font-weight: 600;
   font-size: 0.78rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -600,7 +612,7 @@ body[data-slug="explorar"] .content-meta {
     flex-basis: 100%;
   }
   label {
-    font-family: var(--codeFont);
+    font-family: var(--lq-label-font);
     text-transform: uppercase;
     letter-spacing: 0.1em;
     font-size: 0.68rem;
@@ -704,7 +716,8 @@ ul.lx-activos {
   }
 }
 .lx-status {
-  font-family: var(--codeFont);
+  font-family: var(--lq-label-font);
+  font-weight: 600;
   font-size: 0.8rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;

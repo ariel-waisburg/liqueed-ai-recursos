@@ -11,7 +11,7 @@ Proceso único para cargar fuentes en `vault/`. Respondé siempre en español ri
 
 - **"liqueed" va siempre en minúscula** en todo texto que escribas: resúmenes, "En una línea", ideas clave, `autor`/`proveedor` cuando la fuente es propia, títulos de notas propias y nombres de archivo de notas propias (`liqueed - ….md`). En fuentes de terceros no cambies sus textos citados ni sus URLs; solo nuestras menciones a la marca.
 - **Fechas:** el sitio muestra `publicado` (la fecha del recurso), nunca `guardado` (la de carga en el repo). Por eso `publicado` importa: completalo con la fecha real (`YYYY-MM-DD`, o `YYYY-MM` / `YYYY` si la fuente solo da eso; podés agregar una aclaración, p. ej. `"2025-09 (primera versión)"`). Si no hay fecha real, `""`: la ficha se muestra sin fecha.
-- La tipografía Poppins no se usa en el sitio (regla de Ari; ver `quartz.config.yaml`).
+- La tipografía IBM Plex Mono no se usa en el sitio (regla de Ari; ver `quartz.config.yaml`). Etiquetas en Public Sans, títulos en Poppins.
 
 ## 0. Preparar
 

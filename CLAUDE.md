@@ -12,7 +12,7 @@ Cada vez que Ari pase links para agregar, pida completar pendientes o procesar e
 
 ## Reglas
 
-- **Marca:** "liqueed" siempre en minúscula en todo texto visible y metadatos. La tipografía **Poppins no se usa nunca** en el sitio (títulos en Public Sans 800).
+- **Marca:** "liqueed" siempre en minúscula en todo texto visible y metadatos. La tipografía **IBM Plex Mono no se usa nunca** en el sitio (ni se carga): títulos en Poppins, texto y etiquetas en Public Sans, código en la monoespaciada del sistema.
 - **Fechas en el sitio:** se muestra `publicado` (fecha del recurso); `guardado` (fecha de carga) no se muestra en listados ni fichas.
 - El repo es **público**: todo lo que está en `vault/` se ve en GitHub. No guardes nada privado ni de clientes acá.
 - La sección "Texto original" de cada nota **nunca** se publica en el sitio (`publicar.py` la saca), pero sí queda visible en GitHub: no pegues ahí textos completos de terceros.
