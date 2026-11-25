@@ -184,19 +184,19 @@ open(os.path.join(OUT, "mapa.md"), "w", encoding="utf-8").write(MAPA)
 # (dist/lecturas.js) desde curaduria/lecturas.yaml. Aparecen en el menú lateral y en la home.
 LECTURAS = """---
 title: "Lecturas rápidas"
-description: "Paquetes de lecturas sobre IA aplicada que entran en 10, 15, 20 o 30 minutos, elegidas por liqueed para producto, equipos técnicos y cultura y RR. HH."
+description: "Lecturas cortas sobre IA aplicada, agrupadas por tiempo disponible y perfil."
 ---
 
-¿Tenés 10, 15 o 30 minutos? Elegimos pocas lecturas que entran en ese tiempo y dicen algo importante. Cada lectura muestra cuánto lleva la ficha (nuestro resumen en español) y cuánto lleva la fuente original. Empezá por tu perfil y, si querés, filtrá por tema.
+Lecturas cortas por tiempo disponible. Cada una indica los minutos de nuestra ficha y los de la fuente original.
 """
 open(os.path.join(OUT, "lecturas-rapidas.md"), "w", encoding="utf-8").write(LECTURAS)
 
 RECORRIDOS = """---
 title: "Recorridos recomendados"
-description: "Secuencias de lecturas sobre IA aplicada pensadas por perfil (producto, técnico y CTO, cultura y RR. HH.) y por etapa de adopción, armadas por liqueed."
+description: "Recorridos de lectura sobre IA aplicada sugeridos por perfil: producto, técnico y CTO, cultura y RR. HH., y gobernanza."
 ---
 
-Un recorrido es una secuencia corta de lecturas, en un orden que tiene sentido para tu rol y para la etapa en la que está tu organización. Elegí tu perfil, seguí los pasos y marcá lo que ya leíste: el avance queda guardado en este navegador.
+Recorridos sugeridos por perfil. Podés marcar lo que ya leíste; queda guardado en este navegador.
 """
 open(os.path.join(OUT, "recorridos-recomendados.md"), "w", encoding="utf-8").write(RECORRIDOS)
 

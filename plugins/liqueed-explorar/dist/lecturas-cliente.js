@@ -1,7 +1,7 @@
 /**
  * JS de /lecturas-rapidas y /recorridos-recomendados (mejora progresiva: sin JS todo se ve y filtra con CSS).
  *
- * - Filtros perfil y tema: aplica ?perfil=&tema= de la URL, la actualiza con replaceState y muestra el estado vacío.
+ * - Filtros perfil y tema (dos <select> iguales): aplica ?perfil=&tema= de la URL, la actualiza con replaceState y muestra el estado vacío.
  * - Recorridos: botón "leído" por paso, barra de avance y "Empezar de nuevo"; se guarda en localStorage
  *   ("lq-recorrido:<id>"), solo en este navegador.
  * - "Compartir con mi equipo": navigator.share si existe; si no, copia el link; si falla, sigue el mailto.
@@ -10,7 +10,7 @@
  *   pack_open {pack_id} (primer clic en una lectura del paquete en la visita) ·
  *   pack_item_click {pack_id, item, position, link_type: ficha|fuente}
  *   route_step {route_id, step, item, action: open|done|undone, link_type} · route_complete {route_id, steps}
- *   cta_agendar_click {origen: pagina|recorrido, id} (además del cta_click general de los a[data-cta])
+ *   cta_agendar_click {origen: pagina, id} (además del cta_click general de los a[data-cta])
  *   share_team_click {origen: pagina|paquete|recorrido, id, method: native|clipboard|email}
  *   Todos llevan page_path.
  * Funciona con el SPA de Quartz: los listeners de clic van una sola vez en document; el estado, en cada "nav".
@@ -34,7 +34,7 @@ export const LECTURAS_JS = `
   function applyFilters(root, push) {
     var form = root.querySelector(".lq-lr-filtros");
     if (!form) return;
-    var perfil = (form.querySelector('input[name="perfil"]:checked') || {}).value || "";
+    var perfil = (form.querySelector('select[name="perfil"]') || {}).value || "";
     var tema = (form.querySelector('select[name="tema"]') || {}).value || "";
     var shown = 0;
     root.querySelectorAll(".lq-lr-card").forEach(function (c) {
@@ -73,7 +73,7 @@ export const LECTURAS_JS = `
     if (prog) {
       prog.hidden = false;
       prog.querySelector(".lq-route-bar span").style.width = (total ? Math.round(100 * n / total) : 0) + "%";
-      prog.querySelector(".lq-route-count").textContent = n === total && total ? "¡Recorrido completo! " + n + " de " + total + " leídos" : n + " de " + total + " leídos";
+      prog.querySelector(".lq-route-count").textContent = n === total && total ? n + " de " + total + " leídos · completo" : n + " de " + total + " leídos";
       var reset = prog.querySelector(".lq-route-reset");
       if (reset) reset.hidden = n === 0;
     }
@@ -89,8 +89,10 @@ export const LECTURAS_JS = `
     if (form) {
       var params = new URLSearchParams(location.search);
       var p = params.get("perfil"), t = params.get("tema");
-      if (p) { var r = form.querySelector('input[name="perfil"][value="' + CSS.escape(p) + '"]'); if (r) r.checked = true; }
-      if (t) { var s = form.querySelector('select[name="tema"]'); if (s && s.querySelector('option[value="' + CSS.escape(t) + '"]')) s.value = t; }
+      [["perfil", p], ["tema", t]].forEach(function (kv) {
+        var s = form.querySelector('select[name="' + kv[0] + '"]');
+        if (s && kv[1] && s.querySelector('option[value="' + CSS.escape(kv[1]) + '"]')) s.value = kv[1];
+      });
       applyFilters(root, false);
       form.addEventListener("change", function (e) {
         applyFilters(root, true);
@@ -136,13 +138,13 @@ export const LECTURAS_JS = `
       if (navigator.share) {
         e.preventDefault();
         base.method = "native"; ev("share_team_click", base);
-        navigator.share({ title: title, text: "Te comparto esta selección de lecturas sobre IA de liqueed: " + title, url: url }).catch(function () {});
+        navigator.share({ title: title, text: title + ", en Recursos de IA de liqueed", url: url }).catch(function () {});
       } else if (navigator.clipboard && window.isSecureContext) {
         e.preventDefault();
         navigator.clipboard.writeText(url).then(function () {
           base.method = "clipboard"; ev("share_team_click", base);
           var old = sh.textContent; sh.textContent = "Link copiado"; setTimeout(function () { sh.textContent = old; }, 2200);
-          if (status) status.textContent = "Copiamos el link. Pegalo en el chat o el mail de tu equipo.";
+          if (status) status.textContent = "Link copiado.";
         }, function () { base.method = "email"; ev("share_team_click", base); location.href = sh.href; });
       } else { base.method = "email"; ev("share_team_click", base); }
       return;

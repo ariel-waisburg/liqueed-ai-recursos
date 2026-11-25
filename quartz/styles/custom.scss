@@ -1148,173 +1148,112 @@ body[data-slug="mapa"] .content-meta {
   clip: rect(0 0 0 0);
   white-space: nowrap;
 }
+// Minimalista (pedido de Ari, 25/11/2026): sin cajas, separadores finos, aire y radios suaves.
 .lq-lr {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   [hidden] {
     display: none !important;
   }
 }
+// Perfil y tema: el mismo componente (dos <select> iguales, en fila).
 .lq-lr-filtros {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-end;
-  gap: 1rem 1.5rem;
-  margin: 0 0 1.5rem;
-  padding: 1rem 1.2rem;
-  background: var(--lq-card);
-  border: 1px solid var(--lightgray);
-  border-radius: var(--lq-radius);
-  fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
+  gap: 0.75rem 1.25rem;
+  margin: 0 0 1rem;
+  padding: 0;
+  .lq-lr-campo {
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 0 1 auto;
   }
-  legend,
-  .lq-lr-tema label {
-    display: block;
-    width: 100%;
-    margin: 0 0 0.4rem;
-    font-family: var(--lq-label-font);
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
+  label {
+    font-size: 0.85rem;
+    font-weight: 600;
     color: var(--darkgray);
   }
-  .lq-lr-tema select {
-    min-height: 40px;
-    padding: 0.4rem 0.6rem;
+  select {
+    appearance: none;
+    -webkit-appearance: none;
+    min-height: 38px;
+    min-width: 11rem;
+    max-width: 100%;
+    padding: 0.4rem 2.1rem 0.4rem 0.95rem;
     font: inherit;
-    color: var(--dark);
-    background: var(--light);
-    border: 1px solid var(--gray);
-    border-radius: var(--lq-radius);
-  }
-}
-.lq-lr-chip {
-  position: relative;
-  input {
-    position: absolute;
-    opacity: 0;
-    inset: 0;
-    margin: 0;
-    cursor: pointer;
-  }
-  span {
-    display: inline-flex;
-    align-items: center;
-    min-height: 40px;
-    padding: 0.35rem 0.95rem;
-    border: 1px solid var(--lq-blue);
-    border-radius: 999px;
-    color: var(--lq-blue);
-    font-weight: 600;
     font-size: 0.92rem;
-  }
-  input:checked + span {
-    background: var(--lq-blue);
-    color: #fff;
-  }
-  input:focus-visible + span {
-    outline: 3px solid var(--lq-orange);
-    outline-offset: 2px;
-  }
-}
-:root[saved-theme="dark"] .lq-lr-chip span {
-  color: #9cb8ec;
-  border-color: #9cb8ec;
-}
-:root[saved-theme="dark"] .lq-lr-chip input:checked + span {
-  background: #9cb8ec;
-  color: var(--lq-ink);
-}
-.lq-lr-grid {
-  display: grid;
-  gap: 1.25rem;
-}
-.lq-lr-card {
-  margin: 0 0 1.25rem;
-  padding: 1.4rem 1.5rem 1.3rem;
-  background: var(--lq-card);
-  border: 1px solid var(--lightgray);
-  border-top: 4px solid var(--lq-blue);
-  border-radius: var(--lq-radius);
-  scroll-margin-top: 1rem;
-  h2 {
-    margin: 0.2rem 0 0.5rem;
-    font-size: clamp(1.3rem, 2.2vw, 1.6rem);
-    font-weight: 800;
-    letter-spacing: -0.02em;
-  }
-  &:target {
-    border-top-color: var(--lq-orange);
-    box-shadow: 0 0 0 3px rgba(255, 153, 0, 0.25);
-  }
-  .liqueed-btn.ghost {
-    color: var(--lq-blue);
-    border-color: var(--lq-blue);
+    color: var(--dark);
+    background-color: transparent;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 6 6.5 11 1.5' fill='none' stroke='%23697480' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.85rem center;
+    border: 1px solid var(--lightgray);
+    border-radius: 999px;
+    cursor: pointer;
     &:hover {
-      background: var(--lq-blue);
-      color: #fff;
+      border-color: var(--gray);
+    }
+    &:focus-visible {
+      outline: 2px solid var(--lq-orange);
+      outline-offset: 2px;
     }
   }
 }
-.lq-lr-grid .lq-lr-card {
+.lq-lr-card {
   margin: 0;
+  padding: 2rem 0 1.5rem;
+  border-top: 1px solid var(--lightgray);
+  scroll-margin-top: 1rem;
+  &:target .lq-lr-head h2 {
+    text-decoration: underline;
+    text-decoration-color: var(--lq-orange);
+    text-underline-offset: 6px;
+  }
 }
-.lq-lr-eyebrow {
-  display: inline-block;
-  margin: 0;
-  padding: 0.25rem 0.6rem;
-  background: var(--lq-orange);
-  color: var(--lq-ink);
-  font-family: var(--lq-label-font);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  border-radius: 2px;
+.lq-lr-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  h2 {
+    margin: 0;
+    font-size: clamp(1.25rem, 2vw, 1.45rem);
+    font-weight: 800;
+    letter-spacing: -0.015em;
+  }
+}
+.lq-lr-min {
+  flex: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--darkgray);
 }
 .lq-lr-desc {
-  margin: 0 0 0.5rem;
-  line-height: 1.6;
+  margin: 0.4rem 0 0.2rem;
+  line-height: 1.55;
 }
 .lq-lr-totals {
-  margin: 0 0 0.6rem;
-  font-size: 0.88rem;
-  font-weight: 600;
-  color: var(--lq-orange-ink);
-}
-.lq-lr-outcome {
-  margin: 0 0 0.8rem;
-  padding: 0.6rem 0.8rem;
-  background: rgba(254, 220, 15, 0.18);
-  border-left: 3px solid var(--lq-yellow);
-  line-height: 1.5;
+  margin: 0 0 0.5rem;
+  font-size: 0.85rem;
+  color: var(--darkgray);
 }
 ol.lq-lr-items,
 ul.lq-lr-items {
   list-style: none;
-  margin: 0.75rem 0 0;
+  margin: 0.5rem 0 0;
   padding: 0;
-  display: grid;
-  gap: 0;
 }
 .lq-lr-item {
   display: grid;
-  grid-template-columns: 2.2rem minmax(0, 1fr);
-  gap: 0.75rem;
+  grid-template-columns: 1.75rem minmax(0, 1fr);
+  gap: 0.6rem;
   margin: 0;
-  padding: 0.85rem 0;
-  border-top: 1px solid var(--lightgray);
+  padding: 0.75rem 0;
   h3 {
-    margin: 0 0 0.2rem;
-    font-size: 1.02rem;
+    margin: 0 0 0.15rem;
+    font-size: 1rem;
     line-height: 1.35;
-    font-weight: 700;
+    font-weight: 600;
   }
   h3 a {
     color: var(--dark) !important;
@@ -1325,48 +1264,36 @@ ul.lq-lr-items {
       text-decoration-color: var(--lq-yellow) !important;
     }
   }
-  .lq-lr-meta {
-    margin: 0 0 0.25rem;
-    font-size: 0.83rem;
+  .lq-lr-meta,
+  .lq-lr-times {
+    margin: 0;
+    font-size: 0.82rem;
     color: var(--darkgray);
   }
   .lq-lr-why {
-    margin: 0 0 0.35rem;
+    margin: 0.15rem 0 0.2rem;
     line-height: 1.5;
   }
   .lq-lr-times {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.35rem 0.6rem;
-    align-items: center;
-    margin: 0;
-    font-size: 0.83rem;
-  }
-  .lq-t {
-    padding: 0.1rem 0.5rem;
-    background: rgba(35, 77, 150, 0.08);
-    border-radius: 999px;
-    color: var(--dark);
+    gap: 0.25rem 0.9rem;
+    a.external {
+      font-size: 0.82rem;
+    }
   }
   &.lq-done h3 a {
     color: var(--darkgray) !important;
   }
 }
-.lq-step-num,
-.lq-step-check {
-  width: 2.2rem;
-  height: 2.2rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
+.lq-step-num {
+  padding-top: 0.05rem;
   font-family: var(--headerFont);
-  font-weight: 800;
-  font-size: 0.95rem;
-  background: rgba(35, 77, 150, 0.1);
-  color: var(--lq-blue);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--gray);
 }
-// Sin JS el botón está oculto: el número del paso lo da la lista ordenada.
+// Sin JS el botón "leído" está oculto y el número sale de la lista ordenada.
 .lq-route .lq-lr-items {
   counter-reset: paso;
 }
@@ -1374,55 +1301,62 @@ ul.lq-lr-items {
   counter-increment: paso;
   &::before {
     content: counter(paso);
-    width: 2.2rem;
-    height: 2.2rem;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
+    padding-top: 0.05rem;
     font-family: var(--headerFont);
-    font-weight: 800;
-    background: rgba(35, 77, 150, 0.1);
-    color: var(--lq-blue);
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--gray);
   }
 }
 .lq-js .lq-route > .lq-lr-items > .lq-lr-item::before {
   display: none;
 }
 .lq-step-check {
-  border: 2px solid var(--lq-blue);
+  width: 1.35rem;
+  height: 1.35rem;
+  margin-top: 0.05rem;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid var(--gray);
+  border-radius: 50%;
   background: transparent;
   cursor: pointer;
-  padding: 0;
   &::after {
     content: "";
   }
+  &:hover {
+    border-color: var(--lq-blue);
+  }
   &[aria-pressed="true"] {
     background: var(--lq-blue);
+    border-color: var(--lq-blue);
     &::after {
       content: "✓";
       color: #fff;
+      font-size: 0.75rem;
+      line-height: 1;
     }
   }
   &:focus-visible {
-    outline: 3px solid var(--lq-orange);
+    outline: 2px solid var(--lq-orange);
     outline-offset: 2px;
   }
 }
 .lq-route-extra {
-  margin-top: 0.75rem;
+  margin-top: 0.25rem;
   > h3 {
-    margin: 0;
-    font-size: 0.82rem;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
+    margin: 0.5rem 0 0;
+    font-size: 0.85rem;
+    font-weight: 600;
     color: var(--darkgray);
   }
   .lq-step-num {
     font-size: 0;
     &::after {
       content: "+";
-      font-size: 1rem;
+      font-size: 0.95rem;
     }
   }
 }
@@ -1430,11 +1364,11 @@ ul.lq-lr-items {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.5rem 1rem;
-  margin: 0.5rem 0 0.25rem;
+  gap: 0.4rem 0.9rem;
+  margin: 0.25rem 0 0.25rem;
   .lq-route-bar {
-    flex: 1 1 12rem;
-    height: 8px;
+    flex: 0 1 10rem;
+    height: 3px;
     background: var(--lightgray);
     border-radius: 999px;
     overflow: hidden;
@@ -1442,14 +1376,14 @@ ul.lq-lr-items {
       display: block;
       height: 100%;
       width: 0;
-      background: var(--lq-orange);
+      background: var(--lq-blue);
       transition: width 0.25s ease;
     }
   }
   .lq-route-count {
     margin: 0;
-    font-size: 0.85rem;
-    font-weight: 600;
+    font-size: 0.82rem;
+    color: var(--darkgray);
   }
   .lq-route-reset {
     font: inherit;
@@ -1457,20 +1391,20 @@ ul.lq-lr-items {
     background: none;
     border: 0;
     padding: 0;
-    color: var(--secondary);
+    color: var(--darkgray);
     text-decoration: underline;
     cursor: pointer;
   }
 }
-.lq-route-cta,
 .lq-lr-card-actions {
-  margin-top: 1rem;
-  padding-top: 1rem;
-  border-top: 1px dashed var(--gray);
-  p {
-    margin: 0 0 0.75rem;
-    font-weight: 600;
-  }
+  margin: 0.25rem 0 0;
+  padding-left: 2.35rem;
+  font-size: 0.85rem;
+}
+a.lq-share-link {
+  color: var(--secondary) !important;
+  background: none !important;
+  font-weight: 600;
 }
 .liqueed-btn.small {
   min-height: 40px;
@@ -1478,35 +1412,70 @@ ul.lq-lr-items {
   font-size: 0.86rem;
 }
 .lq-lr-empty {
-  padding: 1rem 1.2rem;
-  background: var(--lq-card);
-  border: 1px dashed var(--gray);
-  border-radius: var(--lq-radius);
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--lightgray);
+  color: var(--darkgray);
 }
 .lq-lr-nota {
-  margin: 1.5rem 0 0;
+  margin: 0;
+  padding: 1.25rem 0 0;
+  border-top: 1px solid var(--lightgray);
   font-size: 0.9rem;
   color: var(--darkgray);
 }
-aside.liqueed-cta.lq-lr-cta {
-  display: block;
+// Cierre (opción A): liviano, sin panel.
+aside.lq-lr-cta {
+  margin: 2.5rem 0 1rem;
+  padding: 1.75rem 0 0;
+  border-top: 1px solid var(--lightgray);
+  h2 {
+    margin: 0 0 0.35rem;
+    font-size: 1.15rem;
+    font-weight: 800;
+  }
   p {
-    color: rgba(255, 255, 255, 0.9);
-    line-height: 1.6;
-    max-width: 62ch;
+    margin: 0 0 1rem;
+    color: var(--darkgray);
+  }
+  .lq-lr-cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+  .liqueed-btn {
+    min-height: 42px;
+    border-radius: 999px;
+  }
+  .liqueed-btn.ghost {
+    color: var(--dark);
+    border: 1px solid var(--lightgray);
+    &:hover {
+      border-color: var(--gray);
+      background: transparent;
+      color: var(--dark);
+    }
   }
   .lq-share-status {
-    margin: 0.75rem 0 0;
-    font-size: 0.9rem;
+    margin: 0.6rem 0 0;
+    font-size: 0.85rem;
     min-height: 1.2em;
   }
 }
 @media #{$mobile} {
-  .lq-lr-card {
-    padding: 1.1rem 1rem 1rem;
+  .lq-lr-filtros {
+    flex-direction: column;
+    align-items: stretch;
+    .lq-lr-campo {
+      display: grid;
+      grid-template-columns: 3.5rem minmax(0, 1fr);
+    }
+    select {
+      min-width: 0;
+      width: 100%;
+      min-height: 42px;
+    }
   }
-  .lq-lr-item {
-    grid-template-columns: 2rem minmax(0, 1fr);
-    gap: 0.6rem;
+  .lq-lr-card-actions {
+    padding-left: 0;
   }
 }

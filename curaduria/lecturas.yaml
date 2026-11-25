@@ -14,163 +14,157 @@
 # los totales los calcula el build, que avisa si un paquete se pasa del tiempo que promete.
 # Perfiles: tecnico | producto | cultura-organizacion. Madurez: explorando | experimentando | escalando.
 # Máximo 5 lecturas rápidas en la página, con 3 a 5 lecturas cada una.
+# Textos (pedido de Ari, 25/11/2026): cortos, sobrios y verificables. Nada que suponga la etapa de la
+# organización de quien lee ni prometa resultados. `minutos` va en la tarjeta, no en el título.
 
 revisado: 2026-11-25
 
 lecturas_rapidas:
   - id: adopcion-10
-    titulo: "Adopción de IA en 10 minutos"
+    titulo: "Adopción de IA"
     minutos: 10
     perfil: [tecnico, producto, cultura-organizacion]
-    descripcion: "Tres lecturas cortas para entender por qué la adopción es social, qué ven los líderes de IT en las grandes empresas y por dónde empezar en un área."
+    descripcion: "Champions, la mirada de IT y primeros pasos en un área."
     items:
       - ficha: "Abundly - The Power of Anointing Gen AI Champions"
-        por_que: "Por qué nombrar champions acelera la adopción más que cualquier capacitación."
+        por_que: "El rol de los champions en la adopción."
       - ficha: "Aaron Levie - Lo que dicen los líderes de IT sobre agentes"
-        por_que: "Lo que preocupa hoy a líderes de IT de grandes empresas: cambio, costos y sistemas legados."
+        por_que: "Qué preocupa a líderes de IT: cambio, costos y sistemas legados."
       - ficha: "Matías Frydman - Cinco pasos para adoptar IA en un área"
-        por_que: "Una receta concreta, en español, para arrancar en un equipo."
+        por_que: "Cinco pasos para empezar en un área. En español."
 
   - id: variado-15
-    titulo: "Cinco miradas en 15 minutos"
+    titulo: "Panorama general"
     minutos: 15
     perfil: [tecnico, producto, cultura-organizacion]
-    descripcion: "Una lectura por mirada: producto, cultura, medición, roles y técnica. Para tener el panorama completo antes de una reunión."
+    descripcion: "Una lectura de producto, cultura, medición, roles y técnica."
     items:
       - ficha: "Félix López - ProtoAIpos"
-        por_que: "Prototipar con IA para decidir mejor qué construir."
+        por_que: "Prototipar con IA antes de decidir qué construir."
       - ficha: "HBR - When Using AI Leads to Brain Fry"
-        por_que: "El costo cognitivo de usar IA todo el día, y cómo diseñar el trabajo para evitarlo."
+        por_que: "El costo cognitivo de usar IA de forma intensiva."
       - ficha: "Dan Shipper - We need to change how we measure AI"
-        por_que: "Por qué los benchmarks no alcanzan para saber si la IA sirve en tu trabajo."
+        por_que: "Por qué los benchmarks no alcanzan para medir utilidad."
       - ficha: "Boris Cherny - Cinco arquetipos de roles de producto"
-        por_que: "Cómo pueden cambiar los roles de producto en los próximos años."
+        por_que: "Cinco arquetipos posibles para los roles de producto."
       - ficha: "Santi - Cuándo usar un workflow y cuándo un agente"
-        por_que: "La decisión técnica más básica, explicada en español."
+        por_que: "Workflow o agente: cuándo conviene cada uno. En español."
 
   - id: producto-20
-    titulo: "Producto con IA en 20 minutos"
+    titulo: "Producto"
     minutos: 20
     perfil: [producto]
-    descripcion: "Qué cambia en el rol de producto y cómo usar la IA para descubrir y prototipar sin construir lo equivocado."
+    descripcion: "El rol de producto y el prototipado con IA."
     items:
       - ficha: "Marty Cagan - AI and the Future of the Product Role"
-        por_que: "La mirada de Cagan sobre qué cambia y qué no en el rol."
+        por_que: "Qué cambia y qué no en el rol, según Cagan."
       - ficha: "Christina Wodtke - I'll Know It When I Build It"
-        por_que: "Construir para pensar: el prototipo como herramienta de discovery."
+        por_que: "El prototipo como herramienta de discovery."
       - ficha: "Félix López - ProtoAIpos"
-        por_que: "Un caso concreto de prototipado con IA, en español."
+        por_que: "Un caso de prototipado con IA. En español."
       - ficha: "Boris Cherny - Cinco arquetipos de roles de producto"
-        por_que: "Hacia dónde pueden ir los roles de producto."
+        por_que: "Cinco arquetipos posibles para los roles de producto."
 
   - id: tecnico-20
-    titulo: "Desarrollo con agentes en 20 minutos"
+    titulo: "Desarrollo con agentes"
     minutos: 20
     perfil: [tecnico]
-    descripcion: "Para líderes técnicos que quieren ponerse al día: qué cambió en los modelos este año y cómo se trabaja con agentes en la práctica."
+    descripcion: "Qué cambió en los modelos y cómo se trabaja con agentes."
     items:
       - ficha: "Simon Willison - Three LLM inflection points in twelve months"
-        por_que: "Los tres saltos de los modelos que cambiaron cómo se programa."
+        por_que: "Tres saltos de los modelos en el último año."
       - ficha: "Martin Fowler - Exploring Generative AI"
-        por_que: "La serie de martinfowler.com sobre cómo usar IA en el desarrollo de software, con criterio."
+        por_que: "La serie de martinfowler.com sobre IA en el desarrollo de software."
       - ficha: "Santi - Cuándo usar un workflow y cuándo un agente"
-        por_que: "Cuándo conviene un agente y cuándo un flujo definido en código."
+        por_que: "Workflow o agente: cuándo conviene cada uno. En español."
       - ficha: "Santi - Flujo para construir software con agentes"
-        por_que: "Un flujo de trabajo concreto con agentes de código, en español."
+        por_que: "Un flujo de trabajo con agentes de código. En español."
 
   - id: gobernanza-30
-    titulo: "Gobernanza de IA en 30 minutos"
+    titulo: "Gobernanza de IA"
     minutos: 30
     perfil: [tecnico, producto, cultura-organizacion]
-    descripcion: "Lo mínimo para ordenar la gobernanza: qué exige el Reglamento europeo, cómo bajarlo a checklists y cómo lo encaró una organización real."
+    descripcion: "El Reglamento europeo, guías para cumplirlo y un caso."
     items:
       - ficha: "Comisión Europea - Ley de IA"
-        por_que: "Los niveles de riesgo y el calendario actualizado, de la fuente oficial."
+        por_que: "Niveles de riesgo y calendario, de la fuente oficial."
       - ficha: "AESIA - Guías prácticas para el cumplimiento del RIA"
-        por_que: "Dieciséis guías y checklists en español para cada requisito."
+        por_que: "Guías y checklists por requisito. En español."
       - ficha: "Félix López - Nuestra estrategia para la adopción de IA"
-        por_que: "Cómo una organización con límites duros de datos y seguridad armó el circuito para probar y aprobar herramientas."
+        por_que: "Cómo una organización aprueba herramientas con límites de datos y seguridad."
 
 recorridos:
   - id: producto-primeros-pasos
-    titulo: "Producto: tus primeros pasos con IA"
+    titulo: "Producto"
     perfil: [producto]
     madurez: explorando
-    descripcion: "Cinco lecturas para entender qué cambia en el rol de producto y cómo prototipar con IA sin construir lo equivocado."
-    sale_sabiendo: "Qué cambia en el rol, cómo usar la IA para descubrir y prototipar, y qué evitar."
+    descripcion: "Fundamentos, el rol de producto y el prototipado con IA."
     pasos:
       - ficha: "Henrik Kniberg - Generative AI in a Nutshell"
-        por_que: "La base: qué es la IA generativa, dibujada y sin jerga."
+        por_que: "Qué es la IA generativa, sin jerga."
       - ficha: "Marty Cagan - AI and the Future of the Product Role"
         por_que: "Qué cambia en el rol de producto."
       - ficha: "Grey - AI Makes It Easier to Build the Wrong Product"
-        por_que: "El riesgo: construir rápido lo que nadie necesita."
+        por_que: "El riesgo de construir rápido algo que nadie necesita."
       - ficha: "Christina Wodtke - I'll Know It When I Build It"
-        por_que: "Construir para pensar, con criterio."
+        por_que: "El prototipo como herramienta de discovery."
       - ficha: "Félix López - ProtoAIpos"
-        por_que: "Un caso de prototipado con IA, en español."
+        por_que: "Un caso de prototipado con IA. En español."
     para_profundizar:
       - ficha: "Sherif Mansour - First principles PM in the AI era"
-        por_que: "Una conversación larga sobre qué hace a un gran PM en la era de la IA."
-    cta: "Armamos este recorrido para tu equipo de producto, con ejercicios sobre sus propios casos."
+        por_que: "Entrevista sobre el trabajo de producto con IA."
 
   - id: tecnico-escalar-agentes
-    titulo: "Técnico: escalar el trabajo con agentes"
+    titulo: "Técnico y CTO"
     perfil: [tecnico]
     madurez: escalando
-    descripcion: "Para CTOs y líderes técnicos con equipos que ya usan agentes: cómo facilitar la adopción, bajar la resistencia, configurar el entorno, medir y cuidar la seguridad."
-    sale_sabiendo: "Cómo facilitar la adopción en ingeniería, configurar el harness, evaluar a escala y qué riesgos de seguridad revisar."
+    descripcion: "Adopción en ingeniería, entorno de agentes, evals y seguridad."
     pasos:
       - ficha: "Will Larson - Facilitating AI adoption at Imprint"
-        por_que: "Cómo un CTO facilitó la adopción en toda su organización."
+        por_que: "Cómo un CTO facilitó la adopción en su empresa."
       - ficha: "Rachel Laycock - Why are good developers so wary of agentic development"
-        por_que: "Por qué los buenos desarrolladores desconfían, y qué hacer con eso."
+        por_que: "Por qué muchos desarrolladores desconfían de los agentes."
       - ficha: "Birgitta Böckeler - Harness engineering for coding agent users"
         por_que: "Cómo configurar el entorno alrededor del agente."
       - ficha: "Uber - How Uber Evals 1 Million Agent Skill Invocations"
-        por_que: "Cómo se evalúan agentes a escala de una gran empresa."
+        por_que: "Cómo evalúa Uber sus agentes a gran escala."
       - ficha: "OWASP - Top 10 2025 de riesgos para LLMs y aplicaciones de IA generativa"
-        por_que: "Los diez riesgos de seguridad que hay que revisar antes de ir a producción, en español."
-    cta: "Hacemos con tu equipo de ingeniería un diagnóstico de cómo trabajan hoy con agentes y qué conviene escalar."
+        por_que: "Diez riesgos de seguridad en aplicaciones con LLMs. En español."
 
   - id: cultura-adopcion-social
-    titulo: "Cultura y RR. HH.: la adopción es social"
+    titulo: "Cultura y RR. HH."
     perfil: [cultura-organizacion]
     madurez: experimentando
-    descripcion: "Para RR. HH., cultura, agile coaches y líderes de cambio: por qué la adopción se contagia entre pares, cómo activar champions y cómo cuidar a la gente."
-    sale_sabiendo: "Por qué la adopción es social, cómo activar champions y cómo evitar el agotamiento."
+    descripcion: "Adopción entre pares, champions, desgaste y equipos ágiles."
     pasos:
       - ficha: "Daan van Rossum - People copy people"
-        por_que: "La adopción se contagia: la gente copia a colegas de confianza."
+        por_que: "La adopción se extiende entre colegas de confianza."
       - ficha: "Abundly - The Power of Anointing Gen AI Champions"
-        por_que: "Cómo elegir y empoderar champions."
+        por_que: "El rol de los champions en la adopción."
       - ficha: "Stanton, Shriber y Rudat - What Top Performers Do Differently with AI"
         por_que: "Qué hacen distinto quienes más aprovechan la IA."
       - ficha: "HBR - When Using AI Leads to Brain Fry"
-        por_que: "El costo cognitivo y cómo diseñar el trabajo para evitarlo."
+        por_que: "El costo cognitivo de usar IA de forma intensiva."
       - ficha: "Henrik Kniberg - Agile in the Age of AI"
-        por_que: "Qué pasa con los equipos y los roles ágiles."
+        por_que: "Qué cambia en los equipos y roles ágiles."
     para_profundizar:
       - ficha: "liqueed - Programa AI Champion"
-        por_que: "Nuestro programa de dos días para formar a los champions de tu organización."
-    cta: "Diseñamos con ustedes cómo activar champions y acompañar la adopción en tu organización."
+        por_que: "Nuestro programa de dos días para champions."
 
   - id: gobernanza-sin-frenar
-    titulo: "Gobernanza: reglas claras sin frenar la adopción"
+    titulo: "Gobernanza"
     perfil: [cultura-organizacion, tecnico, producto]
     madurez: escalando
-    descripcion: "Para quienes tienen que poner reglas cuando la IA ya está en procesos reales: qué exige la regulación, cómo bajarla a controles y cómo gobernar agentes."
-    sale_sabiendo: "Qué exige el Reglamento europeo, cómo convertirlo en checklists y controles, y qué cambia cuando los sistemas son agentes."
+    descripcion: "Regulación europea, guías de cumplimiento y marcos de gestión de riesgos."
     pasos:
       - ficha: "Comisión Europea - Ley de IA"
-        por_que: "El marco: niveles de riesgo, obligaciones y calendario."
+        por_que: "Niveles de riesgo, obligaciones y calendario."
       - ficha: "AESIA - Guías prácticas para el cumplimiento del RIA"
-        por_que: "Cómo bajar cada requisito a medidas y checklists, en español."
+        por_que: "Guías y checklists por requisito. En español."
       - ficha: "IMDA - Model AI Governance Framework for Agentic AI"
-        por_que: "Cómo gobernar agentes: límites, responsables, controles y formación."
+        por_que: "Marco para gobernar sistemas con agentes."
       - ficha: "NIST - Perfil de IA generativa del AI RMF"
-        por_que: "Doce riesgos y más de 200 acciones para armar el backlog de controles."
+        por_que: "Doce riesgos de la IA generativa y acciones para gestionarlos."
     para_profundizar:
       - ficha: "GDS - AI Playbook for the UK Government"
-        por_que: "Diez principios y un modelo de responsabilidades para una gran organización."
-    cta: "Te ayudamos a armar un marco de gobierno de IA a la medida de tu organización, sin frenar a los equipos."
+        por_que: "Diez principios para usar IA en el gobierno británico."
