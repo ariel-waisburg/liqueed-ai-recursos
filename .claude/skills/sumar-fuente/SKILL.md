@@ -66,7 +66,9 @@ Archivo: `vault/fuentes/<carpeta>/Autor - Título corto.md`, con `vault/_plantil
 - **Encabezado:** `**Autor** · tipo · plataforma · fecha · [link](url)` y `Temas: [[Tema]] · [[Tema]]`.
 - **En una línea:** una oración, con tus palabras, que diga de qué trata y por qué importa.
 - **Ideas clave:** de 4 a 6 bullets concretos (conceptos, marcos, datos, prácticas), con tus palabras. Citas de menos de 15 palabras. Si un dato no lo pudiste verificar en el texto, no lo pongas.
-- **Por qué lo guardé** y **Mis notas:** son de Ari. Dejalos como en la plantilla y nunca los edites sin que lo pida.
+- **Voz:** las fichas hablan como liqueed, en primera persona del plural ("nosotros", "lo recomendamos"), nunca en primera persona de Ari.
+- **Por qué lo guardé:** es **opcional**. Si Ari (o el digest aprobado) da un motivo, escribilo en voz "nosotros": 1 o 2 oraciones sobre por qué le sirve a alguien en una corporación. Si no hay motivo, dejá `_(completar)_` como en la plantilla: `publicar.py` quita la sección vacía y la ficha se publica igual. No inventes un motivo.
+- **Mis notas:** son de Ari. Dejalas como en la plantilla y nunca las edites sin que lo pida.
 - **Texto original:** el repo es público, así que **nunca** pegues ahí el texto completo de un tercero. Dejá una línea que diga de dónde salió el resumen y qué parte no se pudo leer.
 - **`estado`:** `resumido` (se leyó todo), `resumido-parcial` (se leyó una parte; aclarar cuál) o `pendiente-captura` (sin contenido; queda fuera del sitio).
 
