@@ -4,8 +4,9 @@ autor: "Birgitta Böckeler"
 tipo: video
 plataforma: "YouTube (AOmA)"
 url: "https://www.youtube.com/watch?v=qB7rsbDfmQg"
+miniatura: "https://i.ytimg.com/vi/qB7rsbDfmQg/hqdefault.jpg"
 idioma: "en"
-publicado: ""
+publicado: "2026-03-21"
 guardado: 2026-11-18
 temas:
   - desarrollo-agentico
@@ -18,7 +19,7 @@ publish: false
 
 # What AI augmentation means for technical leaders
 
-**Birgitta Böckeler** · video · YouTube (AOmA) · [link](https://www.youtube.com/watch?v=qB7rsbDfmQg)
+**Birgitta Böckeler** · video · YouTube (AOmA) · 2026-03-21 · [link](https://www.youtube.com/watch?v=qB7rsbDfmQg)
 
 Temas: [[Desarrollo con agentes]] · [[Adopción de IA en organizaciones]]
 

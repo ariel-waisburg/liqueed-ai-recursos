@@ -4,8 +4,9 @@ autor: "Henrik Kniberg"
 tipo: video
 plataforma: "YouTube"
 url: "https://www.youtube.com/watch?v=2IK3DFHRFfw"
+miniatura: "https://i.ytimg.com/vi/2IK3DFHRFfw/hqdefault.jpg"
 idioma: "en"
-publicado: ""
+publicado: "2024-01-20"
 guardado: 2026-11-18
 temas:
   - adopcion-ia
@@ -17,7 +18,7 @@ publish: false
 
 # Generative AI in a Nutshell: how to survive and thrive in the age of AI
 
-**Henrik Kniberg** · video · YouTube · [link](https://www.youtube.com/watch?v=2IK3DFHRFfw)
+**Henrik Kniberg** · video · YouTube · 2024-01-20 · [link](https://www.youtube.com/watch?v=2IK3DFHRFfw)
 
 Temas: [[Adopción de IA en organizaciones]]
 
