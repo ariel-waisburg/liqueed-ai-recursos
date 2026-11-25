@@ -4,6 +4,8 @@ autor: "João Pinho"
 tipo: curso
 plataforma: "builtbyjoao.com"
 url: "https://www.builtbyjoao.com/resources/realists"
+miniatura: "https://www.builtbyjoao.com/og-realists.jpg?v=1"
+proveedor: "João Pinho (Built by João)"
 idioma: "en"
 publicado: ""
 guardado: 2026-11-18

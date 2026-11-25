@@ -4,6 +4,8 @@ autor: "Chip Huyen"
 tipo: curso
 plataforma: "huyenchip.com"
 url: "https://huyenchip.com/mlops/"
+miniatura: ""
+proveedor: "Chip Huyen"
 idioma: "en"
 publicado: "2025-01-11 (actualización)"
 guardado: 2026-11-18
