@@ -51,7 +51,12 @@ Si una nota queda en `pendiente-captura`, poné una nota de captura que empiece 
 
 Archivo: `vault/fuentes/<carpeta>/Autor - Título corto.md`, con `vault/_plantillas/fuente.md`.
 
-- **Frontmatter:** `title` (título original), `autor`, `tipo`, `plataforma`, `url` (sin tracking), `idioma` (`es`/`en`), `publicado` (`YYYY-MM-DD` o `""`; no inventes fechas), `guardado` (hoy), `temas` (paso 5), `tags` (paso 6), `estado`, `publish: false`.
+- **Frontmatter:** `title` (título original), `autor`, `tipo`, `plataforma`, `url` (sin tracking), `idioma` (código ISO 639-1 del idioma original, en minúscula: `es`, `en`, `fr`, `pt`, `it`, `de`…; lista completa en [idiomas.md](idiomas.md)), `publicado` (`YYYY-MM-DD` o `""`; no inventes fechas), `guardado` (hoy), `temas` (paso 5), `tags` (paso 6), `estado`, `publish: false`.
+- **Solo en `video` y `curso`**, después de `url`:
+  - `miniatura`: URL de la imagen de la fuente. En YouTube, el `thumbnail_url` del oEmbed (`https://www.youtube.com/oembed?url=<url>&format=json`, da `https://i.ytimg.com/vi/<id>/hqdefault.jpg`); en otras páginas, el `og:image`. Si no hay o es una imagen genérica del sitio (no de esa fuente), `""`.
+  - `proveedor` (solo `curso`): quién ofrece el curso, como lo dice la página (`og:site_name`, el sello de la plataforma o la organización autora). Si no está claro, `""`.
+  - En los videos de YouTube, si `publicado` está vacío, usá la fecha de subida real (`uploadDate` de la página del video).
+  - Se usan en el JSON-LD del sitio (`thumbnailUrl`/`uploadDate` del video, `image`/`provider` del curso). No inventes: mejor vacío que aproximado.
 - **Encabezado:** `**Autor** · tipo · plataforma · fecha · [link](url)` y `Temas: [[Tema]] · [[Tema]]`.
 - **En una línea:** una oración, con tus palabras, que diga de qué trata y por qué importa.
 - **Ideas clave:** de 4 a 6 bullets concretos (conceptos, marcos, datos, prácticas), con tus palabras. Citas de menos de 15 palabras. Si un dato no lo pudiste verificar en el texto, no lo pongas.

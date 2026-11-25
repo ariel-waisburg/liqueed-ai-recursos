@@ -23,7 +23,6 @@ export const TIPO_LABEL = {
   podcast: "Podcast",
 }
 
-export const IDIOMA_LABEL = { es: "Español", en: "Inglés", fr: "Francés", pt: "Portugués", de: "Alemán", it: "Italiano" }
 
 /** tipo de la ficha -> tipo de schema.org de la fuente original. */
 export const TIPO_SCHEMA = {
@@ -51,7 +50,31 @@ export const FACETAS = [
 
 const cap = (s) => (s ? s.charAt(0).toUpperCase() + s.slice(1) : s)
 export const tipoLabel = (k) => TIPO_LABEL[k] ?? cap(String(k).replace(/-/g, " "))
-export const idiomaLabel = (k) => IDIOMA_LABEL[k] ?? String(k).toUpperCase()
+/**
+ * Nombre en español de un código ISO 639-1. Sale de .claude/skills/sumar-fuente/idiomas.md
+ * (la misma tabla con la que valida publicar.py); si el código no está, Intl o el código en mayúsculas.
+ */
+export function idiomaLabel(k) {
+  const code = String(k ?? "").trim().toLowerCase()
+  const hit = idiomaNames().get(code)
+  if (hit) return hit
+  try {
+    const n = new Intl.DisplayNames(["es"], { type: "language" }).of(code)
+    if (n && n !== code) return cap(n)
+  } catch {}
+  return code.toUpperCase()
+}
+
+let idiomasCache = null
+export function idiomaNames() {
+  if (idiomasCache) return idiomasCache
+  idiomasCache = new Map()
+  try {
+    const md = fs.readFileSync(path.resolve(".claude/skills/sumar-fuente/idiomas.md"), "utf-8")
+    for (const m of md.matchAll(/^\| ([a-z]{2}) \| ([^|]+) \|/gm)) idiomasCache.set(m[1], oneLine(m[2]))
+  } catch {}
+  return idiomasCache
+}
 
 export const oneLine = (s) => String(s ?? "").replace(/\s+/g, " ").trim()
 const norm = (v) => oneLine(v).toLowerCase()
@@ -169,6 +192,8 @@ export function fichaFromFile(f) {
     idioma: norm(fm.idioma) || null,
     plataforma: oneLine(fm.plataforma) || null,
     url: oneLine(fm.url),
+    miniatura: /^https?:\/\//.test(oneLine(fm.miniatura)) ? oneLine(fm.miniatura) : null,
+    proveedor: oneLine(fm.proveedor) || null,
     publicado: isoDate(fm.publicado),
     guardado: isoDate(fm.guardado),
     temas: list(fm.temas),

@@ -164,8 +164,11 @@ open(os.path.join(OUT, "explorar.md"), "w", encoding="utf-8").write(EXPLORAR)
 # 5. Facetas: avisar valores fuera del vocabulario (no frena la publicación)
 TIPOS = {"articulo", "post", "articulo-x", "hilo", "video", "libro", "guia", "curso",
          "herramienta", "presentacion", "referente"}
-IDIOMAS = {"es", "en", "fr", "pt"}
-tags_md = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".claude", "skills", "sumar-fuente", "tags.md")
+SKILL_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".claude", "skills", "sumar-fuente")
+idiomas_md = os.path.join(SKILL_DIR, "idiomas.md")
+# Cualquier código ISO 639-1 (tabla completa en idiomas.md).
+IDIOMAS = set(re.findall(r"^\| ([a-z]{2}) \|", open(idiomas_md, encoding="utf-8").read(), re.M)) if os.path.exists(idiomas_md) else set()
+tags_md = os.path.join(SKILL_DIR, "tags.md")
 TAGS = set(re.findall(r"^\| ([a-z0-9-]+) \|", open(tags_md, encoding="utf-8").read(), re.M)) if os.path.exists(tags_md) else set()
 TEMAS = {frontmatter_field(t, "slug") for rel, f, t in notes if rel.split(os.sep)[0] == "temas"}
 warnings = []
@@ -175,8 +178,8 @@ for rel, f, t in notes:
     tipo, idioma = frontmatter_field(t, "tipo"), frontmatter_field(t, "idioma")
     if tipo not in TIPOS:
         warnings.append(f"{f}: tipo '{tipo}' no está en la tabla de tipos")
-    if idioma not in IDIOMAS:
-        warnings.append(f"{f}: idioma '{idioma}' (se esperaba un código como es/en)")
+    if IDIOMAS and idioma not in IDIOMAS:
+        warnings.append(f"{f}: idioma '{idioma}' no es un código ISO 639-1 en minúscula (ver idiomas.md)")
     for tag in frontmatter_list(t, "tags"):
         if TAGS and tag not in TAGS:
             warnings.append(f"{f}: tag '{tag}' no está en tags.md")
