@@ -1,0 +1,23 @@
+{
+  "name": "liqueed-explorar",
+  "version": "1.0.0",
+  "description": "Explorar fichas con filtros por faceta y datos estructurados (JSON-LD) de cada página",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "exports": {
+    ".": { "import": "./dist/index.js" },
+    "./components": { "import": "./dist/components/index.js" },
+    "./modelo": { "import": "./dist/modelo.js" }
+  },
+  "peerDependencies": { "preact": "^10.0.0" },
+  "quartz": {
+    "name": "liqueed-explorar",
+    "displayName": "Liqueed: explorar y JSON-LD",
+    "category": "component",
+    "quartzVersion": ">=5.0.0",
+    "components": {
+      "LiqueedExplorar": { "displayName": "Liqueed: explorar y JSON-LD", "defaultPosition": "afterBody", "defaultPriority": 10 }
+    }
+  }
+}
