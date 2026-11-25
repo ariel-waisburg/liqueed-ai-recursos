@@ -1,6 +1,6 @@
 # Rúbrica de curaduría
 
-Versión 1, aprobada por Ari el 24/11/2026. Una corrida automática tiene que poder aplicarla sin más contexto que este archivo, [fuentes.md](fuentes.md) y el skill `.claude/skills/sumar-fuente`.
+Versión 1.1, aprobada por Ari el 24/11/2026 (incluye sus decisiones sobre consultoras, vendors, idioma, voz y volumen). Una corrida automática tiene que poder aplicarla sin más contexto que este archivo, [fuentes.md](fuentes.md) y el skill `.claude/skills/sumar-fuente`.
 
 ## Para quién curamos (ICP)
 
@@ -10,7 +10,7 @@ Personas que trabajan en corporaciones enterprise, con distintos niveles de madu
 - **producto**: PMs, diseño, gente de negocio con menos expertise técnica.
 - **cultura y organización**: RRHH, adopción cultural, agile coaches, gestión del cambio.
 
-El foco es lo **aplicado** (piso propuesto: 2 de cada 3 recursos nuevos son aplicados o casos), pero también entran frameworks y conceptos.
+El foco es lo **aplicado**, pero también entran frameworks y conceptos. No hay piso ni cupo entre aplicado y conceptual: decide la calidad.
 
 ## 1. Filtros de entrada (duros)
 
@@ -21,11 +21,11 @@ Si un recurso no pasa alguno, queda afuera aunque sea bueno en lo demás. Anotá
 | Relevancia ICP | ¿Le sirve a alguno de los tres perfiles en una corporación, y trata sobre IA? | Es solo para hobbistas, académico sin bajada, o no trata sobre IA. |
 | Autoría verificable | ¿Sabemos quién lo escribió y qué experiencia tiene? | Es anónimo o el autor no es rastreable. |
 | Evidencia | ¿Sus afirmaciones tienen respaldo (datos, casos, método)? | Promete resultados sin mostrar cómo. |
-| No vendehumo | Si vende algo, ¿enseña algo útil sin comprarlo? | Es una pieza comercial disfrazada. |
+| No vendehumo | Si vende algo, ¿enseña algo útil sin comprarlo? | Es una pieza comercial disfrazada. El contenido de vendors (Anthropic, OpenAI, Vercel, etc.) sí entra si enseña algo útil; si suena a infomercial, se penaliza (ver abajo). |
 | Vigencia | ¿Sigue siendo cierto hoy? | Lo contradicen cambios posteriores de modelos o herramientas. |
 | Acceso | ¿Se puede leer o ver entero? | Paywall total sin resumen suficiente. |
 | Duplicado | ¿Ya está en `vault/fuentes/`? (buscar la URL sin tracking con `grep -rl`) | Ya existe: no es candidata. |
-| Independencia | ¿Es de una consultora que compite con liqueed? | Regla pendiente de definir por Ari: por ahora entra al digest marcada como "consultora". |
+| Consultoras competidoras | ¿Es de una consultora que compite con liqueed? | Nunca por eso: **sí entra si es el mejor recurso del tema**. En el digest se marca como "consultora". |
 
 ## 2. Rúbrica con puntaje
 
@@ -59,6 +59,23 @@ total = (0,20·relevancia + 0,20·aplicabilidad + 0,20·evidencia
 | Menos de 3,5 | **Descartada**: queda en el log con el motivo. Ari puede rescatarla. |
 | Relevancia o evidencia en 1 | **Fuera**, aunque el total dé alto. |
 
+### Penalización por tono de infomercial
+
+Se aplica sobre el total, después de la fórmula, a cualquier recurso (sobre todo de vendors y consultoras):
+
+| Tono | Penalización |
+|---|---|
+| Menciona su producto, pero lo que enseña sirve igual sin comprarlo | 0 |
+| El producto ocupa buena parte del recurso o lo que enseña depende de comprarlo | −0,5 |
+| Es mayormente promoción con algo de contenido | −1,0 |
+| Es pura pieza comercial | Fuera (filtro "No vendehumo") |
+
+Anotá la penalización y su motivo en una línea en el digest.
+
+### Desempate por idioma
+
+Si dos recursos son equivalentes (mismo tema, puntajes similares), se prioriza el que está **en español**.
+
 ## 3. Señales de alerta
 
 No descartan solas, pero bajan el puntaje y obligan a revisar dos veces:
@@ -71,6 +88,7 @@ No descartan solas, pero bajan el puntaje y obligan a revisar dos veces:
 - "Los agentes van a reemplazar a todo X" sin matices.
 - Tema que cambia rápido con fecha vieja (más de 12 meses en herramientas o modelos).
 - Links de afiliados o CTA comercial en cada párrafo.
+- Tono de infomercial: el producto del autor como única solución (aplicar la penalización de arriba).
 
 ## 4. Etiquetado para el ICP
 
@@ -94,17 +112,16 @@ Estos campos todavía no existen en el frontmatter de las fichas ni en `/explora
 ## 5. Digest semanal
 
 - **Cuándo:** lunes 9:00, hora de Buenos Aires.
-- **Qué:** de 5 a 8 candidatas (hasta 10 en la primera corrida), ordenadas por puntaje y numeradas, para que Ari apruebe por número.
+- **Qué:** todas las candidatas que superan 3,5, ordenadas por puntaje y numeradas, para que Ari apruebe por número. Calidad antes que cantidad: sin número fijo, con un mínimo de 3 por semana, pero pueden ser 10 a 15 si lo valen. Si no hay 3 que superen el umbral, se dice así, no se baja la vara.
 - **Cada candidata lleva:** título, autor o fuente, URL verificada, fecha de publicación del recurso, tipo, idioma, perfil, madurez, valor, esfuerzo, puntaje total y por dimensión, y de 1 a 2 frases en español sobre por qué le sirve a alguien de una corporación.
-- **Mix:** alrededor de 2 de cada 3 aplicados o casos.
+- **Posts de X:** por ahora se toma de X solo lo que linkea a algo más profundo (y se evalúa el recurso linkeado). Aparte, al final del digest, se listan hasta 3 hilos buenos sin link como "posibles" (regla pendiente de Ari).
 - **Decisión de Ari:** por cada número responde entra, no entra o más tarde, y puede sumar una nota (por texto o audio). Su nota va a `Por qué lo guardé` o `Mis notas`, ordenada pero sin desvirtuarla.
 - **Publicación:** lo que Ari aprueba se publica directo (ficha con el skill `sumar-fuente`, PR y merge), sin otro paso de confirmación.
+- **Voz de las fichas:** "nosotros" (liqueed), no la primera persona de Ari.
+- **"Por qué lo guardé":** es opcional. Una ficha se puede publicar sin esa sección si Ari no suma nota.
 - **Registro:** cada digest se guarda en `curaduria/digests/AAAA-MM-DD.md`, con las decisiones de Ari. Si Ari rechaza puntajes altos o rescata bajos, se recalibra la rúbrica.
 
 ## Preguntas abiertas (pendientes de Ari)
 
-- Consultoras que compiten con liqueed: ¿entran si son el mejor recurso del tema?
-- Contenido de vendors (Anthropic, OpenAI, Google): ¿cuenta como fuente válida si enseña algo útil?
-- ¿Priorizamos el español cuando hay dos recursos equivalentes?
-- Posts sueltos de X: ¿entran como ficha o solo si linkean a algo más profundo?
+- Posts sueltos de X: ¿entran como ficha o solo si linkean a algo más profundo? Mientras tanto, regla de arriba.
 - ¿Contenido de gestión del cambio que no menciona la IA (por ejemplo, Agility at Scale) entra por su valor para la adopción?
